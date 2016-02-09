@@ -1,0 +1,63 @@
+$fa-font-path: '{{{appRoot}}}/assets/fonts';
+@import 'components/font-awesome/font-awesome';
+
+@mixin styleguide_custom_styles {
+  // User can re-define this mixin to create custom style overrides
+  // This mixin is included in the end of the application stylesheet
+}
+
+@import 'styleguide_custom_variables';
+@import 'styleguide_variables';
+@import 'styleguide_mixins';
+@import 'styleguide_helper_elements';
+
+// Colors and typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 1.0
+
+// Main colors
+//
+// $primary-color - Primary color
+// $secondary-color - Secondary color
+// $primary-action-color - Primary button color
+// $default-action-color - Default button color and link color
+// $tertiary-color - Used for input hovers and hilights
+//
+
+// Buttons
+//
+//
+//
+// Styleguide 2.0
+
+// Forms
+//
+//
+//
+// Styleguide 3.0
+
+// Navigation
+//
+//
+//
+// Styleguide 4.0
+
+// Alerts
+//
+//
+//
+// Styleguide 5.0
+
+// States
+//
+//
+//
+// Styleguide 6.0
+
+// Utilities
+//
+//
+//
+// Styleguide 7.0

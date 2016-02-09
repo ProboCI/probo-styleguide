@@ -1,0 +1,254 @@
+
+// Atoms
+//
+// This is the atoms chapter. Atoms are the only parts that contain actual
+// class and style definitions. The higher level abastractions are mere
+// composites of the existing atoms.
+//
+// Styleguide 1.0
+
+// Person Information Card Atom
+//
+// An info card with the name and description of a person.
+//
+// We add eg- (exempli gratia) in front of all our styles to put them in their
+// own "namespace".  Your prefix would ideally be unique to the project you are
+// working on.  This atom defines the "person info" block. Its main class is
+// therefore called eg-person-info
+//
+// The different elements (name, description) relevant to the atom are named by
+// concatenating the class of the containing block and the element name with
+// two underscores.  So the class of the name element becomes
+// `eg-person-info_\_name`.
+//
+// We then use a single underscore to specify modifiers for blocks and
+// elements. The cards can have types depending on the role of the person who
+// the card is about. Therefore the roles (developer, designer) introduce the
+// new modifier classes of the form `eg-person-info_role_developer`.  We could
+// also have boolean modifiers like `eg-person-info_important` or specify
+// modifiers for elements, like `eg-person-info__name_birth` for example.
+//
+// It makes sense to scope the element and modifier styles so they only work
+// within the correct containing block.
+//
+// Exercise 1.1a: Add support for a third role "administrator" to the card
+// styles.
+//
+// Exercise 1.1b: Add support for a "title" element to the card.
+//
+// .eg-person-info_role_designer - the person is a designer
+// .eg-person-info_role_developer - the person is a software developer
+// default - a normal person
+//
+// markup:
+// <div class="eg-person-info {$modifiers}">
+//   <div class="eg-person-info__name">Name of the person</div>
+//   <div class="eg-person-info__description">
+//     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
+//     dignissim neque. Suspendisse semper eu metus a congue. Morbi ultrices
+//     venenatis eros at placerat. Mauris gravida lacinia justo sit amet
+//     sodales.
+//   </div>
+// </div>
+//
+// Styleguide 1.1
+
+.eg-person-info {
+
+  font-family: $eg-default-fonts;
+  border: thin solid $eg-color-black;
+
+  .eg-person-info__name {
+    font-size: 1.2em;
+    background-color: $eg-color-orange;
+    padding: $eg-spacings;
+  }
+
+  .eg-person-info__description {
+    padding: $eg-spacings;
+  }
+
+  &.eg-person-info_role_designer {
+    .eg-person-info__name {
+      background-color:  $eg-color-cyan;
+    }
+  }
+
+  &.eg-person-info_role_developer {
+    .eg-person-info__name {
+      background-color: $eg-color-brown;
+    }
+  }
+}
+
+// Simple Grid Atom
+//
+// A simple grid
+//
+// Our example grid is inspired by the simple grid from the blog post
+// "Don’t Overthink It Grids" by Chris Coyier and the UIkit responsive
+// grid. Checkout https://css-tricks.com/dont-overthink-it-grids/ and
+// http://getuikit.com/docs/grid.html
+//
+// Exercise 1.2a: Add support for items with 1-3 and 2-3 ratios.
+//
+// markup:
+// <div class="eg-grid">
+//   <div class="eg-grid__item-1-1">
+//     <div class="styleguide-placeholder">1-1 placeholder 1</div>
+//   </div>
+//   <div class="eg-grid__item-1-1">
+//     <div class="styleguide-placeholder">1-1 placeholder 2</div>
+//   </div>
+// </div>
+// <div class="eg-grid">
+//   <div class="eg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 1</div>
+//   </div>
+//   <div class="eg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 2</div>
+//   </div>
+//   <div class="eg-grid__item-1-2">
+//     <div class="styleguide-placeholder">1-2 placeholder 3</div>
+//   </div>
+// </div>
+//
+// sg-wrapper:
+// <div class="sg-wrapper">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.2
+
+.eg-grid {
+
+  margin-left: -$eg-spacings;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [class*='eg-grid__item-'] {
+    float: left;
+    padding-left: $eg-spacings;
+    padding-bottom: $eg-spacings;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .eg-grid__item-1-2 {
+    width: 50%;
+  }
+
+  .eg-grid__item-1-1 {
+    width: 100%;
+  }
+}
+
+// Page Heading Atom
+//
+// The main heading on a page.
+//
+// Note that while we use h1 in the markup since it may help some user agents.
+// Our selector does not mention h1. There are several reasons for this.
+// The most important is that we do not want our styles to leak to h1 elements
+// that do not explicitly request styling. While we could define a selector
+// that looks like h1.eg-page-heading we should not do this since we can not
+// know on forehand if we will need to apply the same styling for other elements
+// as well. Doing it this way minimizes delays when we encounter such special
+// cases.
+//
+// Exercise 1.3a: Explain to a rubber duck why using HTML element names in
+// selectors is a bad idea.
+//
+// markup:
+// <h1 class="eg-page-heading">Page Heading</h1>
+//
+// Styleguide 1.3
+
+.eg-page-heading {
+
+  font-family: $eg-default-fonts;
+  font-size: 40px;
+}
+
+// Text Paragraph Atom
+//
+// A text paragraph.
+//
+// Just like with headings the text paragraph style does not use the HTML
+// element name p as a part of the selector. However it is still likely that
+// the paragraph class be often used in conjunction with the p element since
+// the application developer may wish to indicate in the HTML that that part
+// of the user interface is in fact a text paragraph. While this should not
+// be a problem since the style definitions for standard HTML elements may
+// vary between browsers. In such cases you may need to do a reset for the
+// element. We do just that in the file reset.scss where we allow ourselves
+// to use HTML element names in selectors. However we try to keep this to
+// a minimum.
+//
+// Exercise 1.4a: Take a look at the reset.scss so you'll know how to deal
+// with differences in default style sheets of different browsers.
+//
+// markup:
+// <p class="eg-paragraph">
+//   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius ex
+//   pharetra nisl mattis commodo. Duis egestas nec lacus sit amet vestibulum.
+//   Phasellus vitae tincidunt mi, quis ornare est. Nam purus magna, gravida a
+//   aliquam ac, cursus posuere neque. Suspendisse id dictum sem, ut rutrum
+//   nisi.  In hac habitasse platea dictumst. Maecenas aliquet, neque sit amet
+//   mollis sagittis, sem nulla placerat tellus, eu blandit lorem nunc a massa.
+// </p>
+//
+// Styleguide 1.4
+
+.eg-paragraph {
+
+  font-family: $eg-default-fonts;
+}
+
+// Input Field Atom
+//
+// A simple text input.
+//
+// Exercise 1.5a: Write some style definitions for the input field to spice it
+// up. Just add different background colors to the default and active states if
+// you do not feel creative right now.
+//
+// Default - the interactive default state
+// :focus - the state when the field has focus
+//
+// markup:
+// <input type="text" class="eg-input {$modifiers}">
+// <input type="text" class="eg-input {$modifiers}" placeholder="placeholder">
+// <input type="text" class="eg-input {$modifiers}" value="value">
+//
+// Styleguide 1.5
+
+.eg-input {
+
+  // default styling goes here
+
+  &:focus {
+    // focus specific definitions go here
+  }
+}
+
+// Push Button Atom
+//
+// A push button.
+//
+// Exercise 1.6a: Add example markup for a button.
+//
+// Exercise 1.6b: Add some styling to your button by defining a new eg-button class.
+//
+// Exercise 1.6c: Add hover state to your button so it responds to mouse movements.
+//
+// Exercise 1.6d: Make hover state always visible in style guide so people who
+// are looking at a printout have a way of seeing what it would look like
+// (tip: for a similar example, take a look at the focus state in chapter 1.5)
+//
+// Styleguide 1.6

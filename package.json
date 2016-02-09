@@ -1,0 +1,26 @@
+{
+  "name": "probo-styleguide",
+  "version": "1.0.0",
+  "description": "A style guide for the Probo app and marketing website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProboCI/probo-styleguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProboCI/probo-styleguide/issues"
+  },
+  "homepage": "https://github.com/ProboCI/probo-styleguide#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-doctoc": "^0.1.4",
+    "gulp-marked": "^1.0.0",
+    "gulp-sass": "^2.2.0",
+    "sc5-styleguide": "^0.3.41"
+  }
+}
