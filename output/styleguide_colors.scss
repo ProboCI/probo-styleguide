@@ -1,0 +1,40 @@
+// Colors and typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 6.0
+
+// Main colors
+//
+// $primary-color - Primary color
+// $secondary-color - Secondary color
+// $primary-action-color - Primary button color
+// $default-action-color - Default button color and link color
+// $tertiary-color - Used for input hovers and hilights
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 6.1
+
+// Calculated colors
+//
+// .color_lighten - Lighter than default action color
+// .color_darken - Darker than default action color
+//
+// markup:
+// <div class="styleguide-color {$modifiers}"></div>
+//
+// Styleguide 6.1.1
+
+$default-action-light: lighten($default-action-color, $action-color-change);
+
+.color_lighten {
+  background-color: $default-action-light;
+}
+
+$default-action-dark: darken($default-action-color, $action-color-change);
+
+.color_darken {
+  background-color: $default-action-dark;
+}
