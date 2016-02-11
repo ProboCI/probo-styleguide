@@ -4,106 +4,37 @@
 //
 // Styleguide 1.0
 
-// Headings
+// Wrapper
 //
-// These are our headings
+// This allows you to center a page’s contents with a .wrapper. This applied a max-width: 1200px and uses margin to center it.
 //
 // markup:
-// <h1 class="sg">Heading 1</h1>
-// <p class="sg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa ipsum, tincidunt vel convallis in, suscipit et risus. Morbi erat dolor, mattis at dignissim sed, feugiat sed lorem.
-// <h2 class="sg">Heading 2</h2>
-// <p class="sg">Mauris feugiat suscipit turpis, ut rhoncus lectus finibus sed. Etiam suscipit consectetur eros vitae venenatis.</p>
-// <h3 class="sg">Heading 3</h3>
-// <p class="sg">Ut leo ipsum, tincidunt vel mauris eget, convallis egestas justo. Nunc ligula neque, porta ac lorem id, ultrices dapibus dolor.</p>
-// <h4 class="sg">Heading 4</h4>
-// <p class="sg"> Phasellus interdum massa ante, ac placerat felis ultricies at. Fusce vulputate, odio sed convallis laoreet, tortor orci venenatis massa, a placerat ligula nisl vitae felis. In pellentesque ornare eleifend. Suspendisse potenti. Quisque eget mauris enim.</p>
-// <h5 class="sg">Heading 5</h5>
+// <div class="sg wrapper">
+//   …
+// </div>
+//
+// Styleguide 1.1
+
+.sg.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+// Left Sidebar
+//
+// Create a left sidebar on your page using #sidebar-first before .page-content.
+//
+// markup:
+// <div id="sidebar-first">
+//   …
+// </div>
+// <div class="page-content">
+//   …
+// </div>
 //
 // Styleguide 1.2
 
-%no-dangling {
-  &:first-child, &:first-of-type {
-    margin-top: 0;
-  }
+#sidebar-first {
+  width: 24%;
+  max-width: 270px;
 }
-h1, h2, h3, h4, h5 {
-  @extend %no-dangling;
-  font-family: 'Merriweather';
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 0;
-  color: #333;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 17.5px);
-  }
-  @include breakpoint($bp-large)   {
-    line-height: 1.58;
-  }
-}
-
-h1, %h1 {
-  @include rem(font-size, 16.25px);
-  margin-bottom: 12px;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 18.25px);
-  }
-
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 20px);
-  }
-}
-h1.post-title {
-  @include rem(font-size, 12px);
-  margin-bottom: 26px;
-  font-family: Helvetica Neue, Helvetica, Arial;
-  font-weight: bold;
-}
-h1.page-title {
-  @include rem(font-size, 14px);
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #EBEBEB;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 16px);
-    margin-bottom: 26px;
-    padding-bottom: 26px;
-    border-bottom: 1px solid #EBEBEB;
-  }
-}
-h2, %h2 {
-  @include rem(font-size, 10px);
-  margin-bottom: 12px;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 12px);
-  }
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 14px);
-  }
-}
-
-h3, %h3 {
-  @include rem(font-size, 8.75px);
-  margin-bottom: 12px;
-
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 9px);
-  }
-
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 10.25px);
-  }
-}
-
-h4, %h4, h5, %h5 {
-  @include rem(font-size, 11.25px);
-
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 17.5px);
-  }
-
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 13.75px);
-  }
-}
-
-

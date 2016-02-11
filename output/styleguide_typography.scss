@@ -1,101 +1,96 @@
 // Typeography
 //
-// These are our headings
-//
-// markup:
-// <h1 class="sg">Heading 1</h1>
-// <p class="sg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa ipsum, tincidunt vel convallis in, suscipit et risus. Morbi erat dolor, mattis at dignissim sed, feugiat sed lorem.
-// <h2 class="sg">Heading 2</h2>
-// <p class="sg">Mauris feugiat suscipit turpis, ut rhoncus lectus finibus sed. Etiam suscipit consectetur eros vitae venenatis.</p>
-// <h3 class="sg">Heading 3</h3>
-// <p class="sg">Ut leo ipsum, tincidunt vel mauris eget, convallis egestas justo. Nunc ligula neque, porta ac lorem id, ultrices dapibus dolor.</p>
-// <h4 class="sg">Heading 4</h4>
-// <p class="sg"> Phasellus interdum massa ante, ac placerat felis ultricies at. Fusce vulputate, odio sed convallis laoreet, tortor orci venenatis massa, a placerat ligula nisl vitae felis. In pellentesque ornare eleifend. Suspendisse potenti. Quisque eget mauris enim.</p>
-// <h5 class="sg">Heading 5</h5>
+// This section covers the basics of Probo’s typographic style.
 //
 // Styleguide 2.0
 
-%no-dangling {
-  &:first-child, &:first-of-type {
-    margin-top: 0;
-  }
-}
-h1, h2, h3, h4, h5 {
-  @extend %no-dangling;
+// Headings
+//
+// markup:
+// <h1 class="sg">h1. Probo heading</h1>
+// <h2 class="sg">h2. Probo heading</h2>
+// <h3 class="sg">h3. Probo heading</h3>
+// <h4 class="sg">h4. Probo heading</h4>
+// <h5 class="sg">h5. Probo heading</h5>
+// <h6 class="sg">h6. Probo heading</h6>
+//
+// Styleguide 2.1
+
+h1.sg,
+h2.sg,
+h3.sg,
+h4.sg,
+h5.sg {
   font-family: 'Merriweather';
   font-weight: 400;
   line-height: 1.5;
   padding: 0;
   color: #333;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 17.5px);
-  }
-  @include breakpoint($bp-large)   {
-    line-height: 1.58;
-  }
 }
 
-h1, %h1 {
-  @include rem(font-size, 16.25px);
-  margin-bottom: 12px;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 18.25px);
-  }
+// Body text
+//
+// markup:
+// <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+// <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+// <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
+//
+// Styleguide 2.2
 
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 20px);
-  }
-}
-h1.post-title {
-  @include rem(font-size, 12px);
-  margin-bottom: 26px;
-  font-family: Helvetica Neue, Helvetica, Arial;
-  font-weight: bold;
-}
-h1.page-title {
-  @include rem(font-size, 14px);
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #EBEBEB;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 16px);
-    margin-bottom: 26px;
-    padding-bottom: 26px;
-    border-bottom: 1px solid #EBEBEB;
-  }
-}
-h2, %h2 {
-  @include rem(font-size, 10px);
-  margin-bottom: 12px;
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 12px);
-  }
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 14px);
-  }
+// Intro text
+//
+// If the first paragraph on a page needs to be larger than the others, add .intro.
+//
+// markup:
+// <p class="sg intro">Sed blandit nulla et ipsum ultricies pellentesque. Morbi pretium nulla mauris, nec venenatis dui egestas eu. Cras vitae eros sit amet metus aliquet fermentum.</p>
+//
+// Styleguide 2.3
+
+.sg.intro {
+  font-size: 9px;
+  font-size: 0.9rem;
 }
 
-h3, %h3 {
-  @include rem(font-size, 8.75px);
-  margin-bottom: 12px;
+// Font icons
+//
+// This section covers the usage of font icons.
+//
+// markup:
+// <i class="sg fa fa-github fa-github-alt"></i>
+// <i class="sg fa fa-bitbucket fa-bitbucket-alt"></i>
+// <i class="sg fa fa-twitter fa-twitter-alt"></i>
+// <i class="sg fa fa-facebook fa-facebook-alt"></i>
+//
+// Styleguide 2.4
 
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 9px);
-  }
+// Lists
+//
+// This section covers basic list usage.
+//
+// Styleguide 2.5
 
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 10.25px);
-  }
-}
+// Unordered
+//
+// A bulleted list of items.
+//
+// markup:
+// <ul>
+//    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+//    <li>Aliquam tincidunt mauris eu risus.</li>
+//    <li>Vestibulum auctor dapibus neque.</li>
+// </ul>
+//
+// Styleguide 2.5.1
 
-h4, %h4, h5, %h5 {
-  @include rem(font-size, 11.25px);
-
-  @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 17.5px);
-  }
-
-  @include breakpoint($bp-large) {
-    @include rem(font-size, 13.75px);
-  }
-}
+// Ordered
+//
+// A numbered list of items.
+//
+// markup:
+// <ol>
+//    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+//    <li>Aliquam tincidunt mauris eu risus.</li>
+//    <li>Vestibulum auctor dapibus neque.</li>
+// </ol>
+//
+// Styleguide 2.5.2
