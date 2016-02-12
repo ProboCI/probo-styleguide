@@ -1,0 +1,41 @@
+@import 'variables';
+
+// Colors
+//
+// These are the primary colors used by Probo.
+//
+// Styleguide 1.0
+
+// Main colors
+//
+// .bg-blue - Blue background
+// .bg-purple - Purple background
+// .bg-purple-dark - Dark purple background
+// .bg-pale	- Pale, off-white background
+// .bg-pale-dark - Darker pale, off-white background
+//
+// Markup:
+// <div class="{{modifier_class}}"><span style="display:block;height:100px"></span></div>
+//
+// Styleguide 1.1
+
+.bg-blue {
+  background-color: $probo-blue;
+}
+
+.bg-purple {
+  background-color: $probo-purple;
+}
+
+.bg-purple-dark {
+  background-color: $probo-purple-dark;
+}
+
+.bg-pale {
+  background-color: $probo-pale;
+}
+
+.bg-pale-dark {
+  background-color: $probo-pale-dark;
+}
+

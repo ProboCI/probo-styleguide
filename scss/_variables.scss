@@ -1,0 +1,32 @@
+// ui colors
+$probo-blue: #00b7ff;
+$probo-blue-dark: #0055a4;
+$probo-midnight: #2e263b;
+$probo-purple-darkest: #33001d;
+$probo-purple-dark: #440027;
+$probo-purple: #a6548c;
+$probo-gray-dark: #404040;
+$probo-gray-dark-medium: #525252;
+$probo-gray-medium: #7d7d7d;
+$probo-pale: #f7f7f7;
+$probo-pale-medium: #f5f5f5;
+$probo-pale-dark: #ebebeb;
+$probo-pale-darker: #c8c8c8;
+$probo-green: #67c293;
+$probo-green-dark: #5fae85;
+$probo-green-darkest: #4a986e;
+$probo-lime: #b5d556;
+
+// alert colors
+$probo-alert-success: $probo-green;
+$probo-alert-warning: #ffb502;
+$probo-alert-error: #cf3e34;
+$probo-alert-info: lighten($probo-blue, 40%);
+
+// typography
+$body-font-size: 14px;
+$body-line-height: 1.5;
+$base-font-color: $probo-gray-dark;
+$body-text-font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+$link-color: $probo-blue-dark;
+$link-color-hover: $probo-blue;

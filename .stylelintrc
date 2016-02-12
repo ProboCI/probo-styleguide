@@ -1,0 +1,13 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-statement-max-nesting-depth"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": ["always", { ignore: ["all-nested"] }],
+    "color-no-named": true,
+    "function-url-quotes": "single",
+    "statement-max-nesting-depth": [2, { countAtRules: false }],
+    "string-quotes": "single"
+  },
+}

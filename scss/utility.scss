@@ -1,0 +1,59 @@
+@import 'variables';
+
+// Utilities
+//
+// These are utility classes. You can use these to perform basic, one off style changes without the need for editing a CSS class for a small change.
+//
+// Styleguide 2.0
+
+// Typography-related
+//
+// .u-underline - Underlned text
+// .u-italic - Italicized text
+// .u-bold - Bold text
+//
+// Markup:
+// <p class="{{modifier_class}}">Sample text</p>
+//
+// Styleguide 2.1
+//
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-italic {
+  font-style: italic;
+}
+
+.u-bold {
+  font-weight: 700;
+}
+
+.u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  &.u-focusable {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-hidden {
+  display: none !important;
+}

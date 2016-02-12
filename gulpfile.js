@@ -1,44 +1,103 @@
-var toc    = require('gulp-doctoc');
-var marked = require('gulp-marked');
+'use strict';
+
 var gulp = require('gulp');
-var styleguide = require('sc5-styleguide');
+var autoprefixer = require('autoprefixer');
+var browserSync = require('browser-sync');
+var concat = require('gulp-concat');
+var cssnano = require('gulp-cssnano');
+var del = require('del');
 var sass = require('gulp-sass');
-var outputPath = 'output';
+var scss = require('postcss-scss');
+var stylelint = require('stylelint');
+var postcss = require('gulp-postcss');
+var reporter = require('postcss-reporter');
+var reload = browserSync.reload;
+var shell = require('gulp-shell');
+var gutil = require('gulp-util');
 
-gulp.task('markdown', function(){
+// paths
+var project = {
+  scss: 'scss',
+  css: 'probo.css',
+  dest: 'styleguide',
+  template: 'template',
+  styleguide: ['./scss/*.scss', './template/**/*.*'],
+};
 
-  gulp.src('README.md')
-    .pipe(toc())
-    .pipe(marked())
-    .pipe(gulp.dest('.'));
+// kss generator
+var kssNode = './node_modules/.bin/kss-node scss --template ' + project.template + ' --source ' + project.scss + ' --destination ' + project.dest + ' --css ' + project.css;
 
+// error notifications
+var handleError = function(task) {
+  return function(err) {
+    gutil.log(gutil.colors.bgRed(task + ' error:'), gutil.colors.red(err));
+    this.emit('end');
+  };
+};
+
+// specify browser compatibility with https://github.com/ai/browserslist
+var AUTOPREFIXER_BROWSERS = [
+  'ie >= 10',
+  'ie_mob >= 10',
+  'ff >= 30',
+  'chrome >= 34',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4.4',
+  'bb >= 10',
+];
+
+// pre CSS processors
+var preprocessors = [
+  stylelint,
+  reporter({clearMessages: true, throwError: true}),
+];
+
+// post CSS processors
+var postprocessors = [
+  autoprefixer({browsers: AUTOPREFIXER_BROWSERS}),
+];
+
+// Delete files
+gulp.task('clean', function() {
+  return del(project.dest);
 });
 
-gulp.task('styleguide:generate', function() {
-  return gulp.src('sass/**/*.scss')
-    .pipe(styleguide.generate({
-        title: 'Probo CI Style Guide',
-        server: true,
-        rootPath: outputPath,
-        overviewPath: 'README.md'
-      }))
-    .pipe(gulp.dest(outputPath));
-});
-
-gulp.task('styleguide:applystyles', function() {
-  return gulp.src('scss/styles.scss')
-    .pipe(sass({
-      errLogToConsole: true
+// Lint scss
+gulp.task('lint:scss', function() {
+  return gulp.src(project.scss)
+    .pipe(postcss(preprocessors, {
+      syntax: scss,
     }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest(outputPath));
+    .on('error', function() {
+      gutil.log(gutil.colors.bgRed('CSS will not build without fixing linting errors!'));
+    });
 });
 
-gulp.task('watch', ['styleguide'], function() {
-  // Start watching changes and update styleguide whenever changes are detected
-  // Styleguide automatically detects existing server instance
-  gulp.watch(['sass/**/*.scss'], ['styleguide']);
+// Build CSS from scss
+gulp.task('scss:dev', ['lint:scss'], function() {
+  return gulp.src('./' + project.scss + '/*.scss')
+    .pipe(sass())
+    .on('error', handleError('Scss Compiling'))
+    .pipe(postcss(postprocessors))
+    .on('error', handleError('Post CSS Processing'))
+    .pipe(gulp.dest('./' + project.dest))    
 });
 
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
-gulp.task('default', ['watch']);
+gulp.task('kss', shell.task([kssNode]));
+
+gulp.task('browser-sync', ['clean', 'styleguide'], function() {
+  browserSync.init({
+    ghostMode: false,
+    files: project.dest,
+    server: {
+      baseDir: './' + project.dest,
+    },
+  });
+
+  gulp.watch(project.styleguide, ['scss:dev', 'kss']);
+});
+
+gulp.task('styleguide', ['scss:dev', 'kss']);
+gulp.task('default', ['browser-sync']);
