@@ -123,7 +123,7 @@ gulp.task('browser-sync', ['clean', 'styleguide'], function() {
 gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
   return gulp.src(['./package.json'])
     // bump the version number in those files 
-    .pipe(bump({type: 'minor'}))
+    .pipe(bump({type: 'patch'}))
     // save it back to filesystem 
     .pipe(gulp.dest('./'))
     // commit the changed version number 
@@ -131,12 +131,15 @@ gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
     // read only one file to get the version number 
     .pipe(filter('package.json'))
     // **tag it in the repository** 
-    .pipe(tag_version());
+    .pipe(tag());
 });
 
 // publish to npm
 gulp.task('npm:publish', function() {
-  spawn('npm', ['publish'], { stdio: 'inherit' }).on('close', done);
+  spawn('npm', ['publish'], { stdio: 'inherit' }).on('close', function() {
+    gutil.log(gutil.colors.bgRed('Styleguide has been published!'));
+    this.emit('end')
+  });
 });
 
 gulp.task('release', ['dist', 'npm:publish']);
