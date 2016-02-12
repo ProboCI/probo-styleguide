@@ -14,6 +14,7 @@ var reporter = require('postcss-reporter');
 var reload = browserSync.reload;
 var shell = require('gulp-shell');
 var gutil = require('gulp-util');
+var rename = require('gulp-rename');
 
 // paths
 var project = {
@@ -22,6 +23,7 @@ var project = {
   dest: 'styleguide',
   template: 'template',
   styleguide: ['./scss/*.scss', './template/**/*.*'],
+  dist: 'dist',
 };
 
 // kss generator
@@ -61,7 +63,7 @@ var postprocessors = [
 
 // Delete files
 gulp.task('clean', function() {
-  return del(project.dest);
+  return del([project.dest, project.dist]);
 });
 
 // Lint scss
@@ -75,7 +77,7 @@ gulp.task('lint:scss', function() {
     });
 });
 
-// Build CSS from scss
+// Build CSS from scss (unminified for development)
 gulp.task('scss:dev', ['lint:scss'], function() {
   return gulp.src('./' + project.scss + '/*.scss')
     .pipe(sass())
@@ -83,6 +85,17 @@ gulp.task('scss:dev', ['lint:scss'], function() {
     .pipe(postcss(postprocessors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./' + project.dest))    
+});
+
+// Build CSS from scss (minified for production)
+gulp.task('scss:dist', function() {
+  return gulp.src('./' + project.scss + '/probo.scss')
+    .pipe(sass())
+    .pipe(postcss(postprocessors))
+    .pipe(gulp.dest(project.dist))
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(project.dist));
 });
 
 gulp.task('kss', shell.task([kssNode]));
