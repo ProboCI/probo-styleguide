@@ -15,6 +15,11 @@ var reload = browserSync.reload;
 var shell = require('gulp-shell');
 var gutil = require('gulp-util');
 var rename = require('gulp-rename');
+var git = require('gulp-git');
+var bump = require('gulp-bump');
+var filter = require('gulp-filter');
+var tag = require('gulp-tag-version');
+var spawn = require('child_process').spawn;
 
 // paths
 var project = {
@@ -98,8 +103,10 @@ gulp.task('scss:dist', function() {
     .pipe(gulp.dest(project.dist));
 });
 
+// generate styleguide
 gulp.task('kss', shell.task([kssNode]));
 
+// Use Browsersync to reload on change
 gulp.task('browser-sync', ['clean', 'styleguide'], function() {
   browserSync.init({
     ghostMode: false,
@@ -112,5 +119,26 @@ gulp.task('browser-sync', ['clean', 'styleguide'], function() {
   gulp.watch(project.styleguide, ['scss:dev', 'kss']);
 });
 
+// create a release
+gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
+  return gulp.src(['./package.json'])
+    // bump the version number in those files 
+    .pipe(bump({type: 'minor'}))
+    // save it back to filesystem 
+    .pipe(gulp.dest('./'))
+    // commit the changed version number 
+    .pipe(git.commit('bumps package version'))
+    // read only one file to get the version number 
+    .pipe(filter('package.json'))
+    // **tag it in the repository** 
+    .pipe(tag_version());
+});
+
+// publish to npm
+gulp.task('npm:publish', function() {
+  spawn('npm', ['publish'], { stdio: 'inherit' }).on('close', done);
+});
+
+gulp.task('release', ['dist', 'npm:publish']);
 gulp.task('styleguide', ['scss:dev', 'kss']);
 gulp.task('default', ['browser-sync']);
