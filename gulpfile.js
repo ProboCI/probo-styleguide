@@ -31,8 +31,11 @@ var project = {
   dist: 'dist',
 };
 
-// kss generator
+// kss generator command
 var kssNode = './node_modules/.bin/kss-node scss --template ' + project.template + ' --source ' + project.scss + ' --destination ' + project.dest + ' --css ' + project.css;
+
+// deploy GH pages command
+var deployGH = 'git subtree push --prefix=styleguide origin gh-pages';
 
 // error notifications
 var handleError = function(task) {
@@ -126,6 +129,8 @@ gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
     .pipe(bump({type: 'patch'}))
     // save it back to filesystem 
     .pipe(gulp.dest('./'))
+    // add changes
+    .pipe(git.add({args: '-p'}))
     // commit the changed version number 
     .pipe(git.commit('bumps package version'))
     // read only one file to get the version number 
@@ -142,6 +147,9 @@ gulp.task('npm:publish', function() {
   });
 });
 
-gulp.task('release', ['dist', 'npm:publish']);
+// deploy styleguide
+gulp.task('deploy', shell.task([deployGH]));
+
+gulp.task('release', ['dist', 'npm:publish', 'deploy']);
 gulp.task('styleguide', ['scss:dev', 'kss']);
 gulp.task('default', ['browser-sync']);
