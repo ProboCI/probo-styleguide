@@ -1,0 +1,167 @@
+@import 'variables';
+
+// Basic duttons
+//
+// The button tag defines a clickable button. Inside a button element you can put content,
+// like text or images. This is the difference between this element and buttons created
+// with the input element. Tip: Always specify the type attribute for a button element.
+//
+// Markup:
+// <button class="{{modifier_class}}">Button Element</button>
+// <a class="button {{modifier_class}}" href="#" role="button">Link button</a>
+// <a class="button {{modifier_class}} button-sm" href="#" role="button">Small button</a>
+//
+// .button            - Basic button used throughout the site.
+// .button-sm         - Use this for small buttons.
+// .button--success   - Use <code>.button</code> for most common page actions.
+// .button--warning   - To indicate to a user that an intended action is potentially dangerous, apply
+//                      the <code>.button--warning</code> class to a button or link.
+// .button--info      - Use this for
+// .button--dark-blue - Use this for
+// .button--dark-gray - Use this for
+// .button--white     - Use this for
+// .button-group      - Use this for
+//
+// Styleguide 3.0
+
+// Button group
+//
+// Markup:
+// <div class="button-group">
+// <button class="{{modifier_class}}">Button Element</button>
+// <button class="{{modifier_class}}">Button Element</button>
+// <button class="{{modifier_class}}">Button Element</button>
+// </div>
+//
+//
+// .button - this does something
+//
+// Styleguide 3.1
+
+
+// Disabled buttons
+//
+// Markup:
+// <button class="button {{modifier_class}}" type="button" disabled>Disabled button</button>
+// <a class="button disabled {{modifier_class}}" href="#" role="button">Disabled button</a>
+// <a class="button disabled {{modifier_class}} button-sm" href="#" role="button">Small button</a>
+//
+// .disabled            - Buttons can be disabled using the <code>.disabled</code> class.
+//
+// Styleguide 3.2
+
+
+button,
+.button {
+  @include button;
+  &:hover {
+  }
+}
+
+.button--success {
+  @include button($probo-green, $probo-green-dark, $probo-green-darkest, #fff);
+}
+
+.button--warning {
+	color: darken($probo-alert-error, 10%);
+	&:hover {
+	  @include button(lighten($probo-alert-error, 3%), $probo-alert-error, darken($probo-alert-error, 10%), #fff);
+	}
+ }
+
+.button--info {
+	&:hover {
+	  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
+	}
+}
+
+.button--dark-blue {
+  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
+}
+
+.button--dark-gray {
+  @include button($probo-gray-dark);
+  @extend .button;
+	background: $probo-gray-dark;
+	border-color: $probo-gray-dark;
+  color: white;
+  &:hover {
+	  background: $probo-pale-dark;
+	  border-color: $probo-pale-dark;
+  }
+}
+
+.button--white {
+  @extend .button;
+  background: none;
+  &:hover {
+  	background: $probo-blue-dark;
+  	color: white;
+  	border-color: $probo-blue-dark;
+  }
+}
+
+.button--icon {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+.button-group {
+
+	margin-left: 0;
+	margin-right: 0;
+
+  [class^=button] {
+    @include inline-block;
+    float: left;
+    border-left-width: 1px;
+    border-right-width: 1px;
+
+    &:first-child {
+      border-radius: $border-radius 0 0 $border-radius;
+      border-left-width: 2px;
+    }
+    &:last-child {
+      border-radius: 0 $border-radius $border-radius 0;
+      border-right-width: 2px;
+    }
+  }
+}
+
+.button--clipboard {
+  @include inline-block;
+  border: 1px solid $probo-pale-darker;
+  background-color: transparent;
+  appearance: none;
+  padding: 0;
+  border-radius: $border-radius;
+  line-height: 2.3;
+
+  span {
+    @include inline-block;
+    margin: 0 $base-margin;
+  }
+
+  i {
+    margin: 0 0 0 $base-margin / 2;
+    padding: $base-margin;
+    background: linear-gradient($probo-pale, $probo-pale-dark);
+  }
+}
+
+.button-sm,
+.button-sm:hover {
+  padding: 2px 10px;
+}
+
+.button:disabled,
+.button:disabled:hover,
+.button.disabled,
+.button.disabled:hover {
+	background-image: none;
+	background-color: #ebebeb;
+	color: #666666;
+	border-color: #ebebeb;
+	cursor: default;
+}

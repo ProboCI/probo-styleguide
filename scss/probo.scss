@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic');
-@import 'colors';
-@import 'utility';
-@import 'typography';
+
+// Global requirements
+@import "variables";
+@import "mixins";
+
+@import "normalize";
+@import "buttons";
+@import "colors";
+@import "type";
 
