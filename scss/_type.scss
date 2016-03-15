@@ -2,20 +2,99 @@
 
 // Type
 //
-// These are utility classes. You can use these to perform basic, one off style changes without the need for editing a CSS class for a small change.
+// These are type classes. You can use these to apply style changes to text of any kind.
 //
 // Styleguide 2.0
+
+// Headings
+//
+// .h1 - h1 text
+// .h2 - h2 text
+// .h3 - h3 text
+// .h4 - h4 text
+//
+// Markup:
+// <span class="{{modifier_class}}">Probo heading</span>
+//
+//
+// Styleguide 2.1
+%tiny {
+  @include rem(font-size, 0.6 * $body-font-size);
+}
+
+%smaller {
+  @include rem(font-size, 0.7 * $body-font-size);
+}
+
+%small {
+  @include rem(font-size, 0.9 * $body-font-size);
+}
+
+%normal {
+  @include rem(font-size, $body-font-size);
+}
+
+%large {
+  @include rem(font-size, 1.25 * $body-font-size);
+}
+
+%larger {
+  @include rem(font-size, 1.5 * $body-font-size);
+}
+
+%largest {
+  @include rem(font-size, 2 * $body-font-size);
+}
+
+
+.h1,
+.h2,
+.h3,
+.h4,
+.p,
+p {
+  @extend %no-dangling;
+}
+
+.h1 {
+  @extend %largest;
+  font-weight: 700;
+}
+
+.h2 {
+  @extend %larger;
+  font-weight: 600;
+}
+
+.h3 {
+  @extend %large;
+  font-weight: 600;
+}
+
+.h4 {
+  @extend %normal;
+  font-weight: 600;
+}
+
+.p {
+  @extend %normal;
+}
+
 
 // Typography-related
 //
 // .u-underline - Underlned text
 // .u-italic - Italicized text
 // .u-bold - Bold text
+// .u-visually-hidden - Hide text
+// .mark - Highlight text
+// .em - Emphasize text
+// .del - Show text as deleted
 //
 // Markup:
-// <p class="{{modifier_class}}">Sample text</p>
+// <span class="{{modifier_class}}">Probo sample text</span>
 //
-// Styleguide 2.1
+// Styleguide 2.2
 //
 
 .u-underline {
@@ -56,4 +135,17 @@
 
 .u-hidden {
   display: none !important;
+}
+
+.mark {
+  background: #ff0;
+  color: #000;
+}
+
+.em {
+  font-style: italic;
+}
+
+.del {
+  text-decoration: line-through;
 }
