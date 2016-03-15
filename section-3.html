@@ -45,13 +45,13 @@
       <li class="kss-nav__menu-item">
         <a href="section-3.html">
           <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Basic duttons</span>
+          ><span class="kss-nav__name">Buttons</span>
         </a>
         <ul class="kss-nav__menu-child">
             <li class="kss-nav__menu-item">
               <a href="section-3.html#kssref-3-1">
                 <span class="kss-nav__ref ">3.1</span
-                ><span class="kss-nav__name">Button group</span>
+                ><span class="kss-nav__name">Button groups</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -61,6 +61,12 @@
               </a>
             </li>
         </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">
+          <span class="kss-nav__ref">4</span
+          ><span class="kss-nav__name">Tables</span>
+        </a>
       </li>
     </ul>
   </nav>
@@ -78,7 +84,7 @@
                 #permalink
             </span>
           </span>
-          Basic duttons
+          Buttons
         </a>
       </h1>
 
@@ -86,55 +92,36 @@
       <div class="kss-description">
         <p>The button tag defines a clickable button. Inside a button element you can put content,
 like text or images. This is the difference between this element and buttons created
-with the input element. Tip: Always specify the type attribute for a button element.</p>
+with the input element.</p>
 
       </div>
     </div>
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-        <div class="kss-modifier__example">
-          <button class="[modifier class]">Button Element</button>
-<a class="button [modifier class]" href="#" role="button">Link button</a>
-<a class="button [modifier class] button-sm" href="#" role="button">Small button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .button
         </div>
         <div class="kss-modifier__description kss-style">
-          Basic button used throughout the site.
+          Basic <code>.button</code> used throughout the site.
         </div>
         <div class="kss-modifier__example">
           <button class="button">Button Element</button>
 <a class="button button" href="#" role="button">Link button</a>
 <a class="button button button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button-sm
         </div>
         <div class="kss-modifier__description kss-style">
-          Use this for small buttons.
+          Use <code>.button-sm</code> for small buttons.
         </div>
         <div class="kss-modifier__example">
           <button class="button-sm">Button Element</button>
 <a class="button button-sm" href="#" role="button">Link button</a>
 <a class="button button-sm button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button-sm&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button-sm button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--success
         </div>
@@ -146,11 +133,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--success" href="#" role="button">Link button</a>
 <a class="button button--success button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--success&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--success&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--success button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--warning
         </div>
@@ -162,11 +144,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--warning" href="#" role="button">Link button</a>
 <a class="button button--warning button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--warning&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--warning&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--warning button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--info
         </div>
@@ -178,11 +155,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--info" href="#" role="button">Link button</a>
 <a class="button button--info button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--info&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--info&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--info button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--dark-blue
         </div>
@@ -194,11 +166,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--dark-blue" href="#" role="button">Link button</a>
 <a class="button button--dark-blue button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--dark-blue&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--dark-blue&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--dark-blue button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--dark-gray
         </div>
@@ -210,11 +177,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--dark-gray" href="#" role="button">Link button</a>
 <a class="button button--dark-gray button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--dark-gray&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--dark-gray&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--dark-gray button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
         <div class="kss-modifier__name kss-style">
           .button--white
         </div>
@@ -226,27 +188,11 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button button--white" href="#" role="button">Link button</a>
 <a class="button button--white button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button--white&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button--white&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button--white button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
-        <div class="kss-modifier__name kss-style">
-          .button-group
-        </div>
-        <div class="kss-modifier__description kss-style">
-          Use this for
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button-group">Button Element</button>
-<a class="button button-group" href="#" role="button">Link button</a>
-<a class="button button-group button-sm" href="#" role="button">Small button</a>
-        </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button-group&quot;&gt;Button Element&lt;/button&gt;
-&lt;a class=&quot;button button-group&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
-&lt;a class=&quot;button button-group button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;[modifier class]&quot;&gt;Button Element&lt;/button&gt;
+&lt;a class=&quot;button [modifier class]&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;
+&lt;a class=&quot;button [modifier class] button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
+      </div>
       </div>
 
       </div>
@@ -261,7 +207,7 @@ with the input element. Tip: Always specify the type attribute for a button elem
                 #permalink
             </span>
           </span>
-          Button group
+          Button groups
         </a>
       </h2>
 
@@ -270,38 +216,27 @@ with the input element. Tip: Always specify the type attribute for a button elem
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-        <div class="kss-modifier__example">
-          <div class="button-group">
-<button class="[modifier class]">Button Element</button>
-<button class="[modifier class]">Button Element</button>
-<button class="[modifier class]">Button Element</button>
-</div>
         </div>
         <div class="kss-modifier__name kss-style">
           .button
         </div>
         <div class="kss-modifier__description kss-style">
-          this does something
+          Wrap buttons in <code>.button-group</code> to adjust spacing of grouped buttons.
         </div>
         <div class="kss-modifier__example">
           <div class="button-group">
-<button class="button">Button Element</button>
-<button class="button">Button Element</button>
-<button class="button">Button Element</button>
+  <button class="button">Button Element</button>
+  <button class="button">Button Element</button>
+  <button class="button">Button Element</button>
 </div>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;button-group&quot;&gt;
-&lt;button class=&quot;button&quot;&gt;Button Element&lt;/button&gt;
-&lt;button class=&quot;button&quot;&gt;Button Element&lt;/button&gt;
-&lt;button class=&quot;button&quot;&gt;Button Element&lt;/button&gt;
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;button-group&quot;&gt;
+  &lt;button class=&quot;[modifier class]&quot;&gt;Button Element&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot;&gt;Button Element&lt;/button&gt;
+  &lt;button class=&quot;[modifier class]&quot;&gt;Button Element&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-				</div>
+      </div>
       </div>
 
       </section>
@@ -325,15 +260,6 @@ with the input element. Tip: Always specify the type attribute for a button elem
 
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Examples
-        </div>
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-        <div class="kss-modifier__example">
-          <button class="button [modifier class]" type="button" disabled>Disabled button</button>
-<a class="button disabled [modifier class]" href="#" role="button">Disabled button</a>
-<a class="button disabled [modifier class] button-sm" href="#" role="button">Small button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .disabled
@@ -346,11 +272,11 @@ with the input element. Tip: Always specify the type attribute for a button elem
 <a class="button disabled disabled" href="#" role="button">Disabled button</a>
 <a class="button disabled disabled button-sm" href="#" role="button">Small button</a>
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button disabled&quot; type=&quot;button&quot; disabled&gt;Disabled button&lt;/button&gt;
-&lt;a class=&quot;button disabled disabled&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Disabled button&lt;/a&gt;
-&lt;a class=&quot;button disabled disabled button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
-				</div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;button [modifier class]&quot; type=&quot;button&quot; disabled&gt;Disabled button&lt;/button&gt;
+&lt;a class=&quot;button disabled [modifier class]&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Disabled button&lt;/a&gt;
+&lt;a class=&quot;button disabled [modifier class] button-sm&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Small button&lt;/a&gt;</code></pre>
+      </div>
       </div>
 
       </section>
