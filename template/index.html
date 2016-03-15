@@ -116,15 +116,6 @@
     {{#if markup}}
       <div class="kss-modifier__wrapper">
         <div class="kss-modifier__heading kss-style">
-          Example{{#if modifiers}}s{{/if}}
-        </div>
-      {{#if modifiers}}
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-      {{/if}}
-        <div class="kss-modifier__example">
-          {{{markup}}}
         </div>
       {{#eachModifier}}
         <div class="kss-modifier__name kss-style">
@@ -136,10 +127,10 @@
         <div class="kss-modifier__example">
           {{{markup}}}
         </div>
-				<div class="kss-markup kss-style">
-					<pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
-				</div>
       {{/eachModifier}}
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+      </div>
       </div>
     {{/if}}
 
