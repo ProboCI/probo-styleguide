@@ -1,18 +1,18 @@
 @import 'variables';
 
-// Basic duttons
+// Buttons
 //
 // The button tag defines a clickable button. Inside a button element you can put content,
 // like text or images. This is the difference between this element and buttons created
-// with the input element. Tip: Always specify the type attribute for a button element.
+// with the input element.
 //
 // Markup:
 // <button class="{{modifier_class}}">Button Element</button>
 // <a class="button {{modifier_class}}" href="#" role="button">Link button</a>
 // <a class="button {{modifier_class}} button-sm" href="#" role="button">Small button</a>
 //
-// .button            - Basic button used throughout the site.
-// .button-sm         - Use this for small buttons.
+// .button            - Basic <code>.button</code> used throughout the site.
+// .button-sm         - Use <code>.button-sm</code> for small buttons.
 // .button--success   - Use <code>.button</code> for most common page actions.
 // .button--warning   - To indicate to a user that an intended action is potentially dangerous, apply
 //                      the <code>.button--warning</code> class to a button or link.
@@ -20,21 +20,21 @@
 // .button--dark-blue - Use this for
 // .button--dark-gray - Use this for
 // .button--white     - Use this for
-// .button-group      - Use this for
 //
 // Styleguide 3.0
 
-// Button group
+// Button groups
 //
 // Markup:
 // <div class="button-group">
-// <button class="{{modifier_class}}">Button Element</button>
-// <button class="{{modifier_class}}">Button Element</button>
-// <button class="{{modifier_class}}">Button Element</button>
+//   <button class="{{modifier_class}}">Button Element</button>
+//   <button class="{{modifier_class}}">Button Element</button>
+//   <button class="{{modifier_class}}">Button Element</button>
 // </div>
 //
 //
-// .button - this does something
+//
+// .button - Wrap buttons in <code>.button-group</code> to adjust spacing of grouped buttons.
 //
 // Styleguide 3.1
 
@@ -108,16 +108,29 @@ button,
 }
 
 .button-group {
+  *zoom: 1;
+}
 
-	margin-left: 0;
-	margin-right: 0;
+.button-group:before, .button-group:after {
+  content: '';
+  display: table;
+}
 
-  [class^=button] {
+.button-group:after {
+  clear: both;
+}
+
+.button-group {
+  .button {
     @include inline-block;
     float: left;
     border-left-width: 1px;
     border-right-width: 1px;
-
+    margin: 0;
+    border-radius: 0;
+    a {
+      margin: 0;
+    }
     &:first-child {
       border-radius: $border-radius 0 0 $border-radius;
       border-left-width: 2px;
@@ -125,6 +138,7 @@ button,
     &:last-child {
       border-radius: 0 $border-radius $border-radius 0;
       border-right-width: 2px;
+      margin-left: 0;
     }
   }
 }
@@ -164,4 +178,5 @@ button,
 	color: #666666;
 	border-color: #ebebeb;
 	cursor: default;
+  box-shadow: none;
 }
