@@ -8,11 +8,10 @@
 
 // Main colors
 //
-// .bg-blue - Blue background
-// .bg-purple - Purple background
-// .bg-purple-dark - Dark purple background
-// .bg-pale	- Pale, off-white background
-// .bg-pale-dark - Darker pale, off-white background
+// .bg-purple - Purple background.
+// .bg-purple-dark - Dark purple background used for the Probo app header.
+// .bg-pale	- Pale, off-white background.
+// .bg-pale-dark - Darker pale, off-white background.
 //
 // Markup:
 // <div class="{{modifier_class}}"><span style="display:block;height:100px"></span></div>
@@ -39,3 +38,78 @@
   background-color: $probo-pale-dark;
 }
 
+// Secondary colors
+//
+// .prbo-blue - Probo blue
+// .probo-blue-dark - Probo dark blue
+// .probo-midnight - Probo midnight
+// .probo-purple-darkest - Probo darkets purple
+// .probo-purple-dark - Probo dark purple
+// .probo-purple - Probo purple
+// .probo-gray-dark - Probo dark gray
+// .probo-gray-dark-medium - Probo medium dark gray
+// .probo-gray-medium - Probo medium gray
+// .probo-pale - Probo pale
+// .probo-pale-medium - Probo medium pale
+// .probo-pale-dark - Probo dark pale
+// .probo-pale-darker - Probo darker pale
+// .probo-green - Probo green
+// .probo-green-dark - Probo dark green
+// .probo-green-darkest - Probo darkest green
+// .probo-lime - Probo lime
+//
+// Markup:
+// <div class="{{modifier_class}}"><span style="display:block;height:100px"></span></div>
+//
+// Styleguide 1.2
+.prbo-blue {
+	background-color: $probo-blue;
+}
+.probo-blue-dark {
+	background-color: $probo-blue-dark;
+}
+.probo-midnight {
+	background-color: $probo-midnight;
+}
+.probo-purple-darkest {
+	background-color: $probo-purple-darkest;
+}
+.probo-purple-dark {
+	background-color: $probo-purple-dark;
+}
+.probo-purple {
+	background-color: $probo-purple;
+}
+.probo-gray-dark {
+	background-color: $probo-gray-dark;
+}
+.probo-gray-dark-medium {
+	background-color: $probo-gray-dark-medium;
+}
+.probo-gray-medium {
+	background-color: $probo-gray-medium;
+}
+.probo-pale {
+	background-color: $probo-pale;
+}
+.probo-pale-medium {
+	background-color: $probo-pale-medium;
+}
+.probo-pale-dark {
+	background-color: $probo-pale-dark;
+}
+.probo-pale-darker {
+	background-color: $probo-pale-darker;
+}
+.probo-green {
+	background-color: $probo-green;
+}
+.probo-green-dark {
+	background-color: $probo-green-dark;
+}
+.probo-green-darkest {
+	background-color: $probo-green-darkest;
+}
+.probo-lime {
+	background-color: $probo-lime;
+}
