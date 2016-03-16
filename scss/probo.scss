@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic');
 
-// Global requirements
-@import "variables";
-@import "mixins";
-
-@import "normalize";
-@import "buttons";
-@import "colors";
-@import "type";
-@import "tables";
-
-// template styles
-@import "kss";
+@import '01-utilities/all';
+@import '02-atoms/all';
+@import '03-molecules/all';
+@import '04-organisms/all';
+@import '05-templates/all';
