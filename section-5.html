@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Probo Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="public/kss.css">
+  <link rel="stylesheet" href="probo.css">
+
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Probo Style Guide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-1.html">
+          <span class="kss-nav__ref">1</span
+          ><span class="kss-nav__name">Colors</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-2.html">
+          <span class="kss-nav__ref">2</span
+          ><span class="kss-nav__name">Type</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-3.html">
+          <span class="kss-nav__ref">3</span
+          ><span class="kss-nav__name">Buttons</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-4.html">
+          <span class="kss-nav__ref">4</span
+          ><span class="kss-nav__name">Tables</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-5.html">
+          <span class="kss-nav__ref">5</span
+          ><span class="kss-nav__name">Forms</span>
+        </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+      <div     id="kssref-5" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-5">
+          <span class="kss-title__ref">
+              5
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Forms
+        </a>
+      </h1>
+
+
+      <div class="kss-description">
+        <p>HTML forms are used to collect user input.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .form
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Generic <code>.form</code> used throughout the site.
+        </div>
+        <div class="kss-modifier__example">
+          <form class="form" action="#" method="post">
+  <div>
+    <label for="name">Text Input:</label>
+    <input type="text" name="name" id="name" value="" tabindex="1" />
+  </div>
+  <div>
+    <label for="name">Required Text Input:</label>
+    <input class="required" type="text" name="name" id="name" value="" tabindex="1" />
+  </div>
+  <div>
+    <h4>Radio Button Choice</h4>
+    <label for="radio-choice-1">Choice 1</label>
+    <input type="radio" class="radio-group__input" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+    <label class="radio-group__label" for="radio-choice-2">Choice 2</label>
+    <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+  </div>
+<div class="select__menu-wrap ng-isolate-scope" probo-select="" data-selected-option="listFilters.order"><div ng-transclude="">
+    <select class="form__input select__menu"><option value="?"></option>
+        <option value="name">Project Name</option>
+        <option value="createdAt" >Newest</option>
+        <option value="updatedAt" selected="selected">Recently Updated</option>
+    </select>
+</div><span class="select__text">Recently Updated</span><span class="select__arrow"><i class="fa fa-caret-down"></i></span></div>
+  <div>
+    <label for="textarea">Textarea:</label>
+    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+  </div>
+  <div>
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" name="checkbox" id="checkbox" />
+  </div>
+  <div>
+    <input class="button" type="submit" value="Submit" />
+  </div>
+</form>
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form&quot; action=&quot;#&quot; method=&quot;post&quot;&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; tabindex=&quot;1&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;name&quot;&gt;Required Text Input:&lt;/label&gt;
+    &lt;input class=&quot;required&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; tabindex=&quot;1&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h4&gt;Radio Button Choice&lt;/h4&gt;
+    &lt;label for=&quot;radio-choice-1&quot;&gt;Choice 1&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; class=&quot;radio-group__input&quot; name=&quot;radio-choice-1&quot; id=&quot;radio-choice-1&quot; tabindex=&quot;2&quot; value=&quot;choice-1&quot; /&gt;
+    &lt;label class=&quot;radio-group__label&quot; for=&quot;radio-choice-2&quot;&gt;Choice 2&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;radio-choice-2&quot; id=&quot;radio-choice-2&quot; tabindex=&quot;3&quot; value=&quot;choice-2&quot; /&gt;
+  &lt;/div&gt;
+&lt;div class=&quot;select__menu-wrap ng-isolate-scope&quot; probo-select=&quot;&quot; data-selected-option=&quot;listFilters.order&quot;&gt;&lt;div ng-transclude=&quot;&quot;&gt;
+    &lt;select class=&quot;form__input select__menu&quot;&gt;&lt;option value=&quot;?&quot;&gt;&lt;/option&gt;
+        &lt;option value=&quot;name&quot;&gt;Project Name&lt;/option&gt;
+        &lt;option value=&quot;createdAt&quot; &gt;Newest&lt;/option&gt;
+        &lt;option value=&quot;updatedAt&quot; selected=&quot;selected&quot;&gt;Recently Updated&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;&lt;span class=&quot;select__text&quot;&gt;Recently Updated&lt;/span&gt;&lt;span class=&quot;select__arrow&quot;&gt;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;textarea&quot;&gt;Textarea:&lt;/label&gt;
+    &lt;textarea cols=&quot;40&quot; rows=&quot;8&quot; name=&quot;textarea&quot; id=&quot;textarea&quot;&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;checkbox&quot;&gt;Checkbox:&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; id=&quot;checkbox&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input class=&quot;button&quot; type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+      </div>
+
+      </div>
+</article>
+
+<!-- SCRIPTS -->
+<script src="public/kss.js"></script>
+<script src="public/prettify.js"></script>
+<script>
+  prettyPrint();
+</script>
+
+
+
+<!-- Automatically generated using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
