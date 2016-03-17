@@ -1,0 +1,31 @@
+%form-inputs {
+  padding: 10px 14px;
+  box-shadow: 1px 1px 1px rgba(#000, 0.1) inset;
+  border: 1px solid $probo-pale-darker;
+  color: $probo-gray-medium;
+  background-color: $probo-pale-medium;
+  max-width: 100%;
+  &:active,
+  &:focus {
+    background-color: $probo-pale;
+    outline: 1px solid $probo-purple;
+  }
+}
+
+%form-inputs-small {
+  @extend %form-inputs;
+  padding: 10px;
+}
+
+%form-inset-wrapper {
+  width: 98%;
+  margin: 0 auto;
+
+  @include breakpoint($bp-medium) {
+    width: 80%;
+  }
+
+  @include breakpoint($bp-large) {
+    width: 50%;
+  }
+}

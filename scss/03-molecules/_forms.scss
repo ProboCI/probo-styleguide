@@ -1,0 +1,158 @@
+// Forms
+//
+// HTML forms are used to collect user input.
+//
+// Markup:
+// <form class="form" action="#" method="post">
+//   <div>
+//     <label for="name">Text Input:</label>
+//     <input type="text" name="name" id="name" value="" tabindex="1" />
+//   </div>
+//   <div>
+//     <label for="name">Required Text Input:</label>
+//     <input class="required" type="text" name="name" id="name" value="" tabindex="1" />
+//   </div>
+//   <div>
+//     <h4>Radio Button Choice</h4>
+//     <label for="radio-choice-1">Choice 1</label>
+//     <input type="radio" class="radio-group__input" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+//     <label class="radio-group__label" for="radio-choice-2">Choice 2</label>
+//     <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+//   </div>
+// <div class="select__menu-wrap ng-isolate-scope" probo-select="" data-selected-option="listFilters.order"><div ng-transclude="">
+//     <select class="form__input select__menu"><option value="?"></option>
+//         <option value="name">Project Name</option>
+//         <option value="createdAt" >Newest</option>
+//         <option value="updatedAt" selected="selected">Recently Updated</option>
+//     </select>
+// </div><span class="select__text">Recently Updated</span><span class="select__arrow"><i class="fa fa-caret-down"></i></span></div>
+//   <div>
+//     <label for="textarea">Textarea:</label>
+//     <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+//   </div>
+//   <div>
+//     <label for="checkbox">Checkbox:</label>
+//     <input type="checkbox" name="checkbox" id="checkbox" />
+//   </div>
+//   <div>
+//     <input class="button" type="submit" value="Submit" />
+//   </div>
+// </form>
+//
+// .form            - Generic <code>.form</code> used throughout the site.
+//
+// Styleguide 5.0
+%input-group {
+  margin: 0 0 10px !important;
+  border: none;
+  padding: 0;
+}
+%input-label {
+  display: block;
+  margin-bottom: $base-margin / 2;
+}
+%checkbox-label {
+  @include inline-block;
+  margin-right: $base-margin / 3;
+}
+form {
+  &__input-group {
+    @extend %input-group;
+  }
+  label,
+  &__label {
+    @extend %input-label;
+  }
+  label[for="checkbox"] {
+    @extend %checkbox-label;
+  }
+  input,
+  textarea,
+  &__input {
+    @extend %form-inputs;
+
+    &.required,
+    &.ng-invalid {
+      border: 1px solid $probo-alert-error;
+    }
+  }
+
+  &__input--small {
+    @extend %form-inputs-small;
+  }
+
+  &__input-invalid {
+    @extend %smaller;
+    color: $probo-alert-error;
+    display: block;
+  }
+
+  &__submit {
+    @extend .button--success;
+  }
+}
+
+.progress-bar {
+  height: $base-margin * 1.75;
+
+  &__inner {
+    @extend %small;
+    height: 100%;
+    background-color: rgba($probo-alert-error, 0.1);
+    color: $probo-pale;
+    font-weight: 700;
+    padding-left: $base-margin / 2;
+  }
+}
+.select__menu-wrap {
+  @include inline-block;
+  position: relative;
+  margin-top: -4px;
+}
+select,
+.select__menu {
+  z-index: 4;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+
+.select__arrow,
+.select__text {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 3px;
+  color: #222;
+  z-index: 3;
+}
+
+.select__text {
+  left: 0;
+}
+
+.select__arrow {
+  right: 10px;
+}
+
+// select {
+//   position: relative;
+//   width: 200px;
+//   margin: 0 auto;
+//   padding: 10px;
+//   background: #fff;
+//   border-radius: 7px;
+//   border: 1px solid rgba(0,0,0,0.15);
+//   box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+//   cursor: pointer;
+//   outline: none;
+//   font-weight: bold;
+// }

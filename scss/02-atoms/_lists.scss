@@ -1,0 +1,69 @@
+%list-zero {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+%list-no-style {
+  li {
+    list-style-type: none;
+  }
+}
+
+%list-inline {
+  @extend %list-zero;
+  li {
+    @include inline-block;
+    margin-right: $base-margin / 3;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+%list-item-after {
+  margin-right: $base-margin / 3;
+
+  &::after {
+    @include inline-block;
+    @extend %smaller;
+    margin-left: $base-margin / 3;
+  }
+
+  &:last-child {
+    margin-right: 0;
+
+    &::after {
+      margin-right: 0;
+      content: '';
+    }
+  }
+}
+
+%list-item-middot-after {
+  &::after {
+    content: '\00B7';
+  }
+}
+
+%list-item-arrow-after {
+  &::after {
+    content: '\003E';
+  }
+}
+
+.token-list {
+  &__file,
+  &__item {
+    padding-top: $base-margin / 2;
+    padding-bottom: $base-margin / 2;
+  }
+
+  &__delete {
+    color: $probo-alert-error;
+  }
+}

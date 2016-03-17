@@ -76,7 +76,7 @@
   }
 }
 
-@mixin button($color: #fff, $bottom-color: #e9eaea, $border-color: #e6e6e6, $font: #64676b) {
+@mixin button($color: #fff, $bottom-color: #e9eaea, $border-color: #e6e6e6, $font: #555555) {
   @include link-colors($font);
   border: 2px solid $border-color;
   background-color: $color;
@@ -87,6 +87,7 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 13px;
+  font-weight: bold;
   &:hover {
     text-decoration: none;
     background-color: darken($color, 7%);

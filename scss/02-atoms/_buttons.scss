@@ -14,10 +14,10 @@
 // .button--success   - Use <code>.button</code> for most common page actions.
 // .button--warning   - To indicate to a user that an intended action is potentially dangerous, apply
 //                      the <code>.button--warning</code> class to a button or link.
-// .button--info      - Use this for
-// .button--dark-blue - Use this for
-// .button--dark-gray - Use this for
-// .button--white     - Use this for
+// .button--info      - Use this for links that provide additional information.
+// .button--dark-blue - Use this for to call attention to a special actions like adding admins.
+// .button--dark-gray - A dark button to be used in the footer.
+// .button--white     - A flat white button.
 //
 // Styleguide 3.0
 
@@ -58,6 +58,7 @@ button,
 
 .button--success {
   @include button($probo-green, $probo-green-dark, $probo-green-darkest, #fff);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .button--warning {
@@ -70,6 +71,7 @@ button,
 .button--info {
 	&:hover {
 	  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 	}
 }
 

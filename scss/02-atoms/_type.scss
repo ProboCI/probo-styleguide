@@ -44,6 +44,34 @@
   @include rem(font-size, 2 * $body-font-size);
 }
 
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  @extend %normal;
+  color: $base-font-color;
+  font-family: $body-text-font-family;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  @include link-colors($link-color, $link-color-hover);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+i {
+  margin-right: 5px;
+}
 
 .h1,
 .h2,
@@ -79,7 +107,7 @@ p {
 }
 
 
-// Typography-related
+// Inline element styles
 //
 // .u-underline - Underlned text
 // .u-italic - Italicized text
@@ -88,6 +116,9 @@ p {
 // .mark - Highlight text
 // .em - Emphasize text
 // .del - Show text as deleted
+// .text-right - Align text to the right
+// .text-left - Align text to the left
+// .text-center - Center text
 //
 // Markup:
 // <span class="{{modifier_class}}">Probo sample text</span>
@@ -147,3 +178,72 @@ p {
 .del {
   text-decoration: line-through;
 }
+%no-dangling {
+  &:first-child,
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+%no-active-outline {
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+// Body text
+//
+// p - A paragraph of text should be wrapped with a <code>p</code> tag.
+//
+// Markup:
+// <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+//
+// Styleguide 2.3
+
+// Lists
+//
+// Styleguide 2.4
+
+// Unordered list
+//
+// ul - A bulleted list of items is created with the <code>ul</code> tag.
+//
+// Markup:
+// <ul>
+//   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+//   <li>Aliquam tincidunt mauris eu risus.</li>
+//   <li>Vestibulum auctor dapibus neque.</li>
+// </ul>
+//
+// Styleguide 2.4.1
+
+// Ordered lists
+//
+// ol - A numbered list of items is created with the <code>ol</code> tag.
+//
+// Markup:
+// <ol>
+//   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+//   <li>Aliquam tincidunt mauris eu risus.</li>
+//   <li>Vestibulum auctor dapibus neque.</li>
+// </ol>
+//
+// Styleguide 2.4.2
