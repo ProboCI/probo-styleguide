@@ -60,6 +60,12 @@
           ><span class="kss-nav__name">Forms</span>
         </a>
         <ul class="kss-nav__menu-child">
+            <li class="kss-nav__menu-item">
+              <a href="section-5.html#kssref-5-1">
+                <span class="kss-nav__ref ">5.1</span
+                ><span class="kss-nav__name">Inputs</span>
+              </a>
+            </li>
         </ul>
       </li>
     </ul>
@@ -100,14 +106,16 @@
         </div>
         <div class="kss-modifier__example">
           <form class="form" action="#" method="post">
-  <div>
-    <label for="name">Text Input:</label>
-    <input type="text" name="name" id="name" value="" tabindex="1" />
-  </div>
-  <div>
-    <label for="name">Required Text Input:</label>
-    <input class="required" type="text" name="name" id="name" value="" tabindex="1" />
-  </div>
+  <div class="segment__item--inline form__input-group">
+    <div class="form__input-group" style="padding-right: 12px;">
+      <label for="name">Text Input:</label>
+      <input class="u-full-width" type="text" name="name" id="name" />
+    </div>
+    <div class="form__input-group" style="padding-left: 12px;">
+      <label for="name">Required Text Input:</label>
+      <input class="required u-full-width" type="text" name="name" id="name" placeholder="XXXX XXXX XXXX XXXX"/>
+    </div>
+    </div>
   <div>
     <h4>Radio Button Choice</h4>
     <label for="radio-choice-1">Choice 1</label>
@@ -116,7 +124,7 @@
     <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
   </div>
 <div class="select__menu-wrap ng-isolate-scope" probo-select="" data-selected-option="listFilters.order"><div ng-transclude="">
-    <select class="form__input select__menu"><option value="?"></option>
+    <select class="form__input select__menu">
         <option value="name">Project Name</option>
         <option value="createdAt" >Newest</option>
         <option value="updatedAt" selected="selected">Recently Updated</option>
@@ -137,14 +145,16 @@
         </div>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form&quot; action=&quot;#&quot; method=&quot;post&quot;&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; tabindex=&quot;1&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for=&quot;name&quot;&gt;Required Text Input:&lt;/label&gt;
-    &lt;input class=&quot;required&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; tabindex=&quot;1&quot; /&gt;
-  &lt;/div&gt;
+  &lt;div class=&quot;segment__item--inline form__input-group&quot;&gt;
+    &lt;div class=&quot;form__input-group&quot; style=&quot;padding-right: 12px;&quot;&gt;
+      &lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
+      &lt;input class=&quot;u-full-width&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form__input-group&quot; style=&quot;padding-left: 12px;&quot;&gt;
+      &lt;label for=&quot;name&quot;&gt;Required Text Input:&lt;/label&gt;
+      &lt;input class=&quot;required u-full-width&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; placeholder=&quot;XXXX XXXX XXXX XXXX&quot;/&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
   &lt;div&gt;
     &lt;h4&gt;Radio Button Choice&lt;/h4&gt;
     &lt;label for=&quot;radio-choice-1&quot;&gt;Choice 1&lt;/label&gt;
@@ -153,7 +163,7 @@
     &lt;input type=&quot;radio&quot; name=&quot;radio-choice-2&quot; id=&quot;radio-choice-2&quot; tabindex=&quot;3&quot; value=&quot;choice-2&quot; /&gt;
   &lt;/div&gt;
 &lt;div class=&quot;select__menu-wrap ng-isolate-scope&quot; probo-select=&quot;&quot; data-selected-option=&quot;listFilters.order&quot;&gt;&lt;div ng-transclude=&quot;&quot;&gt;
-    &lt;select class=&quot;form__input select__menu&quot;&gt;&lt;option value=&quot;?&quot;&gt;&lt;/option&gt;
+    &lt;select class=&quot;form__input select__menu&quot;&gt;
         &lt;option value=&quot;name&quot;&gt;Project Name&lt;/option&gt;
         &lt;option value=&quot;createdAt&quot; &gt;Newest&lt;/option&gt;
         &lt;option value=&quot;updatedAt&quot; selected=&quot;selected&quot;&gt;Recently Updated&lt;/option&gt;
@@ -175,6 +185,68 @@
       </div>
 
       </div>
+      <section id="kssref-5-1" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-5-1">
+          <span class="kss-title__ref">
+              5.1
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Inputs
+        </a>
+      </h2>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .u-full-width
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A full width input.
+        </div>
+        <div class="kss-modifier__example">
+          <form class="form">
+  <input class="u-full-width" type="text" name="name" id="name"/>
+</form>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .form__input
+        </div>
+        <div class="kss-modifier__description kss-style">
+          Basic form input.
+        </div>
+        <div class="kss-modifier__example">
+          <form class="form">
+  <input class="form__input" type="text" name="name" id="name"/>
+</form>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .required
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A required input field.
+        </div>
+        <div class="kss-modifier__example">
+          <form class="form">
+  <input class="required" type="text" name="name" id="name"/>
+</form>
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form&quot;&gt;
+  &lt;input class=&quot;[modifier class]&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot;/&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+      </div>
+
+      </section>
 </article>
 
 <!-- SCRIPTS -->
