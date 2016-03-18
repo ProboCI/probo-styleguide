@@ -1,3 +1,67 @@
+// Inputs
+//
+// .u-full-width - A full width input.
+// .form__input - Basic form input.
+// .required - A required input field.
+//
+// Markup:
+// <form class="form">
+//   <input class="{{modifier_class}}" type="text" name="name" id="name"/>
+// </form>
+//
+// Styleguide 5.1
+
+%input-group {
+  margin: 0 0 10px !important;
+  border: none;
+  padding: 0;
+}
+%input-label {
+  display: block;
+  margin-bottom: $base-margin / 2;
+}
+%checkbox-label {
+  @include inline-block;
+  margin-right: $base-margin / 3;
+}
+form {
+  &__input-group {
+    @extend %input-group;
+  }
+  label,
+  &__label {
+    @extend %input-label;
+  }
+  label[for="checkbox"] {
+    @extend %checkbox-label;
+  }
+  input,
+  textarea,
+  &__input {
+    @extend %form-inputs;
+
+    &.required,
+    &.ng-invalid {
+      border: 1px solid $probo-alert-error;
+    }
+  }
+
+  &__input--small {
+    @extend %form-inputs-small;
+  }
+
+  &__input-invalid {
+    @extend %smaller;
+    color: $probo-alert-error;
+    display: block;
+  }
+
+  &__submit {
+    @extend .button--success;
+  }
+}
+
+
 %form-inputs {
   padding: 10px 14px;
   box-shadow: 1px 1px 1px rgba(#000, 0.1) inset;

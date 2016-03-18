@@ -30,8 +30,6 @@
 //   <button class="{{modifier_class}}">Button Element</button>
 // </div>
 //
-//
-//
 // .button - Wrap buttons in <code>.button-group</code> to adjust spacing of grouped buttons.
 //
 // Styleguide 3.1
@@ -77,6 +75,7 @@ button,
 
 .button--dark-blue {
   @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .button--dark-gray {
@@ -85,6 +84,7 @@ button,
 	background: $probo-gray-dark;
 	border-color: $probo-gray-dark;
   color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   &:hover {
 	  background: $probo-pale-dark;
 	  border-color: $probo-pale-dark;

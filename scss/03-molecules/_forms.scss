@@ -4,14 +4,16 @@
 //
 // Markup:
 // <form class="form" action="#" method="post">
-//   <div>
-//     <label for="name">Text Input:</label>
-//     <input type="text" name="name" id="name" value="" tabindex="1" />
-//   </div>
-//   <div>
-//     <label for="name">Required Text Input:</label>
-//     <input class="required" type="text" name="name" id="name" value="" tabindex="1" />
-//   </div>
+//   <div class="segment__item--inline form__input-group">
+//     <div class="form__input-group" style="padding-right: 12px;">
+//       <label for="name">Text Input:</label>
+//       <input class="u-full-width" type="text" name="name" id="name" />
+//     </div>
+//     <div class="form__input-group" style="padding-left: 12px;">
+//       <label for="name">Required Text Input:</label>
+//       <input class="required u-full-width" type="text" name="name" id="name" placeholder="XXXX XXXX XXXX XXXX"/>
+//     </div>
+//     </div>
 //   <div>
 //     <h4>Radio Button Choice</h4>
 //     <label for="radio-choice-1">Choice 1</label>
@@ -20,7 +22,7 @@
 //     <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
 //   </div>
 // <div class="select__menu-wrap ng-isolate-scope" probo-select="" data-selected-option="listFilters.order"><div ng-transclude="">
-//     <select class="form__input select__menu"><option value="?"></option>
+//     <select class="form__input select__menu">
 //         <option value="name">Project Name</option>
 //         <option value="createdAt" >Newest</option>
 //         <option value="updatedAt" selected="selected">Recently Updated</option>
@@ -42,55 +44,6 @@
 // .form            - Generic <code>.form</code> used throughout the site.
 //
 // Styleguide 5.0
-%input-group {
-  margin: 0 0 10px !important;
-  border: none;
-  padding: 0;
-}
-%input-label {
-  display: block;
-  margin-bottom: $base-margin / 2;
-}
-%checkbox-label {
-  @include inline-block;
-  margin-right: $base-margin / 3;
-}
-form {
-  &__input-group {
-    @extend %input-group;
-  }
-  label,
-  &__label {
-    @extend %input-label;
-  }
-  label[for="checkbox"] {
-    @extend %checkbox-label;
-  }
-  input,
-  textarea,
-  &__input {
-    @extend %form-inputs;
-
-    &.required,
-    &.ng-invalid {
-      border: 1px solid $probo-alert-error;
-    }
-  }
-
-  &__input--small {
-    @extend %form-inputs-small;
-  }
-
-  &__input-invalid {
-    @extend %smaller;
-    color: $probo-alert-error;
-    display: block;
-  }
-
-  &__submit {
-    @extend .button--success;
-  }
-}
 
 .progress-bar {
   height: $base-margin * 1.75;
