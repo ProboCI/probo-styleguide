@@ -5,11 +5,79 @@
 // .required - A required input field.
 //
 // Markup:
-// <form class="form">
+// <form>
 //   <input class="{{modifier_class}}" type="text" name="name" id="name"/>
 // </form>
 //
 // Styleguide 5.1
+
+// Input group
+//
+// .form__input-group - Wrap inputs with this class to group them
+//
+// Markup:
+// <form>
+//   <div class="segment__item--inline form__input-group">
+//     <div class="form__input-group" style="padding-right: 12px;">
+//       <label for="name">Text Input:</label>
+//       <input class="u-full-width" type="text" name="name" id="name" />
+//     </div>
+//     <div class="form__input-group" style="padding-left: 12px;">
+//       <label for="name">Required Text Input:</label>
+//       <input class="required u-full-width" type="text" name="name" id="name" placeholder="XXXX XXXX XXXX XXXX"/>
+//     </div>
+//   </div>
+// </form>
+//
+// Styleguide 5.2
+
+// Submit button
+//
+// type="submit" - A submit button
+//
+// Markup:
+// <form>
+//   <input class="button" type="submit" value="Submit" />
+// </form>
+//
+// Styleguide 5.3
+
+// Checkbox
+//
+// type="checkbox" - A checkbox input
+//
+// Markup:
+// <form>
+//   <label for="checkbox">Checkbox:</label>
+//   <input type="checkbox" name="checkbox" id="checkbox" />
+// </form>
+//
+// Styleguide 5.4
+
+// Textarea
+//
+// textarea - A multi-line text input control.
+//
+// Markup:
+// <form>
+//   <label for="textarea">Textarea:</label>
+//   <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+// </form>
+//
+// Styleguide 5.5
+
+// Radion buttons
+//
+// input type="radio" - An input to select one choice.
+//
+// Markup:
+// <form>
+//   <input type="radio" name="gender" value="male" checked> Male<br>
+//   <input type="radio" name="gender" value="female"> Female<br>
+//   <input type="radio" name="gender" value="other"> Other
+// </form>
+//
+// Styleguide 5.6
 
 %input-group {
   margin: 0 0 10px !important;
