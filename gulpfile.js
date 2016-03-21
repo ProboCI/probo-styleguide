@@ -124,13 +124,13 @@ gulp.task('browser-sync', ['clean', 'styleguide'], function() {
 });
 
 // create a release
-gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
+gulp.task('bump', ['clean', 'styleguide', 'scss:dist'], function() {
 	var type = process.argv.indexOf('--type');
 	var typeLevel = 'patch';
 	if (type >= 1) {
     typeLevel = process.argv[type++];
 	}
-  
+
   return gulp.src(['./package.json'])
     // bump the version number in those files 
     .pipe(bump({type: typeLevel}))
@@ -154,14 +154,14 @@ gulp.task('npm:publish', function() {
       this.emit('end');
     })
     .on('close', function() {
-      gutil.log(gutil.colors.bgGreen('Styleguide has been published!'));
+      gutil.log(gutil.colors.white.bgGreen('Styleguide has been published!'));
       this.emit('end')
     });
 });
 
 // deploy styleguide
 gulp.task('deploy', shell.task([deployGH]));
-
-gulp.task('release', ['dist', 'npm:publish']);
+gulp.task('dist', ['clean', 'styleguide', 'scss:dist']);
+gulp.task('release', ['bump', 'npm:publish']);
 gulp.task('styleguide', ['scss:dev', 'kss']);
 gulp.task('default', ['browser-sync']);
