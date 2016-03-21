@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var argv = argv = require('yargs').argv;
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
@@ -124,9 +125,15 @@ gulp.task('browser-sync', ['clean', 'styleguide'], function() {
 
 // create a release
 gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
+	var type = process.argv.indexOf('--type');
+	var typeLevel = 'patch';
+	if (type >= 1) {
+    typeLevel = process.argv[type++];
+	}
+  
   return gulp.src(['./package.json'])
     // bump the version number in those files 
-    .pipe(bump({type: 'patch'}))
+    .pipe(bump({type: typeLevel}))
     // save it back to filesystem 
     .pipe(gulp.dest('./'))
     // add changes
@@ -141,15 +148,20 @@ gulp.task('dist', ['clean', 'styleguide', 'scss:dist'], function() {
 
 // publish to npm
 gulp.task('npm:publish', function() {
-  spawn('npm', ['publish'], { stdio: 'inherit' }).on('close', function() {
-    gutil.log(gutil.colors.bgRed('Styleguide has been published!'));
-    this.emit('end')
-  });
+  spawn('npm', ['publish'], { stdio: 'inherit' })
+    .on('error', function(err) {
+      gutil.log(gutil.colors.bgRed('Problem publishing to npm: '), err);
+      this.emit('end');
+    })
+    .on('close', function() {
+      gutil.log(gutil.colors.bgGreen('Styleguide has been published!'));
+      this.emit('end')
+    });
 });
 
 // deploy styleguide
 gulp.task('deploy', shell.task([deployGH]));
 
-gulp.task('release', ['styleguide', 'dist', 'npm:publish']);
+gulp.task('release', ['dist', 'npm:publish']);
 gulp.task('styleguide', ['scss:dev', 'kss']);
 gulp.task('default', ['browser-sync']);
