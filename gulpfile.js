@@ -150,6 +150,6 @@ gulp.task('npm:publish', function() {
 // deploy styleguide
 gulp.task('deploy', shell.task([deployGH]));
 
-gulp.task('release', ['dist', 'npm:publish']);
+gulp.task('release', ['styleguide', 'dist', 'npm:publish']);
 gulp.task('styleguide', ['scss:dev', 'kss']);
 gulp.task('default', ['browser-sync']);
