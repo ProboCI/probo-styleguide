@@ -93,7 +93,10 @@ $kss-vertical-rhythm       : $kss-font-size * 1.5;
 
   pre {
     white-space: pre;
-    overflow: scroll;
+    word-wrap: normal;
+    overflow: auto;
+    padding: 8px 12px;
+    border: 1px solid #e3e3e3;
   }
 
   ins {

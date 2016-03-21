@@ -494,7 +494,10 @@ th {
     font-size: 1em; }
   .kss-style pre {
     white-space: pre;
-    overflow: scroll; }
+    word-wrap: normal;
+    overflow: auto;
+    padding: 8px 12px;
+    border: 1px solid #e3e3e3; }
   .kss-style ins {
     color: #111;
     background: #ff9;
