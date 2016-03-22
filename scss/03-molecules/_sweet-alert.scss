@@ -1,0 +1,17 @@
+.sweet-alert {
+	h2 {
+		@extend .h2;
+	}
+
+  button {
+		@extend .button;
+
+		&.cancel {
+			@extend .button--warning;
+		}
+
+		&.confirm {
+			@extend	.button-success;
+		}
+	}
+}
