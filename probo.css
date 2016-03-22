@@ -974,7 +974,8 @@ button,
       color: #7d7d7d;
       box-shadow: none; }
 
-.button--success, form__submit {
+.button--success, form__submit,
+.form__submit {
   color: #fff;
   border: 2px solid #4a986e;
   background-color: #67c293;
@@ -989,26 +990,34 @@ button,
   font-size: 13px;
   font-weight: bold;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4); }
-  .button--success:hover, form__submit:hover {
+  .button--success:hover, form__submit:hover,
+  .form__submit:hover {
     color: #fff; }
-  .button--success:active, form__submit:active {
+  .button--success:active, form__submit:active,
+  .form__submit:active {
     color: #fff; }
-  .button--success:focus, form__submit:focus {
+  .button--success:focus, form__submit:focus,
+  .form__submit:focus {
     color: #fff; }
-  .button--success:hover, form__submit:hover {
+  .button--success:hover, form__submit:hover,
+  .form__submit:hover {
     text-decoration: none;
     background-color: #4eb881;
     background-image: linear-gradient(to bottom, #5fae85, #4a986e);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1); }
-  .button--success:active, form__submit:active, .button--success:focus, form__submit:focus {
+  .button--success:active, form__submit:active,
+  .form__submit:active, .button--success:focus, form__submit:focus,
+  .form__submit:focus {
     background-image: none;
     background-color: #4a986e; }
-  .button--success:disabled, form__submit:disabled {
+  .button--success:disabled, form__submit:disabled,
+  .form__submit:disabled {
     background-image: none;
     background-color: #ebebeb;
     color: #f7f7f7;
     border-color: #ebebeb; }
-    .button--success:disabled:hover, form__submit:disabled:hover {
+    .button--success:disabled:hover, form__submit:disabled:hover,
+    .form__submit:disabled:hover {
       color: #7d7d7d;
       box-shadow: none; }
 
@@ -1338,7 +1347,8 @@ table th[class*="span"],
   float: none;
   margin-left: 0; }
 
-form__input-invalid {
+form__input-invalid,
+.form__input-invalid {
   font-size: 10px;
   font-size: 0.98rem; }
 
@@ -1480,16 +1490,20 @@ p:last-of-type {
 .text-center {
   text-align: center; }
 
-form__input-group {
+form__input-group,
+.form__input-group {
   margin: 0 0 10px !important;
   border: none;
   padding: 0; }
 
-form label, form__label {
+form label, form__label,
+.form label,
+.form__label {
   display: block;
   margin-bottom: 6px; }
 
-form label[for="checkbox"] {
+form label[for="checkbox"],
+.form label[for="checkbox"] {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
@@ -1499,15 +1513,26 @@ form label[for="checkbox"] {
 
 form input.required, form input.ng-invalid,
 form textarea.required,
-form textarea.ng-invalid, form__input.required, form__input.ng-invalid {
+form textarea.ng-invalid, form__input.required, form__input.ng-invalid,
+.form input.required,
+.form input.ng-invalid,
+.form textarea.required,
+.form textarea.ng-invalid,
+.form__input.required,
+.form__input.ng-invalid {
   border: 1px solid #cf3e34; }
 
-form__input-invalid {
+form__input-invalid,
+.form__input-invalid {
   color: #cf3e34;
   display: block; }
 
 form input,
-form textarea, form__input, form__input--small {
+form textarea, form__input,
+.form input,
+.form textarea,
+.form__input, form__input--small,
+.form__input--small {
   padding: 10px 14px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
   border: 1px solid #c8c8c8;
@@ -1515,12 +1540,21 @@ form textarea, form__input, form__input--small {
   background-color: #f5f5f5;
   max-width: 100%; }
   form input:active,
-  form textarea:active, form__input:active, form__input--small:active, form input:focus,
-  form textarea:focus, form__input:focus, form__input--small:focus {
+  form textarea:active, form__input:active,
+  .form input:active,
+  .form textarea:active,
+  .form__input:active, form__input--small:active,
+  .form__input--small:active, form input:focus,
+  form textarea:focus, form__input:focus,
+  .form input:focus,
+  .form textarea:focus,
+  .form__input:focus, form__input--small:focus,
+  .form__input--small:focus {
     background-color: #f7f7f7;
     outline: 1px solid #a6548c; }
 
-form__input--small {
+form__input--small,
+.form__input--small {
   padding: 10px; }
 
 .token-list__file, .token-list__item {
