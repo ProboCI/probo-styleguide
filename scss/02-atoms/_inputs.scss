@@ -92,7 +92,8 @@
   @include inline-block;
   margin-right: $base-margin / 3;
 }
-form {
+form,
+.form {
   &__input-group {
     @extend %input-group;
   }
