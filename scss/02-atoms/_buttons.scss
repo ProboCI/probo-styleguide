@@ -105,6 +105,13 @@ button,
   appearance: none;
   background-color: transparent;
   border: none;
+  background-image: none;
+  
+  &:hover {
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .button-group {
@@ -160,7 +167,6 @@ button,
   i {
     margin: 0 0 0 $base-margin / 2;
     padding: $base-margin;
-    background: linear-gradient($probo-pale, $probo-pale-dark);
   }
 }
 
