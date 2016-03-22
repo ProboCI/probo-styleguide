@@ -915,6 +915,11 @@ button,
 .button--dark-gray,
 .button--white,
 .sweet-alert button {
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  display: inline-block;
+  vertical-align: middle;
   color: #555555;
   border: 2px solid #e6e6e6;
   background-color: #fff;
@@ -985,6 +990,11 @@ button,
 
 .button--success, form__submit,
 .form__submit {
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  display: inline-block;
+  vertical-align: middle;
   color: #fff;
   border: 2px solid #4a986e;
   background-color: #67c293;
@@ -1033,6 +1043,11 @@ button,
 .button--warning, .sweet-alert button.cancel {
   color: #a83028; }
   .button--warning:hover, .sweet-alert button.cancel:hover {
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    display: inline-block;
+    vertical-align: middle;
     color: #fff;
     border: 2px solid #a83028;
     background-color: #d24a40;
@@ -1070,6 +1085,11 @@ button,
         box-shadow: none; }
 
 .button--info:hover {
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  display: inline-block;
+  vertical-align: middle;
   color: #fff;
   border: 2px solid #004585;
   background-color: #006fd7;
@@ -1108,6 +1128,11 @@ button,
       box-shadow: none; }
 
 .button--dark-blue {
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  display: inline-block;
+  vertical-align: middle;
   color: #fff;
   border: 2px solid #004585;
   background-color: #006fd7;
@@ -1146,6 +1171,11 @@ button,
       box-shadow: none; }
 
 .button--dark-gray {
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  display: inline-block;
+  vertical-align: middle;
   color: #555555;
   border: 2px solid #e6e6e6;
   background-color: #404040;
