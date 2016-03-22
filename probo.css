@@ -1552,8 +1552,6 @@ select,
 .select__menu {
   z-index: 4;
   position: relative;
-  width: 200px;
-  margin: 0 auto;
   padding: 10px;
   background: #fff;
   border-radius: 7px;
