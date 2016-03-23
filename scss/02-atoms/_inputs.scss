@@ -92,20 +92,16 @@
   @include inline-block;
   margin-right: $base-margin / 3;
 }
-form,
+
 .form {
   &__input-group {
     @extend %input-group;
   }
-  label,
+
   &__label {
     @extend %input-label;
   }
-  label[for="checkbox"] {
-    @extend %checkbox-label;
-  }
-  input,
-  textarea,
+  
   &__input {
     @extend %form-inputs;
 
@@ -127,6 +123,26 @@ form,
 
   &__submit {
     @extend .button--success;
+  }
+}
+
+form {
+	@extend .form;
+  
+	label {
+		@extend .form__label;
+  }
+
+  label[for=checkbox] {
+    @extend %checkbox-label;
+  }
+
+  input[type=text],
+  input[type=password],
+  input[type=url],
+  input[type=search],
+  textarea {
+    @extend .form__input;
   }
 }
 

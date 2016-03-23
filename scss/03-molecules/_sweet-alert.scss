@@ -11,7 +11,11 @@
 		}
 
 		&.confirm {
-			@extend	.button-success;
+			@extend	.button--success;
 		}
 	}
+}
+
+.sweet-overlay {
+	border-radius: $border-radius;
 }
