@@ -729,7 +729,8 @@ th {
     clear: left;
     padding: 1px 0;
     position: relative;
-    margin: 0 0 20px 0; }
+    margin: 0 0 20px 0;
+    overflow: hidden; }
     #kss-node .kss-modifier__example:last-child {
       margin: 0; }
   #kss-node .kss-markup {
@@ -1596,6 +1597,9 @@ form input.ng-invalid[type=search],
 form textarea.ng-invalid {
   border: 1px solid #cf3e34; }
 
+.form input[type="color"], form input[type="color"] {
+  padding: 0; }
+
 .form__input-invalid {
   color: #cf3e34;
   display: block; }
@@ -1625,6 +1629,10 @@ form textarea, .form__input--small {
 
 .form__input--small {
   padding: 10px; }
+
+.form-actions .button, .form-actions .button--dark-gray, .form-actions .button--white, .form-actions .sweet-alert button, .sweet-alert .form-actions button {
+  display: block;
+  float: right; }
 
 .token-list__file, .token-list__item {
   padding-top: 6px;

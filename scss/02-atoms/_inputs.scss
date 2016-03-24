@@ -79,6 +79,56 @@
 //
 // Styleguide 5.6
 
+// Password
+//
+// input type="password" - Defines a password.
+//
+// Markup:
+// <form>
+//   User name:<br>
+//   <input type="text" name="username"><br>
+//   User password:<br>
+//   <input type="password" name="psw">
+// </form>
+//
+// Styleguide 5.7
+
+// HTML 5 Inputs
+//
+// input type="password" - Defines a password.
+//
+// Markup:
+// <form>
+//   E-mail:
+//   <input type="email" name="email">
+// </form>
+//
+// Styleguide 5.8
+
+// Color Input
+//
+// input type="color" - Input a color.
+//
+// Markup:
+// <form>
+//   Color:
+//   <input type="color" name="favcolor">
+// </form>
+//
+// Styleguide 5.8.1
+
+// Form actions
+//
+// form-actions - Wrap action buttons with <code>form-actions</code> class.
+//
+// Markup:
+// <div class="form-actions">
+//   <button type="button" class="button button--success">Save changes</button>
+//   <button type="button" class="button">Cancel</button>
+// </div>
+//
+// Styleguide 5.9
+
 %input-group {
   margin: 0 0 10px !important;
   border: none;
@@ -109,6 +159,9 @@
     &.ng-invalid {
       border: 1px solid $probo-alert-error;
     }
+  }
+  input[type="color"] {
+    padding: 0;
   }
 
   &__input--small {
@@ -176,5 +229,12 @@ form {
 
   @include breakpoint($bp-large) {
     width: 50%;
+  }
+}
+
+.form-actions {
+  .button {
+    display: block;
+    float: right;
   }
 }
