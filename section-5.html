@@ -210,7 +210,10 @@
         </div>
         <div class="kss-modifier__example">
           <form>
-  <input class="u-full-width" type="text" name="name" id="name"/>
+  <div class="field__container col">
+    <label for="name">Text Input:</label>
+    <input class="u-full-width" type="text"/>
+  </div>
 </form>
         </div>
         <div class="kss-modifier__name kss-style">
@@ -221,7 +224,10 @@
         </div>
         <div class="kss-modifier__example">
           <form>
-  <input class="form__input" type="text" name="name" id="name"/>
+  <div class="field__container col">
+    <label for="name">Text Input:</label>
+    <input class="form__input" type="text"/>
+  </div>
 </form>
         </div>
         <div class="kss-modifier__name kss-style">
@@ -232,12 +238,18 @@
         </div>
         <div class="kss-modifier__example">
           <form>
-  <input class="required" type="text" name="name" id="name"/>
+  <div class="field__container col">
+    <label for="name">Text Input:</label>
+    <input class="required" type="text"/>
+  </div>
 </form>
         </div>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
-  &lt;input class=&quot;[modifier class]&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot;/&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Text Input:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;text&quot;/&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</code></pre>
       </div>
       </div>
@@ -544,14 +556,66 @@
         </div>
         <div class="kss-modifier__example">
           <form>
-  E-mail:
-  <input type="email" name="email">
+  <div class="field__container col">
+    <label for="name">Email:</label>
+    <input class="input" type="email"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Date:</label>
+    <input class="input" type="date"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Month:</label>
+    <input class="input" type="month"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Number:</label>
+    <input class="input" type="number"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Search:</label>
+    <input class="input" type="search"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Phone:</label>
+    <input class="input" type="tel"/>
+  </div>
+  <div class="field__container col">
+    <label for="name">Url:</label>
+    <input class="input" type="url"/>
+  </div>
 </form>
         </div>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
-  E-mail:
-  &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Email:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;email&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Date:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;date&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Month:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;month&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Number:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;number&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Search:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;search&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Phone:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;tel&quot;/&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field__container col&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Url:&lt;/label&gt;
+    &lt;input class=&quot;[modifier class]&quot; type=&quot;url&quot;/&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</code></pre>
       </div>
       </div>
