@@ -6,7 +6,10 @@
 //
 // Markup:
 // <form>
-//   <input class="{{modifier_class}}" type="text" name="name" id="name"/>
+//   <div class="field__container col">
+//     <label for="name">Text Input:</label>
+//     <input class="{{modifier_class}}" type="text"/>
+//   </div>
 // </form>
 //
 // Styleguide 5.1
@@ -99,8 +102,34 @@
 //
 // Markup:
 // <form>
-//   E-mail:
-//   <input type="email" name="email">
+//   <div class="field__container col">
+//     <label for="name">Email:</label>
+//     <input class="{{modifier_class}}" type="email"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Date:</label>
+//     <input class="{{modifier_class}}" type="date"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Month:</label>
+//     <input class="{{modifier_class}}" type="month"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Number:</label>
+//     <input class="{{modifier_class}}" type="number"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Search:</label>
+//     <input class="{{modifier_class}}" type="search"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Phone:</label>
+//     <input class="{{modifier_class}}" type="tel"/>
+//   </div>
+//   <div class="field__container col">
+//     <label for="name">Url:</label>
+//     <input class="{{modifier_class}}" type="url"/>
+//   </div>
 // </form>
 //
 // Styleguide 5.8
@@ -144,6 +173,13 @@
 }
 
 .form {
+  .field {
+
+    &__container {
+      padding-right: 12px;
+    }
+  }
+
   &__input-group {
     @extend %input-group;
   }
@@ -151,7 +187,7 @@
   &__label {
     @extend %input-label;
   }
-  
+
   &__input {
     @extend %form-inputs;
 
@@ -160,6 +196,7 @@
       border: 1px solid $probo-alert-error;
     }
   }
+
   input[type="color"] {
     padding: 0;
   }
@@ -181,7 +218,7 @@
 
 form {
 	@extend .form;
-  
+
 	label {
 		@extend .form__label;
   }
@@ -190,10 +227,20 @@ form {
     @extend %checkbox-label;
   }
 
-  input[type=text],
-  input[type=password],
-  input[type=url],
-  input[type=search],
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="number"],
+  input[type="range"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[type="password"],
   textarea {
     @extend .form__input;
   }

@@ -1586,14 +1586,37 @@ form label[for=checkbox] {
   vertical-align: middle;
   margin-right: 4px; }
 
-.form__input.required, form input.required[type=text],
-form input.required[type=password],
-form input.required[type=url],
-form input.required[type=search],
-form textarea.required, .form__input.ng-invalid, form input.ng-invalid[type=text],
-form input.ng-invalid[type=password],
-form input.ng-invalid[type=url],
-form input.ng-invalid[type=search],
+.form .field__container, form .field__container {
+  padding-right: 12px; }
+
+.form__input.required, form input.required[type="text"],
+form input.required[type="email"],
+form input.required[type="date"],
+form input.required[type="datetime"],
+form input.required[type="datetime-local"],
+form input.required[type="month"],
+form input.required[type="number"],
+form input.required[type="range"],
+form input.required[type="search"],
+form input.required[type="tel"],
+form input.required[type="time"],
+form input.required[type="url"],
+form input.required[type="week"],
+form input.required[type="password"],
+form textarea.required, .form__input.ng-invalid, form input.ng-invalid[type="text"],
+form input.ng-invalid[type="email"],
+form input.ng-invalid[type="date"],
+form input.ng-invalid[type="datetime"],
+form input.ng-invalid[type="datetime-local"],
+form input.ng-invalid[type="month"],
+form input.ng-invalid[type="number"],
+form input.ng-invalid[type="range"],
+form input.ng-invalid[type="search"],
+form input.ng-invalid[type="tel"],
+form input.ng-invalid[type="time"],
+form input.ng-invalid[type="url"],
+form input.ng-invalid[type="week"],
+form input.ng-invalid[type="password"],
 form textarea.ng-invalid {
   border: 1px solid #cf3e34; }
 
@@ -1604,10 +1627,20 @@ form textarea.ng-invalid {
   color: #cf3e34;
   display: block; }
 
-.form__input, form input[type=text],
-form input[type=password],
-form input[type=url],
-form input[type=search],
+.form__input, form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="datetime"],
+form input[type="datetime-local"],
+form input[type="month"],
+form input[type="number"],
+form input[type="range"],
+form input[type="search"],
+form input[type="tel"],
+form input[type="time"],
+form input[type="url"],
+form input[type="week"],
+form input[type="password"],
 form textarea, .form__input--small {
   padding: 10px 14px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
@@ -1615,14 +1648,34 @@ form textarea, .form__input--small {
   color: #7d7d7d;
   background-color: #f5f5f5;
   max-width: 100%; }
-  .form__input:active, form input[type=text]:active,
-  form input[type=password]:active,
-  form input[type=url]:active,
-  form input[type=search]:active,
-  form textarea:active, .form__input--small:active, .form__input:focus, form input[type=text]:focus,
-  form input[type=password]:focus,
-  form input[type=url]:focus,
-  form input[type=search]:focus,
+  .form__input:active, form input[type="text"]:active,
+  form input[type="email"]:active,
+  form input[type="date"]:active,
+  form input[type="datetime"]:active,
+  form input[type="datetime-local"]:active,
+  form input[type="month"]:active,
+  form input[type="number"]:active,
+  form input[type="range"]:active,
+  form input[type="search"]:active,
+  form input[type="tel"]:active,
+  form input[type="time"]:active,
+  form input[type="url"]:active,
+  form input[type="week"]:active,
+  form input[type="password"]:active,
+  form textarea:active, .form__input--small:active, .form__input:focus, form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="date"]:focus,
+  form input[type="datetime"]:focus,
+  form input[type="datetime-local"]:focus,
+  form input[type="month"]:focus,
+  form input[type="number"]:focus,
+  form input[type="range"]:focus,
+  form input[type="search"]:focus,
+  form input[type="tel"]:focus,
+  form input[type="time"]:focus,
+  form input[type="url"]:focus,
+  form input[type="week"]:focus,
+  form input[type="password"]:focus,
   form textarea:focus, .form__input--small:focus {
     background-color: #f7f7f7;
     outline: 1px solid #a6548c; }
