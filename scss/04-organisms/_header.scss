@@ -1,0 +1,128 @@
+// Header
+//
+// Explanatory text goes here.
+//
+// Markup:
+// <header class="header">
+//   <div class="header__wrapper">
+//     <h1>
+//       <a class="site-title" href="/">
+//         <img src="/images/probo-logo-250.png" alt="Probo logo with text">
+//       </a>
+//     </h1>
+//     <ul class="navigation">
+//       <li>
+//         <a href="">Link 1</a>
+//       </li>
+//       <li>
+//         <a href="">Link 2</a>
+//       </li>
+//       <li>
+//         <a href="">Link 3</a>
+//       </li>
+//       <li class="login">
+//         <a href="" target="_blank">Login</a>
+//       </li>
+//     </ul>
+//   </div>
+// </header>
+//
+// Styleguide 6.0
+
+.header {
+  width: 100%;
+  opacity: 1;
+  transition: none !important;
+  background: $probo-purple-dark;
+  @include breakpoint($bp-medium) {
+    opacity: .95;
+  }
+
+  &__wrapper {
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    position: relative;
+    @include cf;
+  }
+
+  h1 {
+    margin-bottom:0;
+    @include breakpoint($bp-medium) {
+      float: left;
+    }
+  }
+  .site-title {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+    line-height:$logo-line-height;
+    @include breakpoint($bp-medium) {
+      float: left;
+    }
+
+    img {
+      height: $logo-line-height;
+      width: auto;
+    }
+  }
+}
+
+.navigation {
+  float: right;
+  margin: auto;
+  display: none;
+  @include breakpoint($bp-medium) {
+    display: block;
+  }
+
+  li.current a {
+    color:#f07bcd;
+      }
+
+  li {
+    list-style-type: none;
+    float: left;
+
+    &.login a {
+      background: $probo-purple-darkest;
+      -webkit-border-radius: 4;
+      -moz-border-radius: 4;
+      border-radius: 4px;
+      font-family: Arial;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+      background: #5f5d5d;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    float: none;
+    clear: both;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid #f7f2f5;
+    line-height: $header-line-height;
+    padding:0 12px;
+    color: white;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include breakpoint($bp-medium) {
+      float: left;
+      width: auto;
+      clear: none;
+      border-bottom: 0 solid #f7f2f5;
+    }
+  }
+}

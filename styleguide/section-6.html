@@ -65,34 +65,67 @@
           <span class="kss-nav__ref">6</span
           ><span class="kss-nav__name">Header</span>
         </a>
+        <ul class="kss-nav__menu-child">
+        </ul>
       </li>
     </ul>
   </nav>
 </div>
 <article role="main" class="kss-main">
-  <a href="https://github.com/ProboCI/probo-styleguide"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-     <h1 id="the-definitive-style-guide-for-proboci">The Definitive Style Guide for ProboCI</h1>
-<p>This goal of this style guide is to provide designers and developers with an overview of styles for the Probo branding. We are using the Brad Frost&#39;s <a href="http://bradfrost.com/blog/post/atomic-web-design/">&quot;Atomic web design&quot;</a> concept and recommend reading the his post prior to making changes to this guide.</p>
-<h2 id="download">Download</h2>
-<p><strong><a href="https://github.com/ProboCI/probo-styleguide/archive/master.zip">probo-styleguide</a></strong> [zip] or</p>
-<pre><code>&#39;git clone https://github.com/ProboCI/probo-styleguide.git&#39;
-</code></pre><h2 id="development">Development</h2>
-<p>First, make sure you&#39;re using node version 4 or above by executing <code>node -v</code>. It&#39;s highly recommended to use <a href="https://www.npmjs.com/package/n">n</a> to switch between node versions, like <code>rvm</code> for Ruby.</p>
-<p>Then, <code>cd probo-styleguide</code> and install the dependencies of this project with <code>npm install</code>.</p>
-<p>Now, start developing by running <code>gulp</code>. This opens your browser and will automatically reload after changes are detected.</p>
-<p><strong>Note:</strong> when making changes, only edit files within:</p>
-<ol>
-<li><code>~/template</code></li>
-<li><code>~/scss</code></li>
-</ol>
-<p>The other directors are generated, so your changes will get removed on the next build. To change the appearance of the styleguide itself, edit files in the <code>~/template</code> directory. You can change the styles by editing <code>~/template/public/kiss.less</code> or alternatively by adding a new CSS file in <code>~/template/public</code> and including it in <code>~/template/index.html</code>.</p>
-<h2 id="releasing-updates">Releasing updates</h2>
-<p>Please see @sean3325 to inquire about releasing new versions.</p>
-<h2 id="contributions">Contributions</h2>
-<p>We are currently not accepting contributions at this time! Thanks!</p>
 
-  </div>
+      <div     id="kssref-6" class="kss-section kss-section--depth-1">
+
+    <div class="kss-style">
+      <h1 class="kss-title kss-title--level-1">
+        <a class="kss-title__permalink" href="#kssref-6">
+          <span class="kss-title__ref">
+              6
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Header
+        </a>
+      </h1>
+
+
+      <div class="kss-description">
+        <p>Explanatory text goes here.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header&quot;&gt;
+  &lt;div class=&quot;header__wrapper&quot;&gt;
+    &lt;h1&gt;
+      &lt;a class=&quot;site-title&quot; href=&quot;/&quot;&gt;
+        &lt;img src=&quot;/images/probo-logo-250.png&quot; alt=&quot;Probo logo with text&quot;&gt;
+      &lt;/a&gt;
+    &lt;/h1&gt;
+    &lt;ul class=&quot;navigation&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;login&quot;&gt;
+        &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Login&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+      </div>
+      </div>
+
+      </div>
 </article>
 
 <!-- SCRIPTS -->
