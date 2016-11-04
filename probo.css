@@ -1761,12 +1761,12 @@ select,
       display: table; }
     .header__wrapper::after {
       clear: both; }
-  .header h1 {
+  .header__title {
     margin-bottom: 0; }
     @media (min-width: 48em) {
-      .header h1 {
+      .header__title {
         float: left; } }
-  .header .site-title {
+  .header__title-link {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -1774,34 +1774,24 @@ select,
     margin: 0 auto;
     line-height: 35px; }
     @media (min-width: 48em) {
-      .header .site-title {
+      .header__title-link {
         float: left; } }
-    .header .site-title img {
-      height: 35px;
-      width: auto; }
-
-.navigation {
-  float: right;
-  margin: auto;
-  display: none; }
-  @media (min-width: 48em) {
-    .navigation {
-      display: block; } }
-  .navigation li.current a {
-    color: #f07bcd; }
-  .navigation li {
+  .header__logo {
+    height: 35px;
+    width: auto; }
+  .header__navigation {
+    float: right;
+    margin: auto;
+    display: none; }
+    @media (min-width: 48em) {
+      .header__navigation {
+        display: block; } }
+  .header__navigation-item {
     list-style-type: none;
     float: left; }
-    .navigation li.login a {
-      background: #33001d;
-      border-radius: 4px;
-      font-family: Arial;
-      color: #fff !important;
-      text-decoration: none;
-      font-weight: bold; }
-      .navigation li.login a:hover {
-        background: #5f5d5d; }
-  .navigation a {
+    .header__navigation-item.current .header__navigation-link {
+      color: #f07bcd; }
+  .header__navigation-link {
     display: block;
     text-decoration: none;
     float: none;
@@ -1813,11 +1803,20 @@ select,
     padding: 0 12px;
     color: white;
     font-size: 16px; }
-    .navigation a:hover {
+    .header__navigation-link:hover {
       text-decoration: underline; }
     @media (min-width: 48em) {
-      .navigation a {
+      .header__navigation-link {
         float: left;
         width: auto;
         clear: none;
-        border-bottom: 0 solid #f7f2f5; } }
+        border-bottom-width: 0; } }
+    .header__navigation-link.login {
+      background: #33001d;
+      border-radius: 4px;
+      font-family: Arial;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: bold; }
+      .header__navigation-link.login:hover {
+        background: #5f5d5d; }
