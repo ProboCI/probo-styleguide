@@ -28,7 +28,7 @@ var project = {
   css: 'probo.css',
   dest: 'styleguide',
   template: 'template',
-  styleguide: ['./scss/*.scss', './template/**/*.*'],
+  styleguide: ['scss/**/*.scss', 'template/**/*.*'],
   dist: 'dist',
 };
 

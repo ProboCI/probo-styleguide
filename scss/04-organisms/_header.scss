@@ -2,30 +2,9 @@
 //
 // Explanatory text goes here.
 //
-// Markup:
-// <header class="header">
-//   <div class="header__wrapper">
-//     <h1>
-//       <a class="site-title" href="/">
-//         <img src="/images/probo-logo-250.png" alt="Probo logo with text">
-//       </a>
-//     </h1>
-//     <ul class="navigation">
-//       <li>
-//         <a href="">Link 1</a>
-//       </li>
-//       <li>
-//         <a href="">Link 2</a>
-//       </li>
-//       <li>
-//         <a href="">Link 3</a>
-//       </li>
-//       <li class="login">
-//         <a href="" target="_blank">Login</a>
-//       </li>
-//     </ul>
-//   </div>
-// </header>
+// Markup: header.html
+// 
+// .header - header colors
 //
 // Styleguide 6.0
 
@@ -45,63 +24,50 @@
     @include cf;
   }
 
-  h1 {
+  &__title {
     margin-bottom:0;
     @include breakpoint($bp-medium) {
       float: left;
     }
   }
-  .site-title {
+
+  &__title-link {
     display: block;
     margin: 0 auto;
     text-align: center;
     float: none;
     margin: 0 auto;
     line-height:$logo-line-height;
+
     @include breakpoint($bp-medium) {
       float: left;
     }
+  }
 
-    img {
-      height: $logo-line-height;
-      width: auto;
+  &__logo {
+    height: $logo-line-height;
+    width: auto;
+  }
+
+  &__navigation {
+    float: right;
+    margin: auto;
+    display: none;
+    @include breakpoint($bp-medium) {
+      display: block;
     }
   }
-}
 
-.navigation {
-  float: right;
-  margin: auto;
-  display: none;
-  @include breakpoint($bp-medium) {
-    display: block;
-  }
-
-  li.current a {
-    color:#f07bcd;
-      }
-
-  li {
+  &__navigation-item {
     list-style-type: none;
     float: left;
 
-    &.login a {
-      background: $probo-purple-darkest;
-      -webkit-border-radius: 4;
-      -moz-border-radius: 4;
-      border-radius: 4px;
-      font-family: Arial;
-      color: #fff !important;
-      text-decoration: none;
-      font-weight: bold;
-
-      &:hover {
-      background: #5f5d5d;
-      }
+    &.current .header__navigation-link {
+      color: #f07bcd;
     }
   }
 
-  a {
+  &__navigation-link {
     display: block;
     text-decoration: none;
     float: none;
@@ -122,7 +88,20 @@
       float: left;
       width: auto;
       clear: none;
-      border-bottom: 0 solid #f7f2f5;
+      border-bottom-width: 0;
+    }
+
+    &.login {
+      background: $probo-purple-darkest;
+      border-radius: 4px;
+      font-family: Arial;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        background: #5f5d5d;
+      }
     }
   }
 }
