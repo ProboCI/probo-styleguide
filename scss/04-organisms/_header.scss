@@ -6,7 +6,7 @@
 //
 // .header - header colors
 //
-// Styleguide 6.0
+// Styleguide 6.1
 
 .header {
   width: 100%;
@@ -18,8 +18,7 @@
   }
 
   &__wrapper {
-    padding-top: 0.5em;
-    padding-bottom: 0;
+    padding: 12px;
     position: relative;
     @include cf;
   }
@@ -32,6 +31,7 @@
   }
 
   &__title-link {
+    @extend .probo-logo;
     display: block;
     margin: 0 auto;
     text-align: center;

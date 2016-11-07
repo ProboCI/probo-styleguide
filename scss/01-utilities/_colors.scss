@@ -44,6 +44,8 @@
 // .probo-purple-darkest - Probo darkets purple
 // .probo-purple-dark - Probo dark purple
 // .probo-purple - Probo purple
+// .probo-soft-peach - Probo soft peach
+// .probo-soft-peach-medium - Probo medium soft peach
 // .probo-gray-dark - Probo dark gray
 // .probo-gray-dark-medium - Probo medium dark gray
 // .probo-gray-medium - Probo medium gray
@@ -77,6 +79,12 @@
 }
 .probo-purple {
 	background-color: $probo-purple;
+}
+.probo-soft-peach {
+  background-color: $probo-soft-peach;
+}
+.probo-soft-peach-medium {
+  background-color: $probo-soft-peach-medium;
 }
 .probo-gray-dark {
 	background-color: $probo-gray-dark;
