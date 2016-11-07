@@ -1,10 +1,10 @@
 // Header
 //
-// Explanatory text goes here.
+// We want to maintain a consistent header across Probo sites. Make sure your site uses these classes and similar markup.
 //
 // Markup: header.html
 //
-// .header - header colors
+// .header - The wrapper for header styles.
 //
 // Styleguide 6.1
 
@@ -36,7 +36,6 @@
     margin: 0 auto;
     text-align: center;
     float: none;
-    margin: 0 auto;
     line-height:$logo-line-height;
 
     @include breakpoint($bp-medium) {
@@ -74,13 +73,14 @@
     clear: both;
     width: 100%;
     border-radius: 0;
-    border-bottom: 1px solid #f7f2f5;
+    border-bottom: 1px solid;
     line-height: $header-line-height;
     padding:0 12px;
     color: white;
     font-size: 16px;
 
     &:hover {
+      @include link-colors(white, white);
       text-decoration: underline;
     }
 

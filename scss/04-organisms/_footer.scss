@@ -1,72 +1,40 @@
 // Footer
 //
-// Explanatory text goes here.
+// We want to maintain a consistent footer across Probo sites. Make sure your site uses these classes and similar markup.
 //
 // Markup: footer.html
 //
-// .footer - footer colors
+// .footer - The wrapper for footer styles.
 //
 // Styleguide 6.2
 
 .footer {
-  @include rem(font-size, 10px);
+  @include rem(font-size, 14px);
   background-color: $probo-gray-dark;
   color: $probo-pale;
   display: block;
   clear: both;
   overflow: hidden;
-  font-size:14px;
-  z-index:1;
-  padding-bottom: 24px;
+  z-index: 1;
 
-  &__secondary {
+  &__upper {
+    @extend .footer__lower;
     @include cf;
-    margin-bottom: 18px;
     background-color: $probo-pale;
     color: $probo-gray-dark;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    display: block;
   }
 
-  &__secondary-left {
-    display: inline-block;
-    margin: 0;
-  }
-
-  &__secondary-right {
-    @include breakpoint($bp-medium-landscape) {
-      position: absolute;
-      right: 112.5px;
-    }
-  }
-
-  &__secondary-link {
+  &__upper-link {
     color: $probo-gray-dark;
-    font-size: 30px;
     padding: 0 10px;
     transition: color 0.2s ease;
     vertical-align: middle;
-
-    &:hover {
-      transition: color 0.2s ease;
-      color: $probo-gray-dark;
-    }
   }
 
-  &__primary {
-  }
-
-  &__primary-left {
-    // @include col(1/1);
-    float: left;
-
-    // @include breakpoint($bp-medium-landscape) {
-    //   @include col(1/3);
-    // }
-  }
-  &__primary-right {
-    float: right;
+  &__lower {
+    padding: $base-margin * 1.5 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__copyright {
