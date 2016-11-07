@@ -1833,7 +1833,7 @@ select,
     .header__wrapper::after {
       clear: both; }
   .header__title {
-    margin-bottom: 0; }
+    margin: 0; }
     @media (min-width: 48em) {
       .header__title {
         float: left; } }
