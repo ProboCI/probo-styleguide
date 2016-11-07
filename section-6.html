@@ -132,7 +132,7 @@
 
 
       <div class="kss-description">
-        <p>Explanatory text goes here.</p>
+        <p>We want to maintain a consistent header across Probo sites. Make sure your site uses these classes and similar markup.</p>
 
       </div>
     </div>
@@ -144,7 +144,7 @@
           .header
         </div>
         <div class="kss-modifier__description kss-style">
-          header colors
+          The wrapper for header styles.
         </div>
         <div class="kss-modifier__example">
           <header class="header">
@@ -214,7 +214,7 @@
 
 
       <div class="kss-description">
-        <p>Explanatory text goes here.</p>
+        <p>We want to maintain a consistent footer across Probo sites. Make sure your site uses these classes and similar markup.</p>
 
       </div>
     </div>
@@ -226,72 +226,64 @@
           .footer
         </div>
         <div class="kss-modifier__description kss-style">
-          footer colors
+          The wrapper for footer styles.
         </div>
         <div class="kss-modifier__example">
           <footer class="footer">
-  <div class="footer__secondary">
-    <p class="footer__secondary-left">Want to try Probo today? <a href="https://app.probo.ci">Get started.</a></p>
-    <div class="footer__secondary-right">
-      <a class="footer__secondary-link" href="https://www.facebook.com/proboci" title="Probo on Facebook" target="_blank"></a>
-      <a class="footer__secondary-link" href="https://github.com/ProboCI/probo" title="Probo on Github" target="_blank"></a>
-      <a class="footer__secondary-link" href="https://twitter.com/ProboCI" title="Sweet Probo Tweets" target="_blank"></a>
+  <div class="footer__upper">
+    <p>Want to try Probo today? <a href="https://app.probo.ci">Get started.</a></p>
+    <div>
+      <a class="footer__upper-link" href="https://www.facebook.com/proboci" title="Probo on Facebook" target="_blank">Facebook</a>
+      <a class="footer__upper-link" href="https://github.com/ProboCI/probo" title="Probo on Github" target="_blank">GitHub</a>
+      <a class="footer__upper-link" href="https://twitter.com/ProboCI" title="Sweet Probo Tweets" target="_blank">Twitter</a>
     </div>
   </div>
-  <div class="footer__primary">
-    <div class="footer__primary-left">
-      <div class="footer__copyright">© 2016 Probo.CI</div>
-    </div>
-    <div class="footer__primary-right">
-      <ul class="footer__navigation">
-        <li class="footer__navigation-item">
-          <a href="" class="footer__navigation-link">Link 1</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a href="" class="footer__navigation-link">Link 2</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a href="" class="footer__navigation-link">Link 3</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a href="" target="_blank" class="footer__navigation-link login">Login</a>
-        </li>
-      </ul>
-    </div>
+  <div class="footer__lower">
+    <div class="footer__copyright">© 2016 Probo.CI</div>
+    <ul class="footer__navigation">
+      <li class="footer__navigation-item">
+        <a href="" class="footer__navigation-link">Link 1</a>
+      </li>
+      <li class="footer__navigation-item">
+        <a href="" class="footer__navigation-link">Link 2</a>
+      </li>
+      <li class="footer__navigation-item">
+        <a href="" class="footer__navigation-link">Link 3</a>
+      </li>
+      <li class="footer__navigation-item">
+        <a href="" target="_blank" class="footer__navigation-link login">Login</a>
+      </li>
+    </ul>
   </div>
 </footer>
 
         </div>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;footer class=&quot;footer&quot;&gt;
-  &lt;div class=&quot;footer__secondary&quot;&gt;
-    &lt;p class=&quot;footer__secondary-left&quot;&gt;Want to try Probo today? &lt;a href=&quot;https://app.probo.ci&quot;&gt;Get started.&lt;/a&gt;&lt;/p&gt;
-    &lt;div class=&quot;footer__secondary-right&quot;&gt;
-      &lt;a class=&quot;footer__secondary-link&quot; href=&quot;https://www.facebook.com/proboci&quot; title=&quot;Probo on Facebook&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;
-      &lt;a class=&quot;footer__secondary-link&quot; href=&quot;https://github.com/ProboCI/probo&quot; title=&quot;Probo on Github&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;
-      &lt;a class=&quot;footer__secondary-link&quot; href=&quot;https://twitter.com/ProboCI&quot; title=&quot;Sweet Probo Tweets&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;
+  &lt;div class=&quot;footer__upper&quot;&gt;
+    &lt;p&gt;Want to try Probo today? &lt;a href=&quot;https://app.probo.ci&quot;&gt;Get started.&lt;/a&gt;&lt;/p&gt;
+    &lt;div&gt;
+      &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://www.facebook.com/proboci&quot; title=&quot;Probo on Facebook&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
+      &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://github.com/ProboCI/probo&quot; title=&quot;Probo on Github&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;
+      &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://twitter.com/ProboCI&quot; title=&quot;Sweet Probo Tweets&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;footer__primary&quot;&gt;
-    &lt;div class=&quot;footer__primary-left&quot;&gt;
-      &lt;div class=&quot;footer__copyright&quot;&gt;© 2016 Probo.CI&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;footer__primary-right&quot;&gt;
-      &lt;ul class=&quot;footer__navigation&quot;&gt;
-        &lt;li class=&quot;footer__navigation-item&quot;&gt;
-          &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;footer__navigation-item&quot;&gt;
-          &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 2&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;footer__navigation-item&quot;&gt;
-          &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 3&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;footer__navigation-item&quot;&gt;
-          &lt;a href=&quot;&quot; target=&quot;_blank&quot; class=&quot;footer__navigation-link login&quot;&gt;Login&lt;/a&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+  &lt;div class=&quot;footer__lower&quot;&gt;
+    &lt;div class=&quot;footer__copyright&quot;&gt;© 2016 Probo.CI&lt;/div&gt;
+    &lt;ul class=&quot;footer__navigation&quot;&gt;
+      &lt;li class=&quot;footer__navigation-item&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;footer__navigation-item&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 2&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;footer__navigation-item&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 3&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;footer__navigation-item&quot;&gt;
+        &lt;a href=&quot;&quot; target=&quot;_blank&quot; class=&quot;footer__navigation-link login&quot;&gt;Login&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/footer&gt;
 </code></pre>
@@ -316,7 +308,7 @@
 
 
       <div class="kss-description">
-        <p>accordion-nav menus</p>
+        <p>We want consistency between our sidebar menus across Probo sites. Make sure your site uses these classes and similar markup. You will need to add a JavaScript library to provide the accordion effect.</p>
 
       </div>
     </div>
