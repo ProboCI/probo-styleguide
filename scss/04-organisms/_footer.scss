@@ -18,21 +18,34 @@
   z-index: 1;
 
   &__upper {
-    @extend .footer__lower;
-    @include cf;
+    padding: $base-margin * .5 3%;
     background-color: $probo-pale;
     color: $probo-gray-dark;
+
+    @include breakpoint($bp-small-landscape) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__upper-left {
+    padding-left: $base-spacing;
+
+    @include breakpoint($bp-small-landscape) {
+      margin-top: $base-margin;
+    }
   }
 
   &__upper-link {
-    color: $probo-gray-dark;
-    padding: 0 10px;
+    @include link-colors($probo-gray-dark, $probo-gray-dark);
     transition: color 0.2s ease;
+    font-size: $base-margin * 2.5;
     vertical-align: middle;
+    padding: 0 10px;
   }
 
   &__lower {
-    padding: $base-margin * 1.5 0;
+    padding: $base-margin * 1.5 3%;
     display: flex;
     justify-content: space-between;
   }
@@ -47,8 +60,13 @@
   }
 
   &__navigation {
+    display: none;
     margin: 0;
     padding: 0;
+
+    @include breakpoint($bp-small-landscape) {
+      display: block;
+    }
   }
 
   &__navigation-item {
