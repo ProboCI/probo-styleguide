@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic");
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3105,6 +3104,9 @@ html {
     .u-hidden-md {
       display: block; } }
 
+.kss-section {
+  max-width: none !important; }
+
 .probo-logo, .header__title-link {
   width: 150px;
   height: 35px;
@@ -3954,28 +3956,30 @@ select,
   overflow: hidden;
   z-index: 1; }
   .footer__upper {
-    padding: 6px 3%;
+    padding: 6px 0;
     background-color: #f7f7f7;
     color: #404040; }
+  .footer__upper-wrapper {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
     @media (min-width: 30em) {
-      .footer__upper {
+      .footer__upper-wrapper {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between; } }
-  .footer__upper-left {
-    padding-left: 10px; }
-    @media (min-width: 30em) {
-      .footer__upper-left {
-        margin-top: 12px; } }
+  @media (min-width: 30em) {
+    .footer__upper-left {
+      margin-top: 12px; } }
   .footer__upper-link {
     color: #404040;
     transition: color 0.2s ease;
     font-size: 30px;
     vertical-align: middle;
-    padding: 0 10px; }
+    margin-left: 12px; }
     .footer__upper-link:hover {
       color: #404040; }
     .footer__upper-link:active {
@@ -3983,16 +3987,17 @@ select,
     .footer__upper-link:focus {
       color: #404040; }
   .footer__lower {
-    padding: 18px 3%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    padding: 18px 0; }
+  @media (min-width: 30em) {
+    .footer__lower-wrapper {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   .footer__copyright {
-    color: #7d7d7d;
-    padding: 0 12px; }
+    color: #7d7d7d; }
     @media (min-width: 64em) {
       .footer__copyright {
         padding-bottom: 0;
@@ -4012,6 +4017,8 @@ select,
     vertical-align: middle;
     list-style-type: none;
     margin-right: 12px; }
+    .footer__navigation-item:last-of-type {
+      margin-right: 0; }
   .footer__navigation-link {
     color: #f5f5f5; }
     .footer__navigation-link:hover {
@@ -4030,9 +4037,10 @@ select,
     .header {
       opacity: .95; } }
   .header__wrapper {
-    padding: 12px;
+    *zoom: 1;
     position: relative;
-    *zoom: 1; }
+    padding-top: 12px;
+    padding-bottom: 12px; }
     .header__wrapper::after, .header__wrapper::before {
       content: ' ';
       display: table; }
@@ -4157,3 +4165,14 @@ select,
     .accordion-nav__child-link::before {
       content: "\00BB \0020";
       margin-left: -24px; }
+
+.layout-975, .footer__upper-wrapper, .footer__lower-wrapper, .header__wrapper {
+  max-width: 975px;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 75em) {
+    .layout-975, .footer__upper-wrapper, .footer__lower-wrapper, .header__wrapper {
+      padding-left: 0;
+      padding-right: 0; } }
