@@ -14,7 +14,8 @@
   margin: 0;
   position: relative;
 
-  a {
+  a,
+  a:hover {
     text-decoration: none;
   }
 
@@ -43,11 +44,11 @@
   &__parent {
     background: $probo-soft-peach;
     padding: 0;
+    display: none;
   }
 
   &__child {
     @extend .accordion-nav__item;
-    display: none;
 
     &:hover {
       background: $probo-soft-peach-medium;
