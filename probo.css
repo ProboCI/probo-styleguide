@@ -4117,7 +4117,8 @@ select,
   font-size: 14px;
   margin: 0;
   position: relative; }
-  .accordion-nav a {
+  .accordion-nav a,
+  .accordion-nav a:hover {
     text-decoration: none; }
   .accordion-nav__item, .accordion-nav__child {
     list-style-type: none;
@@ -4141,11 +4142,10 @@ select,
       background: #f7f2f5; }
   .accordion-nav__parent {
     background: #efe6eb;
-    padding: 0; }
-  .accordion-nav__child {
+    padding: 0;
     display: none; }
-    .accordion-nav__child:hover {
-      background: #e5d6df; }
+  .accordion-nav__child:hover {
+    background: #e5d6df; }
   .accordion-nav__child-link {
     margin-left: 20px;
     margin-left: 2rem;
