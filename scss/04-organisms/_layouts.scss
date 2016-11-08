@@ -3,3 +3,16 @@
 // Various common page elements.
 //
 // Styleguide 6.0
+
+.layout-975 {
+  max-width: $probo-sitewidth;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($bp-large) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

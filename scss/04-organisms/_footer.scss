@@ -18,9 +18,14 @@
   z-index: 1;
 
   &__upper {
-    padding: $base-margin * .5 3%;
+    padding: $base-margin * .5 0;
     background-color: $probo-pale;
     color: $probo-gray-dark;
+  }
+
+  &__upper-wrapper {
+    @extend .layout-975;
+    align-items: center;
 
     @include breakpoint($bp-small-landscape) {
       display: flex;
@@ -29,7 +34,6 @@
   }
 
   &__upper-left {
-    padding-left: $base-spacing;
 
     @include breakpoint($bp-small-landscape) {
       margin-top: $base-margin;
@@ -41,18 +45,23 @@
     transition: color 0.2s ease;
     font-size: $base-margin * 2.5;
     vertical-align: middle;
-    padding: 0 10px;
+    margin-left: $base-margin;
   }
 
   &__lower {
-    padding: $base-margin * 1.5 3%;
-    display: flex;
-    justify-content: space-between;
+    padding: $base-margin * 1.5 0;
+  }
+
+  &__lower-wrapper {
+    @extend .layout-975;
+    @include breakpoint($bp-small-landscape) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__copyright {
     color: $probo-gray-medium;
-    padding: 0 12px;
     @include breakpoint($bp-medium-landscape) {
       padding-bottom:0;
       clear: both;
@@ -73,6 +82,10 @@
       @include inline-block;
       list-style-type: none;
       margin-right: 12px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
 
   &__navigation-link {

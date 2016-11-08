@@ -13,18 +13,22 @@
   opacity: 1;
   transition: none !important;
   background: $probo-purple-dark;
+
   @include breakpoint($bp-medium) {
     opacity: .95;
   }
 
   &__wrapper {
-    padding: 12px;
-    position: relative;
+    @extend .layout-975;
     @include cf;
+    position: relative;
+    padding-top: $base-margin;
+    padding-bottom: $base-margin;
   }
 
   &__title {
     margin: 0;
+
     @include breakpoint($bp-medium) {
       float: left;
     }
