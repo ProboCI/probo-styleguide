@@ -19,7 +19,7 @@ The other directors are generated, so your changes will get removed on the next 
 
 ## Releasing updates
 
-Please see @sean3325 to inquire about releasing new versions.
+Please see [sean3325](https://github.com/sean3325) to inquire about releasing new versions.
 
 ## Contributions
 
