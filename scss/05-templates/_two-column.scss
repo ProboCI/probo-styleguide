@@ -1,0 +1,44 @@
+// Two Column Layout
+//
+// Accordion navigation menus should only be used in the left sidebar. This layout provides a standard way to implement a two-column layout that accommodates accordion nav menus in the left column and page content in the right column.
+//
+// Markup: two-column.html
+//
+// .two-column – Wrapper for a two column layout.
+//
+// Styleguide 6.4
+
+.two-column {
+	@include breakpoint($bp-medium-portrait) {
+		min-height: 90vh;
+	}
+
+  &__left {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 25px 0 0 0;
+    clear: both;
+
+    @include breakpoint($bp-medium-portrait) {
+      float: left;
+      padding: 0;
+      width: 24%;
+      max-width: 270px;
+    }
+  }
+
+  &__right {
+    padding-bottom: 24px;
+    width: 100%;
+    float: none;
+    clear: both;
+    
+    @include breakpoint($bp-medium-portrait) {
+      width: 70%;
+      float: right;
+      clear: none;
+    }
+  }
+}

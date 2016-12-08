@@ -84,6 +84,12 @@
                 ><span class="kss-nav__name">Accordion Navigation</span>
               </a>
             </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-4">
+                <span class="kss-nav__ref ">6.4</span
+                ><span class="kss-nav__name">Two Column Layout</span>
+              </a>
+            </li>
         </ul>
       </li>
     </ul>
@@ -358,6 +364,115 @@
   &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+      </div>
+      </div>
+
+      </section>
+      <section id="kssref-6-4" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-6-4">
+          <span class="kss-title__ref">
+              6.4
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Two Column Layout
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Accordion navigation menus should only be used in the left sidebar. This layout provides a standard way to implement a two-column layout that accommodates accordion nav menus in the left column and page content in the right column.</p>
+<p>.two-column – Wrapper for a two column layout.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;body class=&quot;two-column&quot;&gt;
+
+  &lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;header__wrapper&quot;&gt;
+      &lt;h1 class=&quot;header__title&quot;&gt;
+        &lt;a class=&quot;header__title-link&quot; href=&quot;/&quot;&gt;&lt;/a&gt;
+      &lt;/h1&gt;
+      &lt;ul class=&quot;header__navigation&quot;&gt;
+        &lt;li class=&quot;header__navigation-item&quot;&gt;
+          &lt;a href=&quot;&quot; class=&quot;header__navigation-link&quot;&gt;Link 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;header__navigation-item&quot;&gt;
+          &lt;a href=&quot;&quot; class=&quot;header__navigation-link&quot;&gt;Link 2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;header__navigation-item&quot;&gt;
+          &lt;a href=&quot;&quot; class=&quot;header__navigation-link&quot;&gt;Link 3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;header__navigation-item&quot;&gt;
+          &lt;a href=&quot;&quot; target=&quot;_blank&quot; class=&quot;header__navigation-link login&quot;&gt;Login&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;two-column__left&quot;&gt;
+    &lt;ul class=&quot;accordion-nav&quot;&gt;
+      &lt;li class=&quot;accordion-nav__item&quot;&gt;
+        &lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 1&lt;/a&gt;
+        &lt;ul class=&quot;accordion-nav__parent&quot;&gt;
+          &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;two-column__right&quot;&gt;
+    Page content
+  &lt;/div&gt;
+
+  &lt;footer class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer__upper&quot;&gt;
+      &lt;div class=&quot;footer__upper-wrapper&quot;&gt;
+        &lt;div class=&quot;footer__upper-left&quot;&gt;Want to try Probo today? &lt;a href=&quot;https://app.probo.ci&quot;&gt;Get started.&lt;/a&gt;&lt;/div&gt;
+        &lt;div&gt;
+          &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://www.facebook.com/proboci&quot; title=&quot;Probo on Facebook&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-facebook&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://github.com/ProboCI/probo&quot; title=&quot;Probo on Github&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-github-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+          &lt;a class=&quot;footer__upper-link&quot; href=&quot;https://twitter.com/ProboCI&quot; title=&quot;Sweet Probo Tweets&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;footer__lower&quot;&gt;
+      &lt;div class=&quot;footer__lower-wrapper&quot;&gt;
+        &lt;div class=&quot;footer__copyright&quot;&gt;© 2016 Probo.CI&lt;/div&gt;
+        &lt;ul class=&quot;footer__navigation&quot;&gt;
+          &lt;li class=&quot;footer__navigation-item&quot;&gt;
+            &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__navigation-item&quot;&gt;
+            &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 2&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__navigation-item&quot;&gt;
+            &lt;a href=&quot;&quot; class=&quot;footer__navigation-link&quot;&gt;Link 3&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;footer__navigation-item&quot;&gt;
+            &lt;a href=&quot;&quot; target=&quot;_blank&quot; class=&quot;footer__navigation-link login&quot;&gt;Login&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
 </code></pre>
       </div>
       </div>
