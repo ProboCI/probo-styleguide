@@ -4116,19 +4116,24 @@ select,
   padding-left: 0;
   font-size: 14px;
   margin: 0;
-  position: relative; }
+  position: relative;
+  background: #efe6eb;
+  width: 300px; }
   .accordion-nav a,
   .accordion-nav a:hover {
     text-decoration: none; }
-  .accordion-nav__item, .accordion-nav__child {
+  .accordion-nav__item {
+    border: 1px solid #f5f5f5;
+    background: #faf9f9;
     list-style-type: none;
     text-indent: 11px; }
+    .accordion-nav__item .accordion-nav__toggle-children {
+      border-right: 1px solid #f5f5f5;
+      border-left: 1px solid #f5f5f5; }
   .accordion-nav__item-link {
     color: #440027;
     display: block;
     padding: 12px;
-    border: 1px solid #f7f2f5;
-    background: #faf9f9;
     padding-right: 26px; }
     .accordion-nav__item-link:hover {
       color: #a6548c; }
@@ -4136,17 +4141,38 @@ select,
       color: #440027; }
     .accordion-nav__item-link:focus {
       color: #440027; }
-    .accordion-nav__item-link:hover {
-      background: #e5d6df; }
     .accordion-nav__item-link .current {
-      background: #f7f2f5; }
+      background: #f5f5f5; }
   .accordion-nav__parent {
     background: #efe6eb;
-    padding: 0;
-    display: none; }
-  .accordion-nav__child:hover {
-    background: #e5d6df; }
-  .accordion-nav__child-link {
+    padding: 0; }
+  .accordion-nav__child, .accordion-nav__item {
+    position: relative;
+    right: 0; }
+    .accordion-nav__child i, .accordion-nav__item i {
+      font-size: 30px;
+      position: relative;
+      top: 8px; }
+    .accordion-nav__child.is-closed > ul, .accordion-nav__item.is-closed > ul {
+      transition: max-height 0.15s cubic-bezier(0.7, 0.05, 0.15, 0.95), opacity 0.2s cubic-bezier(0.7, 0.05, 0.15, 0.95);
+      max-height: 0;
+      opacity: 0; }
+    .accordion-nav__child.is-open, .accordion-nav__item.is-open {
+      border-bottom: none; }
+      .accordion-nav__child.is-open > ul, .accordion-nav__item.is-open > ul {
+        transition: max-height 0.4s cubic-bezier(0.7, 0.05, 0.15, 0.95), opacity 0.3s cubic-bezier(0.7, 0.05, 0.15, 0.95);
+        max-height: 9999px;
+        opacity: 1; }
+    .accordion-nav__child li:first-of-type, .accordion-nav__item li:first-of-type {
+      border-top: 2px solid #c8c8c8; }
+  .accordion-nav__child {
+    border-bottom: 1px solid #e5d6df;
+    list-style-type: none;
+    text-indent: 0; }
+    .accordion-nav__child .accordion-nav__toggle-children {
+      border-right: 1px solid #e5d6df;
+      border-left: 1px solid #e5d6df; }
+  .accordion-nav__child-link, .accordion-nav__grandchild-link {
     margin-left: 20px;
     margin-left: 2rem;
     color: #440027;
@@ -4154,17 +4180,36 @@ select,
     background: transparent;
     padding: 12px 24px;
     display: block; }
-    .accordion-nav__child-link:hover {
+    .accordion-nav__child-link:hover, .accordion-nav__grandchild-link:hover {
       color: #a6548c; }
-    .accordion-nav__child-link:active {
+    .accordion-nav__child-link:active, .accordion-nav__grandchild-link:active {
       color: #440027; }
-    .accordion-nav__child-link:focus {
+    .accordion-nav__child-link:focus, .accordion-nav__grandchild-link:focus {
       color: #440027; }
-    .accordion-nav__child-link.current {
-      background: #efe6eb; }
-    .accordion-nav__child-link::before {
-      content: "\00BB \0020";
-      margin-left: -24px; }
+  .accordion-nav__grandchild {
+    border-bottom: 1px solid #dbc7d2;
+    background-color: #e5d6df;
+    list-style-type: none;
+    text-indent: 0; }
+    .accordion-nav__grandchild:last-of-type {
+      border-bottom: none; }
+  .accordion-nav__grandchild-link {
+    margin-left: 4rem; }
+  .accordion-nav__toggle-children {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+    color: #440027;
+    text-indent: 4px;
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5; }
+    .accordion-nav__toggle-children:hover {
+      cursor: pointer; }
 
 .layout-975, .footer__upper-wrapper, .footer__lower-wrapper, .header__wrapper {
   max-width: 975px;
