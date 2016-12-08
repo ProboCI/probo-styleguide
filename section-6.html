@@ -334,13 +334,29 @@
           <ul class="accordion-nav">
   <li class="accordion-nav__item">
     <a href="/" class="accordion-nav__item-link">Link 1</a>
+    <span class="accordion-nav__toggle-children">
+        <i class="fa fa-angle-up"></i>
+    </span>
     <ul class="accordion-nav__parent">
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 1</a></li>
-      <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 2</a></li>
+      <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 2</a>
+        <span class="accordion-nav__toggle-children">
+            <i class="fa fa-angle-up"></i>
+        </span>
+        <ul class="accordion-nav__parent">
+          <li class="accordion-nav__grandchild"><a href="/" class="accordion-nav__grandchild-link">Grandhild link 1</a></li>
+          <li class="accordion-nav__grandchild"><a href="/" class="accordion-nav__grandchild-link">Grandchild link 2</a></li>
+          <li class="accordion-nav__grandchild"><a href="/" class="accordion-nav__grandchild-link">Grandchild link 3</a></li>
+        </ul>
+      </li>
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 3</a></li>
     </ul>
   </li>
-  <li class="accordion-nav__item"><a href="/" class="accordion-nav__item-link">Link 2</a></li>
+  <li class="accordion-nav__item"><a href="/" class="accordion-nav__item-link">Link 2</a>
+    <span class="accordion-nav__toggle-children">
+        <i class="fa fa-angle-down"></i>
+    </span>
+  </li>
   <li class="accordion-nav__item"><a href="/" class="accordion-nav__item-link">Link 3</a></li>
 </ul>
 
@@ -349,13 +365,29 @@
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;accordion-nav&quot;&gt;
   &lt;li class=&quot;accordion-nav__item&quot;&gt;
     &lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 1&lt;/a&gt;
+    &lt;span class=&quot;accordion-nav__toggle-children&quot;&gt;
+        &lt;i class=&quot;fa fa-angle-up&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
     &lt;ul class=&quot;accordion-nav__parent&quot;&gt;
       &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 2&lt;/a&gt;
+        &lt;span class=&quot;accordion-nav__toggle-children&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-up&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+        &lt;ul class=&quot;accordion-nav__parent&quot;&gt;
+          &lt;li class=&quot;accordion-nav__grandchild&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__grandchild-link&quot;&gt;Grandhild link 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;accordion-nav__grandchild&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__grandchild-link&quot;&gt;Grandchild link 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;accordion-nav__grandchild&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__grandchild-link&quot;&gt;Grandchild link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
       &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 3&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 2&lt;/a&gt;
+    &lt;span class=&quot;accordion-nav__toggle-children&quot;&gt;
+        &lt;i class=&quot;fa fa-angle-down&quot;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/li&gt;
   &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
