@@ -4117,8 +4117,7 @@ select,
   font-size: 14px;
   margin: 0;
   position: relative;
-  background: #efe6eb;
-  width: 300px; }
+  background: #efe6eb; }
   .accordion-nav a,
   .accordion-nav a:hover {
     text-decoration: none; }
