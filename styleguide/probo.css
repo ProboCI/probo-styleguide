@@ -4246,17 +4246,17 @@ select,
   position: fixed;
   overflow: hidden;
   width: 300px;
-  top: 70px;
+  top: 59px;
   right: -300px;
   background: #f7f7f7;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 59px);
   -webkit-transform: translate3d(300px, 0, 0);
           transform: translate3d(300px, 0, 0);
   transition: -webkit-transform 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
   transition: transform 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
   transition: transform 0.5s cubic-bezier(0.55, 0.085, 0, 0.99), -webkit-transform 0.5s cubic-bezier(0.55, 0.085, 0, 0.99); }
   .no-js .main-menu__body {
-    height: calc(100vh - 70px); }
+    height: calc(100vh - 59px); }
 
 .main-menu.is-revealed .main-menu__body {
   overflow-y: scroll;
@@ -4272,10 +4272,10 @@ select,
 .main-menu__overlay {
   position: fixed;
   overflow: hidden;
-  top: 70px;
+  top: 59px;
   left: 0;
   right: 0;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 59px);
   background-color: rgba(0, 0, 0, 0.4);
   transition: all .5s ease; }
 
