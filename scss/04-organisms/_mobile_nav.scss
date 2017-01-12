@@ -3,15 +3,15 @@
 }
 
 .main-menu {
-  width: $probo-menu-width;
 
-  @include breakpoint($bp-medium-portrait) {
+  @include breakpoint($bp-medium) {
     @include visuallyhidden;
   }
 
   &__body {
     position: fixed;
     overflow: hidden;
+    width: $probo-menu-width;
     top: $header-height;
     right: -1 * $probo-menu-width;
     background: $probo-pale;
