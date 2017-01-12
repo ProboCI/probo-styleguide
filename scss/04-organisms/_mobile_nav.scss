@@ -62,7 +62,7 @@
     width: 25px;
     height: 20px;
 
-    @include breakpoint($bp-medium-portrait) {
+    @include breakpoint($bp-medium) {
       @include visuallyhidden;
     }
 
