@@ -4288,7 +4288,7 @@ select,
   right: 15px;
   top: 20px;
   display: block;
-  z-index: 10000;
+  z-index: 9999;
   border: none;
   background-image: none;
   background-color: transparent;
