@@ -4281,7 +4281,8 @@ select,
   right: 0;
   height: calc(100vh - 59px);
   background-color: rgba(0, 0, 0, 0.4);
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  z-index: 900; }
 
 .main-menu__toggle {
   position: absolute;
