@@ -9,6 +9,7 @@ var cssnano = require('gulp-cssnano');
 var del = require('del');
 var sass = require('gulp-sass');
 var scss = require('postcss-scss');
+var removeComments = require('postcss-discard-comments');
 var stylelint = require('stylelint');
 var postcss = require('gulp-postcss');
 var reporter = require('postcss-reporter');
@@ -68,6 +69,7 @@ var preprocessors = [
 // post CSS processors
 var postprocessors = [
   autoprefixer({browsers: AUTOPREFIXER_BROWSERS}),
+  removeComments({removeAll: true}),
 ];
 
 // Delete files
@@ -99,7 +101,7 @@ gulp.task('scss:dev', ['lint:scss'], function() {
 // Build CSS from scss (minified for production)
 gulp.task('scss:dist', function() {
   return gulp.src('./' + project.scss + '/probo.scss')
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(postcss(postprocessors))
     .pipe(gulp.dest(project.dist))
     .pipe(cssnano())
