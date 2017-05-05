@@ -3981,7 +3981,8 @@ select,
       padding-right:0; } }
 
 .menu-is-open{
-  overflow:hidden; }
+  overflow:hidden;
+  position:fixed; }
 
 @media (min-width: 48em){
   .main-menu{
@@ -4067,8 +4068,9 @@ select,
         overflow:visible;
         position:static;
         width:auto; } }
-  .main-menu__toggle:focus, .main-menu__toggle:active{
+  .main-menu__toggle:focus, .main-menu__toggle:active, .main-menu__toggle:visited, .main-menu__toggle:hover{
     outline:none;
+    background-image:none;
     background-color:transparent; }
   .main-menu__toggle::after, .main-menu__toggle::before{
     content:'';
