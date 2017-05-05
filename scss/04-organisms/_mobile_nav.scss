@@ -1,5 +1,6 @@
 .menu-is-open {
   overflow: hidden;
+  position: fixed;
 }
 
 .main-menu {
@@ -68,8 +69,11 @@
     }
 
     &:focus,
-    &:active {
+    &:active,
+    &:visited,
+    &:hover {
       outline: none;
+      background-image: none;
       background-color: transparent;
     }
 
