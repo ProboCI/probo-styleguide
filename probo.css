@@ -2878,8 +2878,7 @@ button,
   cursor:pointer;
   text-decoration:none;
   font-size:18px;
-  font-weight:600;
-  font-family:"sofia-pro", sans-serif; }
+  font-weight:600; }
   button:hover,
   .button:hover,
   .button--dark-gray:hover,
@@ -2973,8 +2972,7 @@ button,
   cursor:pointer;
   text-decoration:none;
   font-size:18px;
-  font-weight:600;
-  font-family:"sofia-pro", sans-serif; }
+  font-weight:600; }
   .button--success:hover, .form__submit:hover, .sweet-alert button.confirm:hover{
     color:#ffffff; }
   .button--success:active, .form__submit:active, .sweet-alert button.confirm:active{
@@ -3027,8 +3025,7 @@ button,
     cursor:pointer;
     text-decoration:none;
     font-size:18px;
-    font-weight:600;
-    font-family:"sofia-pro", sans-serif; }
+    font-weight:600; }
     .button--warning:hover:hover, .sweet-alert button.cancel:hover:hover{
       color:#ffffff; }
     .button--warning:hover:active, .sweet-alert button.cancel:hover:active{
@@ -3079,8 +3076,7 @@ button,
   cursor:pointer;
   text-decoration:none;
   font-size:18px;
-  font-weight:600;
-  font-family:"sofia-pro", sans-serif; }
+  font-weight:600; }
   .button--info:hover:hover{
     color:#ffffff; }
   .button--info:hover:active{
@@ -3132,8 +3128,7 @@ button,
   cursor:pointer;
   text-decoration:none;
   font-size:18px;
-  font-weight:600;
-  font-family:"sofia-pro", sans-serif; }
+  font-weight:600; }
   .button--dark-blue:hover{
     color:#ffffff; }
   .button--dark-blue:active{
@@ -3185,7 +3180,6 @@ button,
   text-decoration:none;
   font-size:18px;
   font-weight:600;
-  font-family:"sofia-pro", sans-serif;
   background:#333333;
   border-color:#333333;
   color:#ffffff; }
@@ -3393,11 +3387,14 @@ html{
 
 body{
   color:#4a4a4a;
-  font-family:"Martel", serif;
+  font-family:"sofia-pro", sans-serif;
   line-height:1.5;
   font-weight:400;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale; }
+
+.body-text{
+  font-family:"Martel", serif; }
 
 a{
   color:#0055a4;
@@ -3413,24 +3410,22 @@ a{
   a:hover{
     text-decoration:underline; }
 
-.nav-link{
+.nav-link, .footer__navigation-link, .header__navigation-link, .accordion-nav__item-link, .accordion-nav__child-link, .accordion-nav__grandchild-link{
   font-size:15px;
   font-size:1.5rem;
   color:#4a4a4a;
-  font-family:"sofia-pro", sans-serif;
   color:#333333; }
-  .nav-link:hover{
+  .nav-link:hover, .footer__navigation-link:hover, .header__navigation-link:hover, .accordion-nav__item-link:hover, .accordion-nav__child-link:hover, .accordion-nav__grandchild-link:hover{
     color:#4a4a4a; }
-  .nav-link:active{
+  .nav-link:active, .footer__navigation-link:active, .header__navigation-link:active, .accordion-nav__item-link:active, .accordion-nav__child-link:active, .accordion-nav__grandchild-link:active{
     color:#4a4a4a; }
-  .nav-link:focus{
+  .nav-link:focus, .footer__navigation-link:focus, .header__navigation-link:focus, .accordion-nav__item-link:focus, .accordion-nav__child-link:focus, .accordion-nav__grandchild-link:focus{
     color:#4a4a4a; }
 
 .small-text-link{
   font-size:14px;
   font-size:1.4rem;
   color:#4a4a4a;
-  font-family:"sofia-pro", sans-serif;
   font-weight:600;
   text-transform:uppercase; }
   .small-text-link:hover{
@@ -3447,16 +3442,6 @@ p{
   margin:0; }
   p + p{
     margin-top:12px; }
-
-.h1,
-.h2,
-.sweet-alert h2,
-.h3,
-.h3-alt,
-.h4,
-.h5,
-.h6{
-  font-family:"sofia-pro", sans-serif; }
 
 .h1{
   font-size:40px;
@@ -3860,17 +3845,17 @@ select,
     border-bottom:1px solid;
     line-height:35px;
     padding:0 12px;
-    color:white;
+    color:#ffffff;
     font-size:16px; }
     .header__navigation-link:hover{
-      color:white;
+      color:#ffffff;
       text-decoration:underline; }
       .header__navigation-link:hover:hover{
-        color:white; }
+        color:#ffffff; }
       .header__navigation-link:hover:active{
-        color:white; }
+        color:#ffffff; }
       .header__navigation-link:hover:focus{
-        color:white; }
+        color:#ffffff; }
     @media (min-width: 48em){
       .header__navigation-link{
         float:left;
@@ -3880,8 +3865,7 @@ select,
     .header__navigation-link.login{
       background:#33001d;
       border-radius:4px;
-      font-family:"sofia-pro", sans-serif;
-      color:#fff !important;
+      color:#ffffff !important;
       text-decoration:none;
       font-weight:bold; }
       .header__navigation-link.login:hover{
