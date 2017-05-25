@@ -10,6 +10,8 @@
 // .h2 - h2 text
 // .h3 - h3 text
 // .h4 - h4 text
+// .h5 - h5 text
+// .h6 - h6 text
 //
 // Markup:
 // <span class="{{modifier_class}}">Probo heading</span>
@@ -77,9 +79,20 @@ i {
 .h2,
 .h3,
 .h4,
+.h5,
+.h6,
 .p,
 p {
   @extend %no-dangling;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $header-text-font-family;
 }
 
 .h1 {
@@ -99,6 +112,16 @@ p {
 
 .h4 {
   @extend %normal;
+  font-weight: 600;
+}
+
+.h5 {
+  @extend %small;
+  font-weight: 600;
+}
+
+.h6 {
+  @extend %smaller;
   font-weight: 600;
 }
 
