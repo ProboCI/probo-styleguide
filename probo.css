@@ -3385,11 +3385,11 @@ table th[class*="span"],
   float:none;
   margin-left:0; }
 
-.form__input-invalid{
+.h6, .form__input-invalid{
   font-size:10px;
   font-size:0.98rem; }
 
-.progress-bar__inner{
+.h5, .progress-bar__inner{
   font-size:13px;
   font-size:1.26rem; }
 
@@ -3438,6 +3438,15 @@ a{
 i{
   margin-right:5px; }
 
+.h1,
+.h2,
+.sweet-alert h2,
+.h3,
+.h4,
+.h5,
+.h6{
+  font-family:"sofia-pro", sans-serif; }
+
 .h1{
   font-weight:700; }
 
@@ -3448,6 +3457,12 @@ i{
   font-weight:600; }
 
 .h4{
+  font-weight:600; }
+
+.h5{
+  font-weight:600; }
+
+.h6{
   font-weight:600; }
 
 .u-underline{
@@ -3496,11 +3511,15 @@ i{
 .h2:first-child, .sweet-alert h2:first-child,
 .h3:first-child,
 .h4:first-child,
+.h5:first-child,
+.h6:first-child,
 .p:first-child,
 p:first-child, .h1:first-of-type,
 .h2:first-of-type, .sweet-alert h2:first-of-type,
 .h3:first-of-type,
 .h4:first-of-type,
+.h5:first-of-type,
+.h6:first-of-type,
 .p:first-of-type,
 p:first-of-type{
   margin-top:0; }
@@ -3509,11 +3528,15 @@ p:first-of-type{
 .h2:last-child, .sweet-alert h2:last-child,
 .h3:last-child,
 .h4:last-child,
+.h5:last-child,
+.h6:last-child,
 .p:last-child,
 p:last-child, .h1:last-of-type,
 .h2:last-of-type, .sweet-alert h2:last-of-type,
 .h3:last-of-type,
 .h4:last-of-type,
+.h5:last-of-type,
+.h6:last-of-type,
 .p:last-of-type,
 p:last-of-type{
   margin-bottom:0; }
