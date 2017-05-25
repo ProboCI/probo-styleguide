@@ -3394,7 +3394,8 @@ body{
   -moz-osx-font-smoothing:grayscale; }
 
 .body-text{
-  font-family:"Martel", serif; }
+  font-family:"Martel", serif;
+  line-height:1.65; }
 
 a{
   color:#0055a4;
@@ -3443,20 +3444,27 @@ p{
   p + p{
     margin-top:12px; }
 
+.h1,
+.h2,
+.sweet-alert h2,
+.h3,
+.h3-alt,
+.h4,
+.h5,
+.h6{
+  font-family:"sofia-pro", sans-serif; }
+
 .h1{
   font-size:40px;
-  font-size:4rem;
-  font-weight:600; }
+  font-size:4rem; }
 
 .h2, .sweet-alert h2{
   font-size:32px;
-  font-size:3.2rem;
-  font-weight:600; }
+  font-size:3.2rem; }
 
 .h3, .h3-alt{
   font-size:26px;
-  font-size:2.6rem;
-  font-weight:400; }
+  font-size:2.6rem; }
 
 .h3-alt:before{
   content:'|';
@@ -3464,31 +3472,34 @@ p{
 
 .h4{
   font-size:18px;
-  font-size:1.8rem;
-  font-weight:600; }
+  font-size:1.8rem; }
 
 .h5{
   font-size:16px;
-  font-size:1.6rem;
-  font-weight:600; }
+  font-size:1.6rem; }
 
 .h6{
   font-size:14px;
-  font-size:1.4rem;
-  font-weight:600; }
+  font-size:1.4rem; }
 
 .p{
   font-size:17px;
   font-size:1.7rem; }
 
-.u-underline{
+.f-underline{
   text-decoration:underline; }
 
-.u-italic{
+.f-italic{
   font-style:italic; }
 
-.u-bold{
+.f-bold{
   font-weight:700; }
+
+.f-semi-bold, .h1, .h2, .sweet-alert h2, .h4, .h5, .h6{
+  font-weight:600; }
+
+.f-light{
+  font-weight:300; }
 
 .u-visually-hidden{
   border:0;

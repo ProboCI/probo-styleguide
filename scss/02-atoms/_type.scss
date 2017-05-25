@@ -66,6 +66,7 @@ body {
 
 .body-text {
   font-family: $serif;
+  line-height: 1.65;
 }
 
 a {
@@ -107,22 +108,28 @@ p {
   }
 }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $sans-serif;
+}
+
+
 .h1 {
   @include rem(font-size, 40px);
-
-  font-weight: 600;
+  @extend .f-semi-bold;
 }
 
 .h2 {
   @include rem(font-size, 32px);
-
-  font-weight: 600;
+  @extend .f-semi-bold;
 }
 
 .h3 {
   @include rem(font-size, 26px);
-
-  font-weight: 400;
 }
 
 .h3-alt {
@@ -136,20 +143,17 @@ p {
 
 .h4 {
   @include rem(font-size, 18px);
-
-  font-weight: 600;
+  @extend .f-semi-bold;
 }
 
 .h5 {
   @include rem(font-size, 16px);
-
-  font-weight: 600;
+  @extend .f-semi-bold;
 }
 
 .h6 {
   @include rem(font-size, 14px);
-
-  font-weight: 600;
+  @extend .f-semi-bold;
 }
 
 .p {
@@ -159,9 +163,11 @@ p {
 
 // Inline element styles
 //
-// .u-underline - Underlned text
-// .u-italic - Italicized text
-// .u-bold - Bold text
+// .f-underline - Underlned text
+// .f-italic - Italicized text
+// .f-bold - Bold text
+// .f-semi-bold - Semi-Bold text
+// .f-light - Light text
 // .u-visually-hidden - Hide text
 // .mark - Highlight text
 // .em - Emphasize text
@@ -176,16 +182,24 @@ p {
 // Styleguide 2.2
 //
 
-.u-underline {
+.f-underline {
   text-decoration: underline;
 }
 
-.u-italic {
+.f-italic {
   font-style: italic;
 }
 
-.u-bold {
+.f-bold {
   font-weight: 700;
+}
+
+.f-semi-bold {
+  font-weight: 600;
+}
+
+.f-light {
+  font-weight: 300;
 }
 
 .u-visually-hidden {
