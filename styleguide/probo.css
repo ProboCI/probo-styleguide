@@ -3444,25 +3444,28 @@ p{
   p + p{
     margin-top:12px; }
 
-.h1,
-.h2,
-.sweet-alert h2,
-.h3,
-.h3-alt,
-.h4,
-.h5,
-.h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
   font-family:"sofia-pro", sans-serif; }
 
+h1,
 .h1{
   font-size:40px;
   font-size:4rem; }
 
-.h2, .sweet-alert h2{
+h2,
+.h2,
+.sweet-alert h2{
   font-size:32px;
   font-size:3.2rem; }
 
-.h3, .h3-alt{
+h3,
+.h3,
+.h3-alt{
   font-size:26px;
   font-size:2.6rem; }
 
@@ -3470,14 +3473,17 @@ p{
   content:'|';
   padding-right:16px; }
 
+h4,
 .h4{
   font-size:18px;
   font-size:1.8rem; }
 
+h5,
 .h5{
   font-size:16px;
   font-size:1.6rem; }
 
+h6,
 .h6{
   font-size:14px;
   font-size:1.4rem; }
@@ -3495,7 +3501,12 @@ p{
 .f-bold{
   font-weight:700; }
 
-.f-semi-bold, .h1, .h2, .sweet-alert h2, .h4, .h5, .h6{
+.f-semi-bold, h1,
+.h1, h2,
+.h2, .sweet-alert h2, h4,
+.h4, h5,
+.h5, h6,
+.h6{
   font-weight:600; }
 
 .f-light{
