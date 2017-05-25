@@ -40,7 +40,8 @@
     margin: 0 auto;
     text-align: center;
     float: none;
-    line-height:$logo-line-height;
+    width: 145px;
+    line-height: normal;
 
     @include breakpoint($bp-medium) {
       float: left;

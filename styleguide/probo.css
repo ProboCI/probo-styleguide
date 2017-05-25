@@ -3838,7 +3838,8 @@ select,
     margin:0 auto;
     text-align:center;
     float:none;
-    line-height:35px; }
+    width:145px;
+    line-height:normal; }
     @media (min-width: 48em){
       .header__title-link{
         float:left; } }
