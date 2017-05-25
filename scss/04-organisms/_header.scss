@@ -21,6 +21,7 @@
   &__wrapper {
     @extend .layout-975;
     @include cf;
+
     position: relative;
     padding-top: $base-margin;
     padding-bottom: $base-margin;
@@ -55,6 +56,7 @@
     float: right;
     margin: auto;
     display: none;
+
     @include breakpoint($bp-medium) {
       display: block;
     }
@@ -70,6 +72,8 @@
   }
 
   &__navigation-link {
+    @extend .nav-link;
+
     display: block;
     text-decoration: none;
     float: none;
@@ -79,11 +83,12 @@
     border-bottom: 1px solid;
     line-height: $header-line-height;
     padding:0 12px;
-    color: white;
+    color: $probo-white;
     font-size: 16px;
 
     &:hover {
-      @include link-colors(white, white);
+      @include link-colors($probo-white);
+
       text-decoration: underline;
     }
 
@@ -97,8 +102,7 @@
     &.login {
       background: $probo-purple-darkest;
       border-radius: 4px;
-      font-family: $sans-serif-font-family;
-      color: #fff !important;
+      color: $probo-white !important;
       text-decoration: none;
       font-weight: bold;
 

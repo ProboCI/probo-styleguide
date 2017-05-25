@@ -57,11 +57,15 @@ body {
   @extend %normal;
 
   color: $base-font-color;
-  font-family: $serif-font-family;
+  font-family: $sans-serif;
   line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.body-text {
+  font-family: $serif;
 }
 
 a {
@@ -80,7 +84,6 @@ a {
   @include rem(font-size, 15px);
   @include link-colors($probo-gray);
 
-  font-family: $sans-serif-font-family;
   color: $probo-gray-dark;
 }
 
@@ -88,7 +91,6 @@ a {
   @include rem(font-size, 14px);
   @include link-colors($probo-gray);
 
-  font-family: $sans-serif-font-family;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -103,15 +105,6 @@ p {
   + p {
     margin-top: $base-margin;
   }
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: $sans-serif-font-family;
 }
 
 .h1 {
@@ -269,11 +262,13 @@ p {
 
 // Body text
 //
-// p - A paragraph of text should be wrapped with a <code>p</code> tag.
+// .body-text - Any text that is considered body copy will need this class. This will give it a serif font.
 //
 // Markup:
-// <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+//<div class="body-text">
+//<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 // <p>Nunc consequat ipsum at nisl mollis, id bibendum nibh convallis. Nulla elit ex, lacinia porttitor massa vel, varius luctus odio. Sed sit amet ullamcorper nisl. Vivamus eleifend, est sed scelerisque pretium, elit lectus eleifend mauris, id commodo velit mauris nec orci. Aliquam posuere in tortor vel iaculis.</p>
+//</div>
 //
 // Styleguide 2.3
 
@@ -286,7 +281,9 @@ p {
 // a - An inline link.
 //
 // Markup:
+//<div class="body-text">
 // <p>Curabitur in <a href="/">condimentum nisl</a>. Cras condimentum rhoncus tellus vel tempus. Nam massa ex, maximus ut metus et, bibendum posuere orci.</p>
+//</div>
 //
 // Styleguide 2.4.1
 
