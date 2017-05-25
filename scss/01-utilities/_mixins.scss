@@ -45,12 +45,15 @@
 
 @mixin link-colors($color, $hover: $color, $active: $color, $focus: $color) {
   color: $color;
+
   &:hover {
     color: $hover;
   }
+
   &:active {
     color: $active;
   }
+
   &:focus {
     color: $focus;
   }
@@ -66,11 +69,13 @@
 
 @mixin cf {
   *zoom: 1;
+
   &::after,
   &::before {
     content: ' ';
     display: table;
   }
+
   &::after {
     clear: both;
   }
@@ -79,6 +84,7 @@
 @mixin button($color: #fff, $bottom-color: #e9eaea, $border-color: #e6e6e6, $font: #555555) {
 	@include inline-block;
   @include link-colors($font);
+
   border: 2px solid $border-color;
   background-color: $color;
   background-image: linear-gradient(to bottom, $color, $bottom-color);
@@ -87,24 +93,29 @@
   border-radius: $border-radius;
   cursor: pointer;
   text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $sans-serif-font-family;
+
   &:hover {
     text-decoration: none;
     background-color: darken($color, 7%);
     background-image: linear-gradient(to bottom, $bottom-color, $border-color);
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
   }
+
   &:active,
   &:focus {
     background-image: none;
     background-color: $border-color;
   }
+
   &:disabled {
     background-image: none;
     background-color: $probo-pale-dark;
     color: $probo-pale;
     border-color: $probo-pale-dark;
+
     &:hover {
       color: $probo-gray-medium;
       box-shadow: none;
@@ -142,6 +153,7 @@
 
 @mixin badge($color, $font: $probo-pale) {
   @include rem(font-size, 10px);
+
   border-radius: 50%;
   background-color: $color;
   color: $font;
