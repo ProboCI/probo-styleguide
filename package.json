@@ -8,8 +8,7 @@
   },
   "author": "",
   "contributors": [
-    "Howard Tyson <howard@zivtech.com>",
-    "Sean Wolfe <sean3325@gmail.com>",
+    "John Kaeser <jakaeser44@gmail.com>",
     "James Cole <mail@ofjamescole.com>"
   ],
   "scripts": {
@@ -41,7 +40,7 @@
     "gulp-shell": "^0.6.3",
     "gulp-tag-version": "^1.3.0",
     "gulp-util": "^3.0.7",
-    "kss": "^3.0.0-beta.18",
+    "kss": "^2.4.0",
     "postcss-discard-comments": "^2.0.4",
     "postcss-reporter": "^3.0.0",
     "postcss-scss": "^0.4.1",

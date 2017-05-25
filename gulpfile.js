@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var argv = argv = require('yargs').argv;
 var autoprefixer = require('autoprefixer');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var del = require('del');
@@ -95,7 +95,7 @@ gulp.task('scss:dev', ['lint:scss'], function() {
     .on('error', handleError('Scss Compiling'))
     .pipe(postcss(postprocessors))
     .on('error', handleError('Post CSS Processing'))
-    .pipe(gulp.dest('./' + project.dest))    
+    .pipe(gulp.dest('./' + project.dest))
 });
 
 // Build CSS from scss (minified for production)
@@ -134,17 +134,17 @@ gulp.task('bump', ['clean', 'styleguide', 'scss:dist'], function() {
 	}
 
   return gulp.src(['./package.json'])
-    // bump the version number in those files 
+    // bump the version number in those files
     .pipe(bump({type: typeLevel}))
-    // save it back to filesystem 
+    // save it back to filesystem
     .pipe(gulp.dest('./'))
     // add changes
     .pipe(git.add({args: '-p'}))
-    // commit the changed version number 
+    // commit the changed version number
     .pipe(git.commit('bumps package version'))
-    // read only one file to get the version number 
+    // read only one file to get the version number
     .pipe(filter('package.json'))
-    // **tag it in the repository** 
+    // **tag it in the repository**
     .pipe(tag());
 });
 

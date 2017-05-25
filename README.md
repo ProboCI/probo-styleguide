@@ -4,7 +4,7 @@ This goal of this style guide is to provide designers and developers with an ove
 
 ## Development
 
-First, make sure you're using node version 4 or above by executing `node -v`. It's highly recommended to use [n](https://www.npmjs.com/package/n) to switch between node versions, like `rvm` for Ruby. 
+First, make sure you're using node version 4 or above by executing `node -v`. It's highly recommended to use [n](https://www.npmjs.com/package/n) to switch between node versions, like `rvm` for Ruby.
 
 Then, `cd probo-styleguide` and install the dependencies of this project with `npm install`.
 
@@ -19,7 +19,7 @@ The other directors are generated, so your changes will get removed on the next 
 
 ## Releasing updates
 
-Please see [sean3325](https://github.com/sean3325) to inquire about releasing new versions.
+Please see [James Cole](https://github.com/tortillaj) to inquire about releasing new versions.
 
 ## Contributions
 
