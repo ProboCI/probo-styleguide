@@ -57,8 +57,6 @@
 button,
 .button {
   @include button;
-  &:hover {
-  }
 }
 
 .button:disabled,
@@ -66,9 +64,9 @@ button,
 .button.disabled,
 .button.disabled:hover {
   background-image: none;
-  background-color: #ebebeb;
+  background-color: $probo-pale-dark;
   color: #666666;
-  border-color: #ebebeb;
+  border-color: $probo-pale-dark;
   cursor: default;
   box-shadow: none;
 }
@@ -80,27 +78,30 @@ button,
   border-color: lighten($bg,10%);;
   cursor: default;
   box-shadow: none;
+
   &:hover {
     color: $color;
   }
 }
 
 .button--success {
-  @include button($probo-green, $probo-green-dark, $probo-green-darkest, #fff);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  @include button($probo-green, $probo-green-dark, $probo-green-darkest, $probo-white);
+
   &.disabled,
   &.disabled:hover,
   &:disabled,
   &:disabled:hover {
-    @include disabled-button(#fff,$probo-green);
+    @include disabled-button($probo-white,$probo-green);
   }
 }
 
 .button--warning {
 	color: darken($probo-alert-error, 10%);
+
 	&:hover {
-	  @include button(lighten($probo-alert-error, 3%), $probo-alert-error, darken($probo-alert-error, 10%), #fff);
+	  @include button(lighten($probo-alert-error, 3%), $probo-alert-error, darken($probo-alert-error, 10%), $probo-white);
 	}
+
   &.disabled,
   &.disabled:hover,
   &:disabled,
@@ -111,9 +112,9 @@ button,
 
 .button--info {
 	&:hover {
-	  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), $probo-white);
 	}
+
   &.disabled,
   &.disabled:hover,
   &:disabled,
@@ -123,42 +124,46 @@ button,
 }
 
 .button--dark-blue {
-  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), #fff);
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), $probo-white);
+
   &.disabled,
   &.disabled:hover,
   &:disabled,
   &:disabled:hover {
-    @include disabled-button(#fff,#002547);
+    @include disabled-button($probo-white,#002547);
   }
 }
 
 .button--dark-gray {
   @include button($probo-gray-dark);
   @extend .button;
+
 	background: $probo-gray-dark;
 	border-color: $probo-gray-dark;
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  color: $probo-white;
+
   &:hover {
 	  background: $probo-pale-dark;
 	  border-color: $probo-pale-dark;
+
   }
   &.disabled,
   &.disabled:hover,
   &:disabled,
   &:disabled:hover {
-    @include disabled-button(#fff,$probo-gray-dark);
+    @include disabled-button($probo-white,$probo-gray-dark);
   }
 }
 
-.button--white {
+.button--probo-white {
   @extend .button;
+
   background: none;
+
   &:hover {
-  	background: $probo-blue-dark;
-  	color: white;
-  	border-color: $probo-blue-dark;
+    background: $probo-blue-dark;
+    color: $probo-white;
+    border-color: $probo-blue-dark;
   }
 }
 
@@ -191,18 +196,22 @@ button,
 .button-group {
   .button {
     @include inline-block;
+
     float: left;
     border-left-width: 1px;
     border-right-width: 1px;
     margin: 0;
     border-radius: 0;
+
     a {
       margin: 0;
     }
+
     &:first-child {
       border-radius: $border-radius 0 0 $border-radius;
       border-left-width: 2px;
     }
+
     &:last-child {
       border-radius: 0 $border-radius $border-radius 0;
       border-right-width: 2px;
@@ -213,6 +222,7 @@ button,
 
 .button--clipboard {
   @include inline-block;
+
   border: 1px solid $probo-pale-darker;
   background-color: transparent;
   appearance: none;
@@ -222,6 +232,7 @@ button,
 
   span {
     @include inline-block;
+
     margin: 0 $base-margin;
   }
 
@@ -233,5 +244,6 @@ button,
 
 .button-sm,
 .button-sm:hover {
+  font-size: 14px;
   padding: 2px 10px;
 }

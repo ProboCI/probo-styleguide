@@ -35,6 +35,8 @@
 
   &__item-link {
     @include link-colors($probo-purple-dark, $probo-purple, $probo-purple-dark, $probo-purple-dark);
+    @extend .nav-link;
+
     display: block;
     padding: 12px;
     padding-right: 26px;
@@ -103,6 +105,8 @@
   &__child-link {
     @include rem(margin-left, 20px);
     @include link-colors($probo-purple-dark, $probo-purple);
+    @extend .nav-link;
+
     border: none;
     background: transparent;
     padding: 12px 24px;
@@ -122,6 +126,8 @@
 
   &__grandchild-link {
     @extend .accordion-nav__child-link;
+    @extend .nav-link;
+
     margin-left: 4rem;
   }
 

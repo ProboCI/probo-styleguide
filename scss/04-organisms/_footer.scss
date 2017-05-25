@@ -10,6 +10,7 @@
 
 .footer {
   @include rem(font-size, 14px);
+
   background-color: $probo-gray-dark;
   color: $probo-pale;
   display: block;
@@ -25,6 +26,7 @@
 
   &__upper-wrapper {
     @extend .layout-975;
+
     align-items: center;
 
     @include breakpoint($bp-small-landscape) {
@@ -42,6 +44,7 @@
 
   &__upper-link {
     @include link-colors($probo-gray-dark, $probo-gray-dark);
+
     transition: color 0.2s ease;
     font-size: $base-margin * 2.5;
     vertical-align: middle;
@@ -54,6 +57,7 @@
 
   &__lower-wrapper {
     @extend .layout-975;
+
     @include breakpoint($bp-small-landscape) {
       display: flex;
       justify-content: space-between;
@@ -62,6 +66,7 @@
 
   &__copyright {
     color: $probo-gray-medium;
+
     @include breakpoint($bp-medium-landscape) {
       padding-bottom:0;
       clear: both;
@@ -79,16 +84,18 @@
   }
 
   &__navigation-item {
-      @include inline-block;
-      list-style-type: none;
-      margin-right: 12px;
+    @include inline-block;
 
-      &:last-of-type {
-        margin-right: 0;
-      }
+    list-style-type: none;
+    margin-right: 12px;
+
+    &:last-of-type {
+      margin-right: 0;
     }
+  }
 
   &__navigation-link {
-      @include link-colors($probo-pale-medium, $probo-blue, $probo-gray-medium, $probo-gray-medium);
+    @include link-colors($probo-pale-medium, $probo-blue, $probo-gray-medium, $probo-gray-medium);
+    @extend .nav-link;
   }
 }

@@ -1,6 +1,24 @@
-// ui colors
-$probo-blue: #00b7ff;
-$probo-blue-dark: #0055a4;
+// GRAYSCALE
+
+//// OLD!
+$probo-gray-dark: #404040;
+$probo-gray-dark-medium: #525252;
+$probo-gray-medium: #7d7d7d;
+$probo-pale-darker: #c8c8c8;
+$probo-pale-dark: #ebebeb;
+$probo-pale-medium: #f5f5f5;
+$probo-pale: #f7f7f7;
+
+//// NEW!
+$probo-black: #000000;
+$probo-gray-dark: #333333;
+$probo-gray: #4a4a4a;
+$probo-gray-light: #d8d8d8;
+$probo-white: #ffffff;
+
+// COLORSCALE
+
+//// OLD!
 $probo-midnight: #2e263b;
 $probo-purple-darkest: #33001d;
 $probo-purple-dark: #440027;
@@ -8,17 +26,24 @@ $probo-purple: #a6548c;
 $probo-soft-peach: #efe6eb;
 $probo-soft-peach-medium: darken(#efe6eb, 5%);
 $probo-soft-peach-dark: darken(#efe6eb, 10%);
-$probo-gray-dark: #404040;
-$probo-gray-dark-medium: #525252;
-$probo-gray-medium: #7d7d7d;
-$probo-pale: #f7f7f7;
-$probo-pale-medium: #f5f5f5;
-$probo-pale-dark: #ebebeb;
-$probo-pale-darker: #c8c8c8;
+
 $probo-green: #67c293;
 $probo-green-dark: #5fae85;
 $probo-green-darkest: #4a986e;
 $probo-lime: #b5d556;
+
+$probo-blue: #00b7ff;
+$probo-blue-dark: #0055a4;
+
+//// NEW!
+$probo-purple: #4d0027;
+$probo-purple-light: #a74783;
+$probo-pink: #e8d7dd;
+
+$probo-green: #9ac36c;
+
+$probo-blue: #3276b6;
+
 
 // alert colors
 $probo-alert-success: $probo-green;
@@ -27,13 +52,12 @@ $probo-alert-error: #cf3e34;
 $probo-alert-info: lighten($probo-blue, 40%);
 
 // typography
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic');
-$body-font-size: 14px;
+@import url('https://fonts.googleapis.com/css?family=Martel');
+$body-font-size: 17px;
 $body-line-height: 1.5;
-$base-font-color: $probo-gray-dark;
-$body-text-font-family: 'Open Sans', 'Lucida Grande', Helvetica, Arial, sans-serif;
-$link-color: $probo-blue-dark;
-$link-color-hover: $probo-blue;
+$base-font-color: $probo-gray;
+$serif: 'Martel', serif;
+$sans-serif: 'sofia-pro', sans-serif;
 
 // layout
 $probo-sitewidth: 975px;
@@ -58,15 +82,9 @@ $header-line-height: 35px;
 $logo-line-height: 35px;
 
 @font-face {
-  font-family:Merriweather;
-  font-style:normal;
-  font-weight:400;
-  src:local('Merriweather'),url(//themes.googleusercontent.com/static/fonts/merriweather/v5/RFda8w1V0eDZheqfcyQ4EKRDOzjiPcYnFooOUGCOsRk.woff) format('woff')
-}
-
-@font-face {
-  font-family:'Open Sans';
-  font-style:normal;
-  font-weight:400;
-  src:local('Open Sans'),local('OpenSans'),url(//fonts.gstatic.com/s/opensans/v10/u-WUoqrET9fUeobQW7jkRZBw1xU1rKptJj_0jans920.woff2) format('woff2'),local('Open Sans'),local('OpenSans'),url(//fonts.gstatic.com/s/opensans/v10/u-WUoqrET9fUeobQW7jkRbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');unicode-range:U+0100024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Martel'), local('Martel-Regular'), url(https://fonts.gstatic.com/s/martel/v1/ovCvXzSjesSyDxdnHqyGiuvvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }

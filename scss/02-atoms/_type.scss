@@ -9,13 +9,17 @@
 // .h1 - h1 text
 // .h2 - h2 text
 // .h3 - h3 text
+// .h3-alt - h3-alt text
 // .h4 - h4 text
+// .h5 - h5 text
+// .h6 - h6 text
 //
 // Markup:
 // <span class="{{modifier_class}}">Probo heading</span>
 //
 //
 // Styleguide 2.1
+
 %tiny {
   @include rem(font-size, 0.6 * $body-font-size);
 }
@@ -29,7 +33,7 @@
 }
 
 %normal {
-  @include rem(font-size, $body-font-size);
+ @include rem(font-size, $body-font-size);
 }
 
 %large {
@@ -51,59 +55,105 @@ html {
 
 body {
   @extend %normal;
+
   color: $base-font-color;
-  font-family: $body-text-font-family;
+  font-family: $sans-serif;
   line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.body-text {
+  font-family: $serif;
+}
+
 a {
-  @include link-colors($link-color, $link-color-hover);
+  @include link-colors($probo-blue-dark, $probo-blue);
+
   text-decoration: none;
   transition: color 0.25s ease;
   -webkit-tap-highlight-color: transparent;
+
   &:hover {
     text-decoration: underline;
   }
+}
+
+.nav-link {
+  @include rem(font-size, 15px);
+  @include link-colors($probo-gray);
+
+  color: $probo-gray-dark;
+}
+
+.small-text-link {
+  @include rem(font-size, 14px);
+  @include link-colors($probo-gray);
+
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 i {
   margin-right: 5px;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.p,
 p {
-  @extend %no-dangling;
+  margin: 0;
+
+  + p {
+    margin-top: $base-margin;
+  }
 }
 
 .h1 {
-  @extend %largest;
-  font-weight: 700;
+  @include rem(font-size, 40px);
+
+  font-weight: 600;
 }
 
 .h2 {
-  @extend %larger;
+  @include rem(font-size, 32px);
+
   font-weight: 600;
 }
 
 .h3 {
-  @extend %large;
-  font-weight: 600;
+  @include rem(font-size, 26px);
+
+  font-weight: 400;
+}
+
+.h3-alt {
+  @extend .h3;
+
+  &:before {
+    content: '|';
+    padding-right: 16px;
+  }
 }
 
 .h4 {
-  @extend %normal;
+  @include rem(font-size, 18px);
+
+  font-weight: 600;
+}
+
+.h5 {
+  @include rem(font-size, 16px);
+
+  font-weight: 600;
+}
+
+.h6 {
+  @include rem(font-size, 14px);
+
   font-weight: 600;
 }
 
 .p {
-  @extend %normal;
+  @include rem(font-size, $body-font-size);
 }
 
 
@@ -178,6 +228,7 @@ p {
 .del {
   text-decoration: line-through;
 }
+
 %no-dangling {
   &:first-child,
   &:first-of-type {
@@ -211,16 +262,56 @@ p {
 
 // Body text
 //
-// p - A paragraph of text should be wrapped with a <code>p</code> tag.
+// .body-text - Any text that is considered body copy will need this class. This will give it a serif font.
 //
 // Markup:
-// <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+//<div class="body-text">
+//<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+// <p>Nunc consequat ipsum at nisl mollis, id bibendum nibh convallis. Nulla elit ex, lacinia porttitor massa vel, varius luctus odio. Sed sit amet ullamcorper nisl. Vivamus eleifend, est sed scelerisque pretium, elit lectus eleifend mauris, id commodo velit mauris nec orci. Aliquam posuere in tortor vel iaculis.</p>
+//</div>
 //
 // Styleguide 2.3
 
-// Lists
+// Links
 //
 // Styleguide 2.4
+
+// Inline links
+//
+// a - An inline link.
+//
+// Markup:
+//<div class="body-text">
+// <p>Curabitur in <a href="/">condimentum nisl</a>. Cras condimentum rhoncus tellus vel tempus. Nam massa ex, maximus ut metus et, bibendum posuere orci.</p>
+//</div>
+//
+// Styleguide 2.4.1
+
+// Navigation links
+//
+// .nav-link - A link in a navigation menu.
+//
+// Markup:
+// <ul>
+//   <li><a href="/" class="nav-link">Product</a></li>
+//   <li><a href="/" class="nav-link">About</a></li>
+//   <li><a href="/" class="nav-link">Pricing</a></li>
+// <ul>
+//
+// Styleguide 2.4.2
+
+// Small text links
+//
+// .small-text-link - A small text link.
+//
+// Markup:
+// <a href="/" class="small-text-link">Next post</a>
+//
+// Styleguide 2.4.3
+
+// Lists
+//
+// Styleguide 2.5
 
 // Unordered list
 //
@@ -233,7 +324,7 @@ p {
 //   <li>Vestibulum auctor dapibus neque.</li>
 // </ul>
 //
-// Styleguide 2.4.1
+// Styleguide 2.5.1
 
 // Ordered lists
 //
@@ -246,4 +337,4 @@ p {
 //   <li>Vestibulum auctor dapibus neque.</li>
 // </ol>
 //
-// Styleguide 2.4.2
+// Styleguide 2.5.2

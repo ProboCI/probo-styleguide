@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="public/kss.css">
   <link rel="stylesheet" href="probo.css">
 
+
+  <script src="https://use.typekit.net/xvn3ltd.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
 <body id="kss-node">
 
@@ -63,18 +67,42 @@
             <li class="kss-nav__menu-item">
               <a href="section-2.html#kssref-2-4">
                 <span class="kss-nav__ref ">2.4</span
-                ><span class="kss-nav__name">Lists</span>
+                ><span class="kss-nav__name">Links</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-2.html#kssref-2-4-1">
                 <span class="kss-nav__ref kss-nav__ref-child">2.4.1</span
-                ><span class="kss-nav__name">Unordered list</span>
+                ><span class="kss-nav__name">Inline links</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a href="section-2.html#kssref-2-4-2">
                 <span class="kss-nav__ref kss-nav__ref-child">2.4.2</span
+                ><span class="kss-nav__name">Navigation links</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-2.html#kssref-2-4-3">
+                <span class="kss-nav__ref kss-nav__ref-child">2.4.3</span
+                ><span class="kss-nav__name">Small text links</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-2.html#kssref-2-5">
+                <span class="kss-nav__ref ">2.5</span
+                ><span class="kss-nav__name">Lists</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-2.html#kssref-2-5-1">
+                <span class="kss-nav__ref kss-nav__ref-child">2.5.1</span
+                ><span class="kss-nav__name">Unordered list</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-2.html#kssref-2-5-2">
+                <span class="kss-nav__ref kss-nav__ref-child">2.5.2</span
                 ><span class="kss-nav__name">Ordered lists</span>
               </a>
             </li>
@@ -182,6 +210,15 @@
           <span class="h3">Probo heading</span>
         </div>
         <div class="kss-modifier__name kss-style">
+          .h3-alt
+        </div>
+        <div class="kss-modifier__description kss-style">
+          h3-alt text
+        </div>
+        <div class="kss-modifier__example">
+          <span class="h3-alt">Probo heading</span>
+        </div>
+        <div class="kss-modifier__name kss-style">
           .h4
         </div>
         <div class="kss-modifier__description kss-style">
@@ -189,6 +226,24 @@
         </div>
         <div class="kss-modifier__example">
           <span class="h4">Probo heading</span>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h5
+        </div>
+        <div class="kss-modifier__description kss-style">
+          h5 text
+        </div>
+        <div class="kss-modifier__example">
+          <span class="h5">Probo heading</span>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .h6
+        </div>
+        <div class="kss-modifier__description kss-style">
+          h6 text
+        </div>
+        <div class="kss-modifier__example">
+          <span class="h6">Probo heading</span>
         </div>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class=&quot;[modifier class]&quot;&gt;Probo heading&lt;/span&gt;</code></pre>
@@ -335,16 +390,22 @@
         <div class="kss-modifier__heading kss-style">
         </div>
         <div class="kss-modifier__name kss-style">
-          p
+          .body-text
         </div>
         <div class="kss-modifier__description kss-style">
-          A paragraph of text should be wrapped with a <code>p</code> tag.
+          Any text that is considered body copy will need this class. This will give it a serif font.
         </div>
         <div class="kss-modifier__example">
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="body-text">
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+<p>Nunc consequat ipsum at nisl mollis, id bibendum nibh convallis. Nulla elit ex, lacinia porttitor massa vel, varius luctus odio. Sed sit amet ullamcorper nisl. Vivamus eleifend, est sed scelerisque pretium, elit lectus eleifend mauris, id commodo velit mauris nec orci. Aliquam posuere in tortor vel iaculis.</p>
+</div>
         </div>
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;body-text&quot;&gt;
+&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&lt;/p&gt;
+&lt;p&gt;Nunc consequat ipsum at nisl mollis, id bibendum nibh convallis. Nulla elit ex, lacinia porttitor massa vel, varius luctus odio. Sed sit amet ullamcorper nisl. Vivamus eleifend, est sed scelerisque pretium, elit lectus eleifend mauris, id commodo velit mauris nec orci. Aliquam posuere in tortor vel iaculis.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
       </div>
       </div>
 
@@ -360,7 +421,7 @@
                 #permalink
             </span>
           </span>
-          Lists
+          Links
         </a>
       </h2>
 
@@ -376,6 +437,146 @@
         <a class="kss-title__permalink" href="#kssref-2-4-1">
           <span class="kss-title__ref">
               2.4.1
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Inline links
+        </a>
+      </h3>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          a
+        </div>
+        <div class="kss-modifier__description kss-style">
+          An inline link.
+        </div>
+        <div class="kss-modifier__example">
+          <div class="body-text">
+<p>Curabitur in <a href="/">condimentum nisl</a>. Cras condimentum rhoncus tellus vel tempus. Nam massa ex, maximus ut metus et, bibendum posuere orci.</p>
+</div>
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;body-text&quot;&gt;
+&lt;p&gt;Curabitur in &lt;a href=&quot;/&quot;&gt;condimentum nisl&lt;/a&gt;. Cras condimentum rhoncus tellus vel tempus. Nam massa ex, maximus ut metus et, bibendum posuere orci.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      </div>
+
+      </section>
+      <section id="kssref-2-4-2" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-2-4-2">
+          <span class="kss-title__ref">
+              2.4.2
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Navigation links
+        </a>
+      </h3>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .nav-link
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A link in a navigation menu.
+        </div>
+        <div class="kss-modifier__example">
+          <ul>
+  <li><a href="/" class="nav-link">Product</a></li>
+  <li><a href="/" class="nav-link">About</a></li>
+  <li><a href="/" class="nav-link">Pricing</a></li>
+<ul>
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/&quot; class=&quot;nav-link&quot;&gt;Product&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/&quot; class=&quot;nav-link&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/&quot; class=&quot;nav-link&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;</code></pre>
+      </div>
+      </div>
+
+      </section>
+      <section id="kssref-2-4-3" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-2-4-3">
+          <span class="kss-title__ref">
+              2.4.3
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Small text links
+        </a>
+      </h3>
+
+
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .small-text-link
+        </div>
+        <div class="kss-modifier__description kss-style">
+          A small text link.
+        </div>
+        <div class="kss-modifier__example">
+          <a href="/" class="small-text-link">Next post</a>
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;/&quot; class=&quot;small-text-link&quot;&gt;Next post&lt;/a&gt;</code></pre>
+      </div>
+      </div>
+
+      </section>
+      <section id="kssref-2-5" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-2-5">
+          <span class="kss-title__ref">
+              2.5
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Lists
+        </a>
+      </h2>
+
+
+    </div>
+
+
+      </section>
+      <section id="kssref-2-5-1" class="kss-section kss-section--depth-3">
+
+    <div class="kss-style">
+      <h3 class="kss-title kss-title--level-3">
+        <a class="kss-title__permalink" href="#kssref-2-5-1">
+          <span class="kss-title__ref">
+              2.5.1
             <span class="kss-title__permalink-hash">
                 #permalink
             </span>
@@ -413,13 +614,13 @@
       </div>
 
       </section>
-      <section id="kssref-2-4-2" class="kss-section kss-section--depth-3">
+      <section id="kssref-2-5-2" class="kss-section kss-section--depth-3">
 
     <div class="kss-style">
       <h3 class="kss-title kss-title--level-3">
-        <a class="kss-title__permalink" href="#kssref-2-4-2">
+        <a class="kss-title__permalink" href="#kssref-2-5-2">
           <span class="kss-title__ref">
-              2.4.2
+              2.5.2
             <span class="kss-title__permalink-hash">
                 #permalink
             </span>
