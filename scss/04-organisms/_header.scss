@@ -28,6 +28,8 @@
   }
 
   &__title {
+    height: $logo-line-height;
+    width: auto;
     margin: 0;
 
     @include breakpoint($bp-medium) {
@@ -46,11 +48,6 @@
     @include breakpoint($bp-medium) {
       float: left;
     }
-  }
-
-  &__logo {
-    height: $logo-line-height;
-    width: auto;
   }
 
   &__navigation {
@@ -108,7 +105,7 @@
       font-weight: bold;
 
       &:hover {
-        background: #5f5d5d;
+        background: $probo-gray-dark-medium;
       }
     }
   }

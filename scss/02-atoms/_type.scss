@@ -133,6 +133,7 @@ h2,
 h3,
 .h3 {
   @include rem(font-size, 26px);
+  @extend .f-normal;
 }
 
 .h3-alt {
@@ -206,6 +207,10 @@ h6,
 
 .f-light {
   font-weight: 300;
+}
+
+.f-normal {
+  font-weight: 400;
 }
 
 .u-visually-hidden {
