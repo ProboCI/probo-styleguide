@@ -3512,6 +3512,10 @@ h6,
 .f-light{
   font-weight:300; }
 
+.f-normal, h3,
+.h3, .h3-alt{
+  font-weight:400; }
+
 .u-visually-hidden{
   border:0;
   clip:rect(0 0 0 0);
@@ -3829,6 +3833,8 @@ select,
     .header__wrapper::after{
       clear:both; }
   .header__title{
+    height:35px;
+    width:auto;
     margin:0; }
     @media (min-width: 48em){
       .header__title{
@@ -3843,9 +3849,6 @@ select,
     @media (min-width: 48em){
       .header__title-link{
         float:left; } }
-  .header__logo{
-    height:35px;
-    width:auto; }
   .header__navigation{
     float:right;
     margin:auto;
@@ -3892,7 +3895,7 @@ select,
       text-decoration:none;
       font-weight:bold; }
       .header__navigation-link.login:hover{
-        background:#5f5d5d; }
+        background:#525252; }
 
 .accordion-nav{
   padding-left:0;
@@ -4008,8 +4011,7 @@ select,
       padding-right:0; } }
 
 .menu-is-open{
-  overflow:hidden;
-  position:fixed; }
+  overflow:hidden; }
 
 @media (min-width: 48em){
   .main-menu{
