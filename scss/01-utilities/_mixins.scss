@@ -1,3 +1,7 @@
+@function em($pixel) {
+  @return $pixel / 16px * 1em;
+}
+
 // https://gist.github.com/webgefrickel/4530526
 // usage:
 // @include rem(font-size, 16px)
@@ -42,6 +46,14 @@
   #{$property}: $px-values;
   #{$property}: $rem-values;
 }
+
+@mixin white-text {
+  color: $probo-pale-medium;
+  h1, h2, h3, h4, h5 {
+    color: $probo-pale-medium;
+  }
+}
+
 
 @mixin link-colors($color, $hover: $color, $active: $color, $focus: $color) {
   color: $color;

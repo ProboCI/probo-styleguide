@@ -1,25 +1,8 @@
-// GRAYSCALE
-
-//// OLD!
-$probo-gray-dark: #404040;
-$probo-gray-dark-medium: #525252;
-$probo-gray-medium: #7d7d7d;
-$probo-pale-darker: #c8c8c8;
-$probo-pale-dark: #ebebeb;
-$probo-pale-medium: #f5f5f5;
-$probo-pale: #f7f7f7;
-
-//// NEW!
-$probo-black: #000000;
-$probo-gray-dark: #333333;
-$probo-gray: #4a4a4a;
-$probo-gray-light: #d8d8d8;
-$probo-white: #ffffff;
-
-// COLORSCALE
-
-//// OLD!
+// ui colors
+$probo-blue: #00b7ff;
+$probo-blue-dark: #0055a4;
 $probo-midnight: #2e263b;
+
 $probo-purple-darkest: #33001d;
 $probo-purple-dark: #440027;
 $probo-purple: #a6548c;
@@ -32,24 +15,32 @@ $probo-green-dark: #5fae85;
 $probo-green-darkest: #4a986e;
 $probo-lime: #b5d556;
 
-$probo-blue: #00b7ff;
-$probo-blue-dark: #0055a4;
-
-//// NEW!
-$probo-purple: #4d0027;
-$probo-purple-light: #a74783;
-$probo-pink: #e8d7dd;
-
-$probo-green: #9ac36c;
-
-$probo-blue: #3276b6;
-
+$probo-gray-dark: #404040;
+$probo-gray-dark-medium: #525252;
+$probo-gray-medium: #7d7d7d;
+$probo-pale-darker: #c8c8c8;
+$probo-pale-dark: #ebebeb;
+$probo-pale-medium: #f5f5f5;
+$probo-pale: #f7f7f7;
 
 // alert colors
 $probo-alert-success: $probo-green;
 $probo-alert-warning: #ffb502;
 $probo-alert-error: #cf3e34;
 $probo-alert-info: lighten($probo-blue, 40%);
+
+//// New colors being phased in
+$probo-black: #000000;
+$probo-gray-dark: #333333;
+$probo-gray: #4a4a4a;
+$probo-gray-light: #d8d8d8;
+$probo-white: #ffffff;
+
+$probo-purple: #4d0027;
+$probo-purple-light: #a74783;
+$probo-pink: #e8d7dd;
+$probo-green: #9ac36c;
+$probo-blue: #3276b6;
 
 // typography
 @import url('https://fonts.googleapis.com/css?family=Martel');
