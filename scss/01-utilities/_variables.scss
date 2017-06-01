@@ -42,35 +42,38 @@ $probo-pink: #e8d7dd;
 $probo-green: #9ac36c;
 $probo-blue: #3276b6;
 
-// typography
-@import url('https://fonts.googleapis.com/css?family=Martel');
-$body-font-size: 17px;
-$body-line-height: 1.5;
-$base-font-color: $probo-gray;
-$serif: 'Martel', serif;
-$sans-serif: 'sofia-pro', sans-serif;
-
 // layout
-$probo-sitewidth: 975px;
-$probo-menu-width: 300px;
+$base-context: 17;
+$probo-sitewidth-large: 1400 / $base-context * 1em;
+$probo-sitewidth: 975 / $base-context * 1em;
+$probo-menu-width: 300 / $base-context * 1em;
 $border-radius: 4px;
 $header-height: 60px;
 $base-margin: 12px;
 $base-spacing: 10px;
-$inner-width: 975px;
+$inner-width: $probo-sitewidth;
 $inner-width-padding: ($probo-sitewidth - $inner-width) / 2;
 
 // breakpoints
-$bp-small-landscape: 480px / 16px * 1em;
-$bp-medium: 768px / 16px * 1em;
-$bp-medium-landscape: 1024px / 16px * 1em;
-$bp-large: 1200px / 16px * 1em;
-$bp-larger: 1500px / 16px * 1em;
+$bp-small-landscape: 480 / $base-context * 1em;
+$bp-medium: 768 / $base-context * 1em;
+$bp-medium-landscape: $probo-sitewidth / $base-context;
+$bp-large: 1200 / $base-context * 1em;
+$bp-larger: $probo-sitewidth-large / $base-context;
 
 // header
 $header-height: 59px;
 $header-line-height: 35px;
 $logo-line-height: 35px;
+
+// typography
+$body-font-size: $base-context * 1px;
+$body-line-height: (28 / 17);
+$base-font-color: $probo-gray;
+$serif: 'Martel', serif;
+$sans-serif: 'sofia-pro', sans-serif;
+$link-color: $probo-blue-dark;
+$link-color-hover: $probo-blue;
 
 @font-face {
   font-family: 'Martel';

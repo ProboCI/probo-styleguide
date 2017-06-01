@@ -70,7 +70,7 @@ body {
 }
 
 a {
-  @include link-colors($probo-blue-dark, $probo-blue);
+  @include link-colors($link-color, $link-color-hover);
 
   text-decoration: none;
   transition: color 0.25s ease;
@@ -86,6 +86,7 @@ a {
   @include link-colors($probo-gray);
 
   color: $probo-gray-dark;
+  line-height: (22 / 15);
 }
 
 .small-text-link {
@@ -94,18 +95,11 @@ a {
 
   font-weight: 600;
   text-transform: uppercase;
+  line-height: (21 / 14);
 }
 
 i {
   margin-right: 5px;
-}
-
-p {
-  margin: 0;
-
-  + p {
-    margin-top: $base-margin;
-  }
 }
 
 h1,
@@ -122,18 +116,24 @@ h1,
 .h1 {
   @include rem(font-size, 40px);
   @extend .f-semi-bold;
+
+  line-height: (50 / 40);
 }
 
 h2,
 .h2 {
   @include rem(font-size, 32px);
   @extend .f-semi-bold;
+
+  line-height: (38 / 32);
 }
 
 h3,
 .h3 {
   @include rem(font-size, 26px);
   @extend .f-normal;
+
+  line-height: (32 / 26);
 }
 
 .h3-alt {
@@ -149,6 +149,8 @@ h4,
 .h4 {
   @include rem(font-size, 18px);
   @extend .f-semi-bold;
+
+  line-height: (26 / 18);
 }
 
 h5,
@@ -163,8 +165,14 @@ h6,
   @extend .f-semi-bold;
 }
 
+p,
 .p {
   @include rem(font-size, $body-font-size);
+  margin: 0;
+
+  + p {
+    margin-top: $base-margin;
+  }
 }
 
 
