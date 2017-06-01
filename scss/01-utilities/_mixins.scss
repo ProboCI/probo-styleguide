@@ -154,6 +154,14 @@
   }
 }
 
+@mixin visuallyhidden-off {
+  clip: auto;
+  height: auto;
+  width: auto;
+  position: static;
+  overflow: auto;
+}
+
 @mixin invisible {
   visibility: hidden;
 }

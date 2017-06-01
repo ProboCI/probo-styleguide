@@ -45,7 +45,7 @@ $probo-blue: #3276b6;
 // layout
 $base-context: 17;
 $probo-sitewidth-large: 1400 / $base-context * 1em;
-$probo-sitewidth: 975 / $base-context * 1em;
+$probo-sitewidth: 1024 / $base-context * 1em;
 $probo-menu-width: 300 / $base-context * 1em;
 $border-radius: 4px;
 $header-height: 60px;
@@ -57,7 +57,7 @@ $inner-width-padding: ($probo-sitewidth - $inner-width) / 2;
 // breakpoints
 $bp-small-landscape: 480 / $base-context * 1em;
 $bp-medium: 768 / $base-context * 1em;
-$bp-medium-landscape: $probo-sitewidth / $base-context;
+$bp-medium-landscape: $probo-sitewidth;
 $bp-large: 1200 / $base-context * 1em;
 $bp-larger: $probo-sitewidth-large / $base-context;
 
