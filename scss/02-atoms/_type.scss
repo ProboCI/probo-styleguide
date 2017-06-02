@@ -58,7 +58,7 @@ body {
 
   color: $base-font-color;
   font-family: $sans-serif;
-  line-height: 1.5;
+  line-height: $body-line-height;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
