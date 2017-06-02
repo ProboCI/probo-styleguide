@@ -230,6 +230,8 @@ button,
 
 .button-sm,
 .button-sm:hover {
-  font-size: 14px;
-  padding: 2px 10px;
+  @include rem(font-size, 14px);
+  @extend .f-semi-bold;
+
+  line-height: (21 / 17);
 }
