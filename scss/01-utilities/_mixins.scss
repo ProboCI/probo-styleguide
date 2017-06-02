@@ -90,6 +90,7 @@
   @include rem(font-size, 18px);
   @extend .f-semi-bold;
 
+  font-family: $sans-serif;
   line-height: (24 / 17);
   text-decoration: none;
   padding: 8px 24px;
