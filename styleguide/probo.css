@@ -2550,6 +2550,9 @@ th{
         border-bottom:0;
         background-image:none;
         box-shadow:none; } }
+  #kss-node #kssref-3 .kss-modifier__wrapper,
+  #kss-node #kssref-3 ~ section .kss-modifier__wrapper{
+    background-color:#f7f7f7; }
 
 #kss-node .kss-doc-title{
   margin:0; }

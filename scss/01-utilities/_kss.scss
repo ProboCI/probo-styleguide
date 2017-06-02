@@ -205,6 +205,13 @@ $kss-vertical-rhythm       : $kss-font-size * 1.5;
       background-image: none;
       box-shadow: none;    }
   }
+
+  #kssref-3,
+  #kssref-3 ~ section {
+    .kss-modifier__wrapper {
+      background-color: $probo-pale;
+    }
+  }
 }
 
 // ------------------------------------------------------------------------------
