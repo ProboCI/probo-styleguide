@@ -68,6 +68,17 @@ svg:not(:root) {
   }
 }
 
+%page-title {
+  margin-bottom: $base-margin;
+  padding-bottom: $base-margin;
+  border-bottom: 1px solid $probo-gray-light;
+
+  @include breakpoint($bp-medium-landscape) {
+    margin-bottom: $base-margin * 2;
+    padding-bottom: $base-margin * 2;
+  }
+}
+
 %nav-right {
   float: right;
   margin: auto;
