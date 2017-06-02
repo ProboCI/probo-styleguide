@@ -4080,7 +4080,8 @@ form textarea, .form__input--small{
   border:1px solid #c8c8c8;
   color:#7d7d7d;
   background-color:#f5f5f5;
-  max-width:100%; }
+  max-width:100%;
+  border-radius:24px; }
   .form__input:active, form input[type="text"]:active,
   form input[type="email"]:active,
   form input[type="date"]:active,
@@ -4111,7 +4112,7 @@ form textarea, .form__input--small{
   form input[type="password"]:focus,
   form textarea:focus, .form__input--small:focus{
     background-color:#f7f7f7;
-    outline:1px solid #4d0027; }
+    outline:none; }
 
 .form__input--small{
   padding:10px; }
