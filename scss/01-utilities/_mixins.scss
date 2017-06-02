@@ -116,56 +116,6 @@
     border-color: lighten($border-color, 20%);
     cursor: default;
   }
-
-  &--inverse {
-    background-color: $font-color;
-    color: $bg-color;
-    border: 2px solid $bg-color;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      background-color: $bg-color;
-      color: $font-color;
-      border-color: $bg-color;
-    }
-
-    &.disabled,
-    &.disabled:hover,
-    &:disabled,
-    &:disabled:hover {
-      background-color: lighten($font-color, 20%);
-      color: lighten($bg-color, 10%);
-      border-color: lighten($bg-color, 20%);
-      cursor: default;
-    }
-  }
-
-  &--transparent {
-    background-color: transparent;
-    color: $bg-color;
-    border: 2px solid $bg-color;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-      background-color: $bg-color;
-      color: $font-color;
-      border-color: $bg-color;
-    }
-
-    &.disabled,
-    &.disabled:hover,
-    &:disabled,
-    &:disabled:hover {
-      background-color: lighten($font-color, 20%);
-      color: lighten($bg-color, 10%);
-      border-color: lighten($border-color, 20%);
-      cursor: default;
-    }
-  }
 }
 
 @mixin button-group($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: $font-color, $hover-font-color: $bg-color, $hover-border-color: $bg-color) {

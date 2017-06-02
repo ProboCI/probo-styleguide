@@ -11,10 +11,9 @@
 //
 // .button            - Basic <code>.button</code> used throughout the site.
 // .button--inverse            - Basic <code>.button</code> used throughout the site.
-// .button--transparent            - Basic <code>.button</code> used throughout the site.
+// .button--transparent--dark - A transparent button with gray text and border.
+// .button--transparent--light - A transparent button with white text and border.
 // .button-sm         - Use <code>.button-sm</code> for small buttons.
-// .button--transparent--light   - A transparent button with white text and border.
-// .button--transparent--dark   - A transparent button with dark gray text and border.
 // .button--success   - Use <code>.button</code> for most common page actions.
 // .button--success--inverse   - Use <code>.button</code> for most common page actions.
 // .button--success--transparent   - Use <code>.button</code> for most common page actions.
@@ -45,7 +44,7 @@
 //   <button class="button">Button Element</button>
 // </div>
 //
-// .button-group - Default button group.
+// .button-group--gray - Gray button group.
 // .button-group--green - Green button group.
 // .button-group--purple - Purple button group.
 // .button-group--blue - Blue button group.
@@ -61,8 +60,8 @@
 // <a class="button {{modifier_class}} disabled button-sm" href="#" role="button">Small button</a>
 //
 // .disabled            - Basic <code>.button</code> used throughout the site.
+// .button--transparent--dark - A transparent button with gray text and border
 // .button--transparent--light   - A transparent button with white text and border.
-// .button--transparent--dark   - A transparent button with dark gray text and border.
 // .button--success   - Use <code>.button</code> for most common page actions.
 // .button--success--inverse   - Use <code>.button</code> for most common page actions.
 // .button--success--transparent   - Use <code>.button</code> for most common page actions.
@@ -88,38 +87,81 @@
 button,
 .button {
   @include button;
-}
 
-.button--transparent--light {
-  @include button(transparent, $probo-white, $probo-white, $hover-font-color: $base-font-color, $hover-border-color: $base-font-color);
-}
+  &--inverse {
+    @include button($probo-white, $base-font-color, $base-font-color, $base-font-color, $probo-white, $base-font-color);
+  }
 
-.button--transparent--dark {
-  @include button(transparent, $base-font-color, $base-font-color, $hover-font-color: $probo-white);
+  &--transparent--dark {
+    @include button(transparent, $base-font-color, $base-font-color, transparent, $probo-white, $probo-white);
+  }
+
+  &--transparent--light {
+    @include button(transparent, $probo-white, $probo-white, transparent, $base-font-color, $base-font-color);
+  }
 }
 
 .button--success,
 .button--green {
   @include button($probo-green, $probo-white);
+
+  &--inverse {
+    @include button($probo-white, $probo-green, $probo-green, $probo-green, $probo-white, $probo-green);
+  }
+
+  &--transparent {
+    @include button(transparent, $probo-green, $probo-green, $probo-green, $probo-white, $probo-green);
+  }
 }
 
 .button--purple {
   @include button($probo-purple-light, $probo-white);
+
+  &--inverse {
+    @include button($probo-white, $probo-purple-light, $probo-purple-light, $probo-purple-light, $probo-white, $probo-purple-light);
+  }
+
+  &--transparent {
+    @include button(transparent, $probo-purple-light, $probo-purple-light, $probo-purple-light, $probo-white, $probo-purple-light);
+  }
 }
 
 .button--warning,
 .button--red {
-	@include button(darken($probo-alert-error, 10%), $probo-white);
+	@include button($probo-red, $probo-white);
+
+  &--inverse {
+    @include button($probo-white, $probo-red, $probo-red, $probo-red, $probo-white, $probo-red);
+  }
+
+  &--transparent {
+    @include button(transparent, $probo-red, $probo-red, $probo-red, $probo-white, $probo-red);
+  }
 }
 
 .button--info,
 .button--blue {
   @include button($probo-blue, $probo-white);
+
+  &--inverse {
+    @include button($probo-white, $probo-blue, $probo-blue, $probo-blue, $probo-white, $probo-blue);
+  }
+
+  &--transparent {
+    @include button(transparent, $probo-blue, $probo-blue, $probo-blue, $probo-white, $probo-blue);
+  }
 }
 
 .button--dark-gray {
   @include button($probo-gray-dark, $probo-white, $probo-gray-dark);
-  @extend .button;
+
+  &--inverse {
+    @include button($probo-white, $probo-gray-dark, $probo-gray-dark, $probo-gray-dark, $probo-white, $probo-gray-dark);
+  }
+
+  &--transparent {
+    @include button(transparent, $probo-gray-dark, $probo-gray-dark, $probo-gray-dark, $probo-white, $probo-gray-dark);
+  }
 }
 
 .button--icon {
@@ -148,7 +190,7 @@ button,
   clear: both;
 }
 
-.button-group {
+.button-group--gray {
   @include button-group();
 }
 

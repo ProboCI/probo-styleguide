@@ -42,6 +42,8 @@ $probo-pink: #e8d7dd;
 $probo-green: #9ac36c;
 $probo-blue: #3276b6;
 
+$probo-red: darken($probo-alert-error, 10%);
+
 // layout
 $base-context: 17;
 $probo-sitewidth-large: 1400 / $base-context * 1em;
