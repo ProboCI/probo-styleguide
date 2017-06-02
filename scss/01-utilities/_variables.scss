@@ -61,7 +61,7 @@ $bp-small-landscape: 480 / $base-context * 1em;
 $bp-medium: 768 / $base-context * 1em;
 $bp-medium-landscape: $probo-sitewidth;
 $bp-large: 1200 / $base-context * 1em;
-$bp-larger: $probo-sitewidth-large / $base-context;
+$bp-larger: $probo-sitewidth-large;
 
 // header
 $header-height: 59px;
