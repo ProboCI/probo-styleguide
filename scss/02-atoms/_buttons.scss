@@ -10,27 +10,45 @@
 // <a class="button {{modifier_class}} button-sm" href="#" role="button">Small button</a>
 //
 // .button            - Basic <code>.button</code> used throughout the site.
+// .button--inverse            - Basic <code>.button</code> used throughout the site.
+// .button--transparent            - Basic <code>.button</code> used throughout the site.
 // .button-sm         - Use <code>.button-sm</code> for small buttons.
+// .button--transparent--light   - A transparent button with white text and border.
+// .button--transparent--dark   - A transparent button with dark gray text and border.
 // .button--success   - Use <code>.button</code> for most common page actions.
+// .button--success--inverse   - Use <code>.button</code> for most common page actions.
+// .button--success--transparent   - Use <code>.button</code> for most common page actions.
+// .button--purple   - A flat purple button.
+// .button--purple--inverse   - A flat purple button.
+// .button--purple--transparent   - A flat purple button.
 // .button--warning   - To indicate to a user that an intended action is potentially dangerous, apply
 //                      the <code>.button--warning</code> class to a button or link.
+// .button--warning--inverse   - To indicate to a user that an intended action is potentially dangerous, apply
+//                      the <code>.button--warning</code> class to a button or link.
+// .button--warning--transparent   - To indicate to a user that an intended action is potentially dangerous, apply
+//                      the <code>.button--warning</code> class to a button or link.
 // .button--info      - Use this for links that provide additional information.
-// .button--dark-blue - Use this for to call attention to a special actions like adding admins.
+// .button--info--inverse      - Use this for links that provide additional information.
+// .button--info--transparent      - Use this for links that provide additional information.
 // .button--dark-gray - A dark button to be used in the footer.
-// .button--white     - A flat white button.
+// .button--dark-gray--inverse - A dark button to be used in the footer.
+// .button--dark-gray--transparent - A dark button to be used in the footer.
 //
 // Styleguide 3.0
 
 // Button groups
 //
 // Markup:
-// <div class="button-group">
-//   <button class="{{modifier_class}}">Button Element</button>
-//   <button class="{{modifier_class}}">Button Element</button>
-//   <button class="{{modifier_class}}">Button Element</button>
+// <div class="{{modifier_class}}">
+//   <button class="button">Button Element</button>
+//   <button class="button">Button Element</button>
+//   <button class="button">Button Element</button>
 // </div>
 //
-// .button - Wrap buttons in <code>.button-group</code> to adjust spacing of grouped buttons.
+// .button-group - Default button group.
+// .button-group--green - Green button group.
+// .button-group--purple - Purple button group.
+// .button-group--blue - Blue button group.
 //
 // Styleguide 3.1
 
@@ -43,13 +61,26 @@
 // <a class="button {{modifier_class}} disabled button-sm" href="#" role="button">Small button</a>
 //
 // .disabled            - Basic <code>.button</code> used throughout the site.
+// .button--transparent--light   - A transparent button with white text and border.
+// .button--transparent--dark   - A transparent button with dark gray text and border.
 // .button--success   - Use <code>.button</code> for most common page actions.
+// .button--success--inverse   - Use <code>.button</code> for most common page actions.
+// .button--success--transparent   - Use <code>.button</code> for most common page actions.
+// .button--purple   - A flat purple button
+// .button--purple--inverse   - A flat purple button.
+// .button--purple--transparent   - A flat purple button.
 // .button--warning   - To indicate to a user that an intended action is potentially dangerous, apply
 //                      the <code>.button--warning</code> class to a button or link.
+// .button--warning--inverse   - To indicate to a user that an intended action is potentially dangerous, apply
+//                      the <code>.button--warning</code> class to a button or link.
+// .button--warning--transparent   - To indicate to a user that an intended action is potentially dangerous, apply
+//                      the <code>.button--warning</code> class to a button or link.
 // .button--info      - Use this for links that provide additional information.
-// .button--dark-blue - Use this for to call attention to a special actions like adding admins.
+// .button--info--inverse      - Use this for links that provide additional information.
+// .button--info--transparent      - Use this for links that provide additional information.
 // .button--dark-gray - A dark button to be used in the footer.
-// .button--white     - A flat white button.
+// .button--dark-gray--inverse - A dark button to be used in the footer.
+// .button--dark-gray--transparent - A dark button to be used in the footer.
 //
 // Styleguide 3.2
 
@@ -59,112 +90,36 @@ button,
   @include button;
 }
 
-.button:disabled,
-.button:disabled:hover,
-.button.disabled,
-.button.disabled:hover {
-  background-image: none;
-  background-color: $probo-pale-dark;
-  color: #666666;
-  border-color: $probo-pale-dark;
-  cursor: default;
-  box-shadow: none;
+.button--transparent--light {
+  @include button(transparent, $probo-white, $probo-white, $hover-font-color: $base-font-color, $hover-border-color: $base-font-color);
 }
 
-@mixin disabled-button($color, $bg) {
-  background-image: none;
-  background-color: lighten($bg,20%);
-  color: $color;
-  border-color: lighten($bg,10%);;
-  cursor: default;
-  box-shadow: none;
-
-  &:hover {
-    color: $color;
-  }
+.button--transparent--dark {
+  @include button(transparent, $base-font-color, $base-font-color, $hover-font-color: $probo-white);
 }
 
-.button--success {
-  @include button($probo-green, $probo-green-dark, $probo-green-darkest, $probo-white);
-
-  &.disabled,
-  &.disabled:hover,
-  &:disabled,
-  &:disabled:hover {
-    @include disabled-button($probo-white,$probo-green);
-  }
+.button--success,
+.button--green {
+  @include button($probo-green, $probo-white);
 }
 
-.button--warning {
-	color: darken($probo-alert-error, 10%);
-
-	&:hover {
-	  @include button(lighten($probo-alert-error, 3%), $probo-alert-error, darken($probo-alert-error, 10%), $probo-white);
-	}
-
-  &.disabled,
-  &.disabled:hover,
-  &:disabled,
-  &:disabled:hover {
-    @include disabled-button(darken($probo-alert-error, 10%),$probo-pale-darker);
-  }
- }
-
-.button--info {
-	&:hover {
-	  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), $probo-white);
-	}
-
-  &.disabled,
-  &.disabled:hover,
-  &:disabled,
-  &:disabled:hover {
-    @include disabled-button(darken(#666666, 10%),$probo-pale-darker);
-  }
+.button--purple {
+  @include button($probo-purple-light, $probo-white);
 }
 
-.button--dark-blue {
-  @include button(lighten($probo-blue-dark, 10%), $probo-blue-dark, darken($probo-blue-dark, 6%), $probo-white);
+.button--warning,
+.button--red {
+	@include button(darken($probo-alert-error, 10%), $probo-white);
+}
 
-  &.disabled,
-  &.disabled:hover,
-  &:disabled,
-  &:disabled:hover {
-    @include disabled-button($probo-white,#002547);
-  }
+.button--info,
+.button--blue {
+  @include button($probo-blue, $probo-white);
 }
 
 .button--dark-gray {
-  @include button($probo-gray-dark);
+  @include button($probo-gray-dark, $probo-white, $probo-gray-dark);
   @extend .button;
-
-	background: $probo-gray-dark;
-	border-color: $probo-gray-dark;
-  color: $probo-white;
-
-  &:hover {
-	  background: $probo-pale-dark;
-	  border-color: $probo-pale-dark;
-
-  }
-  &.disabled,
-  &.disabled:hover,
-  &:disabled,
-  &:disabled:hover {
-    @include disabled-button($probo-white,$probo-gray-dark);
-  }
-}
-
-.button--probo-white {
-  @extend .button;
-
-  background: none;
-
-  &:hover {
-    background: $probo-blue-dark;
-    color: $probo-white;
-    border-color: $probo-blue-dark;
-  }
 }
 
 .button--icon {
@@ -194,30 +149,19 @@ button,
 }
 
 .button-group {
-  .button {
-    @include inline-block;
+  @include button-group();
+}
 
-    float: left;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    margin: 0;
-    border-radius: 0;
+.button-group--green {
+  @include button-group($probo-green, $probo-white);
+}
 
-    a {
-      margin: 0;
-    }
+.button-group--purple {
+  @include button-group($probo-purple-light, $probo-white);
+}
 
-    &:first-child {
-      border-radius: $border-radius 0 0 $border-radius;
-      border-left-width: 2px;
-    }
-
-    &:last-child {
-      border-radius: 0 $border-radius $border-radius 0;
-      border-right-width: 2px;
-      margin-left: 0;
-    }
-  }
+.button-group--blue {
+  @include button-group($probo-blue, $probo-white);
 }
 
 .button--clipboard {
