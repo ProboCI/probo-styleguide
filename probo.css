@@ -3960,13 +3960,12 @@ h6,
 .h6{
   font-size:1.4rem; }
 
-p,
 .p{
   font-size:1.7rem;
   margin:0; }
-  p + p,
-  .p + p{
-    margin-top:12px; }
+
+p + p{
+  margin-top:12px; }
 
 .f-underline{
   text-decoration:underline; }
@@ -4224,7 +4223,6 @@ select,
   border-radius:24px; }
 
 .footer{
-  font-size:1.4rem;
   background-color:#333333;
   color:#f7f7f7;
   display:block;
@@ -4247,9 +4245,8 @@ select,
         -webkit-justify-content:space-between;
             -ms-flex-pack:justify;
                 justify-content:space-between; } }
-  @media (min-width: 28.23529em){
-    .footer__upper-left{
-      margin-top:12px; } }
+    .footer__upper-wrapper > *{
+      font-size:1.4rem; }
   .footer__upper-link{
     color:#333333;
     transition:color 0.2s ease;
@@ -4272,6 +4269,8 @@ select,
       -webkit-justify-content:space-between;
           -ms-flex-pack:justify;
               justify-content:space-between; } }
+  .footer__lower-wrapper > *{
+    font-size:1.4rem; }
   .footer__copyright{
     color:#7d7d7d; }
     @media (min-width: 60.23529em){
