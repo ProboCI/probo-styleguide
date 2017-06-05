@@ -20,6 +20,8 @@
 //
 // Styleguide 2.1
 
+// @TODO Move extendable and utility classes to 01-utilities directory
+
 %tiny {
   @include rem(font-size, 0.6 * $body-font-size);
 }

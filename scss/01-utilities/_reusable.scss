@@ -102,36 +102,6 @@ svg:not(:root) {
   }
 }
 
-%price-block {
-  border: 1px solid #EBEBEB;
-  margin-bottom: 12px;
-  background: #f7f7f7;
-  padding-bottom: 24px;
-
-  h2 {
-    padding: 12px 0;
-    margin-bottom: 0;
-
-    @include breakpoint($bp-small-landscape) {
-      padding: 24px 0;
-    }
-  }
-
-  .price {
-    font-size: 32px;
-    line-height: 1;
-    font-weight: bold;
-    padding-top: 12px;
-    background-color: #fff;
-  }
-
-  .label {
-    background-color: #fff;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #EBEBEB;
-  }
-}
-
 %check-list {
   text-align: center;
   margin-left: 0;
