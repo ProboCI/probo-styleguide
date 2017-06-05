@@ -9,8 +9,6 @@
 // Styleguide 6.2
 
 .footer {
-  @include rem(font-size, 14px);
-
   background-color: $probo-gray-dark;
   color: $probo-pale;
   display: block;
@@ -33,12 +31,9 @@
       display: flex;
       justify-content: space-between;
     }
-  }
 
-  &__upper-left {
-
-    @include breakpoint($bp-small-landscape) {
-      margin-top: $base-margin;
+    > * {
+      @include rem(font-size, 14px);
     }
   }
 
@@ -61,6 +56,10 @@
     @include breakpoint($bp-small-landscape) {
       display: flex;
       justify-content: space-between;
+    }
+
+    > * {
+      @include rem(font-size, 14px);
     }
   }
 

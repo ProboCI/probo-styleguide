@@ -165,14 +165,13 @@ h6,
   @extend .f-semi-bold;
 }
 
-p,
 .p {
   @include rem(font-size, $body-font-size);
   margin: 0;
+}
 
-  + p {
-    margin-top: $base-margin;
-  }
+p + p {
+  margin-top: $base-margin;
 }
 
 
