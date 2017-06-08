@@ -234,5 +234,7 @@ button,
   @include rem(font-size, 14px);
   @extend .f-semi-bold;
 
+  padding: 6px $base-margin;
+
   line-height: (21 / 17);
 }

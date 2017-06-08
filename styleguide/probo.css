@@ -3493,6 +3493,7 @@ button,
 .button-sm,
 .button-sm:hover{
   font-size:1.4rem;
+  padding:6px 12px;
   line-height:1.23529; }
 
 table{

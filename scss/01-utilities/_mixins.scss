@@ -93,7 +93,7 @@
   font-family: $sans-serif;
   line-height: (24 / 17);
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 8px $base-margin * 2;
   border-radius: $border-radius;
   cursor: pointer;
   border: 2px solid $base-font-color;
