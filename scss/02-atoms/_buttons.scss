@@ -87,80 +87,81 @@
 button,
 .button {
   @include button;
+  @include button-colors;
 
   &--inverse {
-    @include button($probo-white, $base-font-color, $base-font-color, $base-font-color, $probo-white, $base-font-color);
+    @include button-colors-inverse($probo-white, $base-font-color, $base-font-color);
   }
 
   &--transparent--dark {
-    @include button(transparent, $base-font-color, $base-font-color, transparent, $probo-white, $probo-white);
+    @include button-colors-inverse(transparent, $base-font-color, $base-font-color);
   }
 
   &--transparent--light {
-    @include button(transparent, $probo-white, $probo-white, transparent, $base-font-color, $base-font-color);
+    @include button-colors-inverse(transparent, $probo-white, $probo-white);
   }
 }
 
 .button--success,
 .button--green {
-  @include button($probo-green, $probo-white);
+  @include button-colors($probo-green, $probo-white);
 
   &--inverse {
-    @include button($probo-white, $probo-green, $probo-green, $probo-green, $probo-white, $probo-green);
+    @include button-colors-inverse($probo-white, $probo-green, $probo-green);
   }
 
   &--transparent {
-    @include button(transparent, $probo-green, $probo-green, $probo-green, $probo-white, $probo-green);
+    @include button-colors-inverse(transparent, $probo-green, $probo-green);
   }
 }
 
 .button--purple {
-  @include button($probo-purple-light, $probo-white);
+  @include button-colors($probo-purple-light, $probo-white);
 
   &--inverse {
-    @include button($probo-white, $probo-purple-light, $probo-purple-light, $probo-purple-light, $probo-white, $probo-purple-light);
+    @include button-colors-inverse($probo-white, $probo-purple-light, $probo-purple-light);
   }
 
   &--transparent {
-    @include button(transparent, $probo-purple-light, $probo-purple-light, $probo-purple-light, $probo-white, $probo-purple-light);
+    @include button-colors-inverse(transparent, $probo-purple-light, $probo-purple-light);
   }
 }
 
 .button--warning,
 .button--red {
-	@include button($probo-red, $probo-white);
+	@include button-colors($probo-red, $probo-white);
 
   &--inverse {
-    @include button($probo-white, $probo-red, $probo-red, $probo-red, $probo-white, $probo-red);
+    @include button-colors-inverse($probo-white, $probo-red, $probo-red);
   }
 
   &--transparent {
-    @include button(transparent, $probo-red, $probo-red, $probo-red, $probo-white, $probo-red);
+    @include button-colors-inverse(transparent, $probo-red, $probo-red);
   }
 }
 
 .button--info,
 .button--blue {
-  @include button($probo-blue, $probo-white);
+  @include button-colors($probo-blue, $probo-white);
 
   &--inverse {
-    @include button($probo-white, $probo-blue, $probo-blue, $probo-blue, $probo-white, $probo-blue);
+    @include button-colors-inverse($probo-white, $probo-blue, $probo-blue);
   }
 
   &--transparent {
-    @include button(transparent, $probo-blue, $probo-blue, $probo-blue, $probo-white, $probo-blue);
+    @include button-colors-inverse(transparent, $probo-blue, $probo-blue);
   }
 }
 
 .button--dark-gray {
-  @include button($probo-gray-dark, $probo-white, $probo-gray-dark);
+  @include button-colors($probo-gray-dark, $probo-white, $probo-gray-dark);
 
   &--inverse {
-    @include button($probo-white, $probo-gray-dark, $probo-gray-dark, $probo-gray-dark, $probo-white, $probo-gray-dark);
+    @include button-colors-inverse($probo-white, $probo-gray-dark, $probo-gray-dark);
   }
 
   &--transparent {
-    @include button(transparent, $probo-gray-dark, $probo-gray-dark, $probo-gray-dark, $probo-white, $probo-gray-dark);
+    @include button-colors-inverse(transparent, $probo-gray-dark, $probo-gray-dark);
   }
 }
 

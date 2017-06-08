@@ -85,7 +85,7 @@
   }
 }
 
-@mixin button($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: $font-color, $hover-font-color: $bg-color, $hover-border-color: $bg-color) {
+@mixin button($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: darken($bg-color, 10%), $hover-font-color: $font-color, $hover-border-color: darken($border-color, 10%)) {
 	@include inline-block;
   @include rem(font-size, 18px);
   @extend .f-semi-bold;
@@ -96,15 +96,31 @@
   padding: 8px 24px;
   border-radius: $border-radius;
   cursor: pointer;
-  background-color: $bg-color;
-  color: $font-color;
-  border: 2px solid $border-color;
+  border: 2px solid $base-font-color;
   transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &:disabled,
+  &:disabled:hover {
+    cursor: default;
+  }
+}
+
+@mixin button-colors($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: darken($bg-color, 10%), $hover-font-color: $font-color, $hover-border-color: darken($border-color, 10%)) {
+  background-color: $bg-color;
+  color: $font-color;
+  border-color: $border-color;
+
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $hover-bg-color;
     color: $hover-font-color;
     border-color: $hover-border-color;
@@ -117,8 +133,11 @@
     background-color: lighten($bg-color, 20%);
     color: lighten($font-color, 10%);
     border-color: lighten($border-color, 20%);
-    cursor: default;
   }
+}
+
+@mixin button-colors-inverse($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: darken($bg-color, 10%), $hover-font-color: $font-color, $hover-border-color: darken($border-color, 10%)) {
+  @include button-colors($bg-color, $font-color, $border-color, $bg-color, darken($font-color, 10%), darken($border-color, 10%));
 }
 
 @mixin button-group($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: $font-color, $hover-font-color: $bg-color, $hover-border-color: $bg-color) {
