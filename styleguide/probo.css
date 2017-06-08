@@ -3311,9 +3311,6 @@ button,
     background-color:transparent;
     box-shadow:none; }
 
-.button-group{
-  *zoom:1; }
-
 .button-group:before, .button-group:after{
   content:'';
   display:table; }
@@ -3321,149 +3318,15 @@ button,
 .button-group:after{
   clear:both; }
 
-.button-group--gray .button, .button-group--gray .sweet-alert button, .sweet-alert .button-group--gray button{
-  *vertical-align:auto;
-  *zoom:1;
-  *display:inline;
-  display:inline-block;
-  vertical-align:middle;
-  font-size:1.8rem;
-  font-family:"sofia-pro", sans-serif;
-  line-height:1.41176;
-  text-decoration:none;
-  padding:8px 24px;
-  border-radius:24px;
-  cursor:pointer;
-  border:2px solid #4a4a4a;
-  transition:background 0.1s ease-in-out, color 0.1s ease-in-out;
+.button-group .button, .button-group .sweet-alert button, .sweet-alert .button-group button{
   float:left;
-  margin:0;
   border-radius:0; }
-  .button-group--gray .button:hover, .button-group--gray .sweet-alert button:hover, .sweet-alert .button-group--gray button:hover, .button-group--gray .button:active, .button-group--gray .sweet-alert button:active, .sweet-alert .button-group--gray button:active, .button-group--gray .button:focus, .button-group--gray .sweet-alert button:focus, .sweet-alert .button-group--gray button:focus{
-    text-decoration:none; }
-  .button-group--gray .button.disabled, .button-group--gray .sweet-alert button.disabled, .sweet-alert .button-group--gray button.disabled, .button-group--gray .button.disabled:hover, .button-group--gray .sweet-alert button.disabled:hover, .sweet-alert .button-group--gray button.disabled:hover, .button-group--gray .button:disabled, .button-group--gray .sweet-alert button:disabled, .sweet-alert .button-group--gray button:disabled, .button-group--gray .button:disabled:hover, .button-group--gray .sweet-alert button:disabled:hover, .sweet-alert .button-group--gray button:disabled:hover{
-    cursor:default; }
-  .button-group--gray .button a, .button-group--gray .sweet-alert button a, .sweet-alert .button-group--gray button a{
-    margin:0; }
-  .button-group--gray .button:first-child, .button-group--gray .sweet-alert button:first-child, .sweet-alert .button-group--gray button:first-child{
+  .button-group .button:first-child, .button-group .sweet-alert button:first-child, .sweet-alert .button-group button:first-child{
     border-radius:24px 0 0 24px;
     border-right:1px solid #ffffff; }
-    .button-group--gray .button:first-child:hover, .button-group--gray .sweet-alert button:first-child:hover, .sweet-alert .button-group--gray button:first-child:hover{
-      border-right:1px solid #4a4a4a; }
-  .button-group--gray .button:last-child, .button-group--gray .sweet-alert button:last-child, .sweet-alert .button-group--gray button:last-child{
+  .button-group .button:last-child, .button-group .sweet-alert button:last-child, .sweet-alert .button-group button:last-child{
     border-radius:0 24px 24px 0;
-    border-left:1px solid #ffffff;
-    margin-left:0; }
-    .button-group--gray .button:last-child:hover, .button-group--gray .sweet-alert button:last-child:hover, .sweet-alert .button-group--gray button:last-child:hover{
-      border-left:1px solid #4a4a4a; }
-
-.button-group--green .button, .button-group--green .sweet-alert button, .sweet-alert .button-group--green button{
-  *vertical-align:auto;
-  *zoom:1;
-  *display:inline;
-  display:inline-block;
-  vertical-align:middle;
-  font-size:1.8rem;
-  font-family:"sofia-pro", sans-serif;
-  line-height:1.41176;
-  text-decoration:none;
-  padding:8px 24px;
-  border-radius:24px;
-  cursor:pointer;
-  border:2px solid #4a4a4a;
-  transition:background 0.1s ease-in-out, color 0.1s ease-in-out;
-  float:left;
-  margin:0;
-  border-radius:0; }
-  .button-group--green .button:hover, .button-group--green .sweet-alert button:hover, .sweet-alert .button-group--green button:hover, .button-group--green .button:active, .button-group--green .sweet-alert button:active, .sweet-alert .button-group--green button:active, .button-group--green .button:focus, .button-group--green .sweet-alert button:focus, .sweet-alert .button-group--green button:focus{
-    text-decoration:none; }
-  .button-group--green .button.disabled, .button-group--green .sweet-alert button.disabled, .sweet-alert .button-group--green button.disabled, .button-group--green .button.disabled:hover, .button-group--green .sweet-alert button.disabled:hover, .sweet-alert .button-group--green button.disabled:hover, .button-group--green .button:disabled, .button-group--green .sweet-alert button:disabled, .sweet-alert .button-group--green button:disabled, .button-group--green .button:disabled:hover, .button-group--green .sweet-alert button:disabled:hover, .sweet-alert .button-group--green button:disabled:hover{
-    cursor:default; }
-  .button-group--green .button a, .button-group--green .sweet-alert button a, .sweet-alert .button-group--green button a{
-    margin:0; }
-  .button-group--green .button:first-child, .button-group--green .sweet-alert button:first-child, .sweet-alert .button-group--green button:first-child{
-    border-radius:24px 0 0 24px;
-    border-right:1px solid #ffffff; }
-    .button-group--green .button:first-child:hover, .button-group--green .sweet-alert button:first-child:hover, .sweet-alert .button-group--green button:first-child:hover{
-      border-right:1px solid #9ac36c; }
-  .button-group--green .button:last-child, .button-group--green .sweet-alert button:last-child, .sweet-alert .button-group--green button:last-child{
-    border-radius:0 24px 24px 0;
-    border-left:1px solid #ffffff;
-    margin-left:0; }
-    .button-group--green .button:last-child:hover, .button-group--green .sweet-alert button:last-child:hover, .sweet-alert .button-group--green button:last-child:hover{
-      border-left:1px solid #9ac36c; }
-
-.button-group--purple .button, .button-group--purple .sweet-alert button, .sweet-alert .button-group--purple button{
-  *vertical-align:auto;
-  *zoom:1;
-  *display:inline;
-  display:inline-block;
-  vertical-align:middle;
-  font-size:1.8rem;
-  font-family:"sofia-pro", sans-serif;
-  line-height:1.41176;
-  text-decoration:none;
-  padding:8px 24px;
-  border-radius:24px;
-  cursor:pointer;
-  border:2px solid #4a4a4a;
-  transition:background 0.1s ease-in-out, color 0.1s ease-in-out;
-  float:left;
-  margin:0;
-  border-radius:0; }
-  .button-group--purple .button:hover, .button-group--purple .sweet-alert button:hover, .sweet-alert .button-group--purple button:hover, .button-group--purple .button:active, .button-group--purple .sweet-alert button:active, .sweet-alert .button-group--purple button:active, .button-group--purple .button:focus, .button-group--purple .sweet-alert button:focus, .sweet-alert .button-group--purple button:focus{
-    text-decoration:none; }
-  .button-group--purple .button.disabled, .button-group--purple .sweet-alert button.disabled, .sweet-alert .button-group--purple button.disabled, .button-group--purple .button.disabled:hover, .button-group--purple .sweet-alert button.disabled:hover, .sweet-alert .button-group--purple button.disabled:hover, .button-group--purple .button:disabled, .button-group--purple .sweet-alert button:disabled, .sweet-alert .button-group--purple button:disabled, .button-group--purple .button:disabled:hover, .button-group--purple .sweet-alert button:disabled:hover, .sweet-alert .button-group--purple button:disabled:hover{
-    cursor:default; }
-  .button-group--purple .button a, .button-group--purple .sweet-alert button a, .sweet-alert .button-group--purple button a{
-    margin:0; }
-  .button-group--purple .button:first-child, .button-group--purple .sweet-alert button:first-child, .sweet-alert .button-group--purple button:first-child{
-    border-radius:24px 0 0 24px;
-    border-right:1px solid #ffffff; }
-    .button-group--purple .button:first-child:hover, .button-group--purple .sweet-alert button:first-child:hover, .sweet-alert .button-group--purple button:first-child:hover{
-      border-right:1px solid #a74783; }
-  .button-group--purple .button:last-child, .button-group--purple .sweet-alert button:last-child, .sweet-alert .button-group--purple button:last-child{
-    border-radius:0 24px 24px 0;
-    border-left:1px solid #ffffff;
-    margin-left:0; }
-    .button-group--purple .button:last-child:hover, .button-group--purple .sweet-alert button:last-child:hover, .sweet-alert .button-group--purple button:last-child:hover{
-      border-left:1px solid #a74783; }
-
-.button-group--blue .button, .button-group--blue .sweet-alert button, .sweet-alert .button-group--blue button{
-  *vertical-align:auto;
-  *zoom:1;
-  *display:inline;
-  display:inline-block;
-  vertical-align:middle;
-  font-size:1.8rem;
-  font-family:"sofia-pro", sans-serif;
-  line-height:1.41176;
-  text-decoration:none;
-  padding:8px 24px;
-  border-radius:24px;
-  cursor:pointer;
-  border:2px solid #4a4a4a;
-  transition:background 0.1s ease-in-out, color 0.1s ease-in-out;
-  float:left;
-  margin:0;
-  border-radius:0; }
-  .button-group--blue .button:hover, .button-group--blue .sweet-alert button:hover, .sweet-alert .button-group--blue button:hover, .button-group--blue .button:active, .button-group--blue .sweet-alert button:active, .sweet-alert .button-group--blue button:active, .button-group--blue .button:focus, .button-group--blue .sweet-alert button:focus, .sweet-alert .button-group--blue button:focus{
-    text-decoration:none; }
-  .button-group--blue .button.disabled, .button-group--blue .sweet-alert button.disabled, .sweet-alert .button-group--blue button.disabled, .button-group--blue .button.disabled:hover, .button-group--blue .sweet-alert button.disabled:hover, .sweet-alert .button-group--blue button.disabled:hover, .button-group--blue .button:disabled, .button-group--blue .sweet-alert button:disabled, .sweet-alert .button-group--blue button:disabled, .button-group--blue .button:disabled:hover, .button-group--blue .sweet-alert button:disabled:hover, .sweet-alert .button-group--blue button:disabled:hover{
-    cursor:default; }
-  .button-group--blue .button a, .button-group--blue .sweet-alert button a, .sweet-alert .button-group--blue button a{
-    margin:0; }
-  .button-group--blue .button:first-child, .button-group--blue .sweet-alert button:first-child, .sweet-alert .button-group--blue button:first-child{
-    border-radius:24px 0 0 24px;
-    border-right:1px solid #ffffff; }
-    .button-group--blue .button:first-child:hover, .button-group--blue .sweet-alert button:first-child:hover, .sweet-alert .button-group--blue button:first-child:hover{
-      border-right:1px solid #3276b6; }
-  .button-group--blue .button:last-child, .button-group--blue .sweet-alert button:last-child, .sweet-alert .button-group--blue button:last-child{
-    border-radius:0 24px 24px 0;
-    border-left:1px solid #ffffff;
-    margin-left:0; }
-    .button-group--blue .button:last-child:hover, .button-group--blue .sweet-alert button:last-child:hover, .sweet-alert .button-group--blue button:last-child:hover{
-      border-left:1px solid #3276b6; }
+    border-left:1px solid #ffffff; }
 
 .button--clipboard{
   *vertical-align:auto;

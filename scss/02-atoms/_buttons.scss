@@ -38,16 +38,16 @@
 // Button groups
 //
 // Markup:
-// <div class="{{modifier_class}}">
-//   <button class="button">Button Element</button>
-//   <button class="button">Button Element</button>
-//   <button class="button">Button Element</button>
+// <div class="button-group">
+//   <button class="button {{modifier_class}}">Button Element</button>
+//   <button class="button {{modifier_class}}">Button Element</button>
+//   <button class="button {{modifier_class}}">Button Element</button>
 // </div>
 //
-// .button-group--gray - Gray button group.
-// .button-group--green - Green button group.
-// .button-group--purple - Purple button group.
-// .button-group--blue - Blue button group.
+// .button--dark-gray - Dark Gray button group.
+// .button--green - Green button group.
+// .button--blue - Blue button group.
+// .button--purple - Purple button group.
 //
 // Styleguide 3.1
 
@@ -179,33 +179,48 @@ button,
 }
 
 .button-group {
-  *zoom: 1;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .button {
+    float: left;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: $border-radius 0 0 $border-radius;
+      border-right: 1px solid $probo-white;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius $border-radius 0;
+      border-left: 1px solid $probo-white;
+    }
+  }
 }
 
-.button-group:before, .button-group:after {
-  content: '';
-  display: table;
-}
-
-.button-group:after {
-  clear: both;
-}
-
-.button-group--gray {
-  @include button-group();
-}
-
-.button-group--green {
-  @include button-group($probo-green, $probo-white);
-}
-
-.button-group--purple {
-  @include button-group($probo-purple-light, $probo-white);
-}
-
-.button-group--blue {
-  @include button-group($probo-blue, $probo-white);
-}
+//
+// .button-group--gray {
+//   @include button-group();
+// }
+//
+// .button-group--green {
+//   @include button-group($probo-green, $probo-white);
+// }
+//
+// .button-group--purple {
+//   @include button-group($probo-purple-light, $probo-white);
+// }
+//
+// .button-group--blue {
+//   @include button-group($probo-blue, $probo-white);
+// }
 
 .button--clipboard {
   @include inline-block;

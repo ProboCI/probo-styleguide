@@ -140,39 +140,6 @@
   @include button-colors($bg-color, $font-color, $border-color, $bg-color, darken($font-color, 10%), darken($border-color, 10%));
 }
 
-@mixin button-group($bg-color: $base-font-color, $font-color: $probo-white, $border-color: $bg-color, $hover-bg-color: $font-color, $hover-font-color: $bg-color, $hover-border-color: $bg-color) {
-  .button {
-    @include button($bg-color, $font-color, $border-color, $hover-bg-color, $hover-font-color, $hover-border-color);
-
-    float: left;
-    margin: 0;
-    border-radius: 0;
-
-    a {
-      margin: 0;
-    }
-
-    &:first-child {
-      border-radius: $border-radius 0 0 $border-radius;
-      border-right: 1px solid $font-color;
-
-      &:hover {
-        border-right: 1px solid $hover-border-color;
-      }
-    }
-
-    &:last-child {
-      border-radius: 0 $border-radius $border-radius 0;
-      border-left: 1px solid $font-color;
-      margin-left: 0;
-
-      &:hover {
-        border-left: 1px solid $hover-border-color;
-      }
-    }
-  }
-}
-
 @mixin visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
