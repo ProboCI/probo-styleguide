@@ -9,6 +9,26 @@ html {
   @include hidden;
 }
 
+.u-hidden-sm {
+  @include hidden;
+  // @include visuallyhidden;
+
+  @include breakpoint($bp-medium) {
+    // @include visuallyhidden-off;
+    display: block;
+  }
+}
+
+.u-hidden-md {
+  // @include visuallyhidden;
+  @include hidden;
+
+  @include breakpoint($bp-medium-landscape) {
+    // @include visuallyhidden-off;
+    display: block;
+  }
+}
+
 .u-invisible {
   @include invisible;
 }
@@ -95,18 +115,12 @@ html {
   margin-right: $base-margin;
 }
 
-.u-hidden-sm {
-  display: none;
-  @include breakpoint($bp-medium) {
-    display: block;
-  }
+.u-rounded {
+  border-radius: $border-radius !important;
 }
 
-.u-hidden-md {
-  display: none;
-  @include breakpoint($bp-medium-landscape) {
-    display: block;
-  }
+.u-square {
+  border-radius: 0 !important;
 }
 
 .kss-section {
