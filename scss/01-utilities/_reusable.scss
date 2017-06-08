@@ -128,17 +128,6 @@ svg:not(:root) {
   }
 }
 
-%pullquote {
-  @include cf;
-
-  border-radius: 12px;
-  background-color: #EBEBEB;
-  text-align: left;
-  font-style: italic;
-  padding: 24px;
-  min-height: 200px;
-}
-
 %hide-text {
   display: block;
   text-indent: -99999px;
