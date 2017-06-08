@@ -2767,6 +2767,18 @@ html{
 .u-hidden{
   display:none !important; }
 
+.u-hidden-sm{
+  display:none !important; }
+  @media (min-width: 45.17647em){
+    .u-hidden-sm{
+      display:block; } }
+
+.u-hidden-md{
+  display:none !important; }
+  @media (min-width: 60.23529em){
+    .u-hidden-md{
+      display:block; } }
+
 .u-invisible{
   visibility:hidden; }
 
@@ -2843,17 +2855,11 @@ html{
 .u-margin-right{
   margin-right:12px; }
 
-.u-hidden-sm{
-  display:none; }
-  @media (min-width: 45.17647em){
-    .u-hidden-sm{
-      display:block; } }
+.u-rounded{
+  border-radius:24px !important; }
 
-.u-hidden-md{
-  display:none; }
-  @media (min-width: 60.23529em){
-    .u-hidden-md{
-      display:block; } }
+.u-square{
+  border-radius:0 !important; }
 
 .kss-section{
   max-width:none !important; }
@@ -3556,7 +3562,7 @@ p + p{
   font-weight:700; }
 
 .f-semi-bold, button,
-.button, .sweet-alert button, .button-group--gray .button, .button-group--gray .sweet-alert button, .sweet-alert .button-group--gray button, .button-group--green .button, .button-group--green .sweet-alert button, .sweet-alert .button-group--green button, .button-group--purple .button, .button-group--purple .sweet-alert button, .sweet-alert .button-group--purple button, .button-group--blue .button, .button-group--blue .sweet-alert button, .sweet-alert .button-group--blue button, .button-sm,
+.button, .sweet-alert button, .button-sm,
 .button-sm:hover, h1,
 .h1, h2,
 .h2, .sweet-alert h2, h4,
