@@ -88,6 +88,12 @@
                 ><span class="kss-nav__name">Accordion Navigation</span>
               </a>
             </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-6.html#kssref-6-4">
+                <span class="kss-nav__ref ">6.4</span
+                ><span class="kss-nav__name">Search</span>
+              </a>
+            </li>
         </ul>
       </li>
     </ul>
@@ -396,6 +402,16 @@
         <i class="fa fa-angle-up"></i>
     </span>
     <ul class="accordion-nav__parent">
+      <li class="accordion-nav__item search">
+        <form action="/search" method="GET">
+          <label for="sidebarInput">search for text</label>
+          <input type="text" name="query" placeholder="Search the docs" class="accordion-nav__search-input" id="sidebarInput">
+          <label for="sidebarSubmit">search</label>
+          <button type="submit" class="accordion-nav__search-submit button--blue" id="sidebarSubmit">
+            <i class="fa fa-search accordion-nav__search-submit-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+      </li>
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 1</a></li>
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 2</a>
         <span class="accordion-nav__toggle-children">
@@ -427,6 +443,16 @@
         &lt;i class=&quot;fa fa-angle-up&quot;&gt;&lt;/i&gt;
     &lt;/span&gt;
     &lt;ul class=&quot;accordion-nav__parent&quot;&gt;
+      &lt;li class=&quot;accordion-nav__item search&quot;&gt;
+        &lt;form action=&quot;/search&quot; method=&quot;GET&quot;&gt;
+          &lt;label for=&quot;sidebarInput&quot;&gt;search for text&lt;/label&gt;
+          &lt;input type=&quot;text&quot; name=&quot;query&quot; placeholder=&quot;Search the docs&quot; class=&quot;accordion-nav__search-input&quot; id=&quot;sidebarInput&quot;&gt;
+          &lt;label for=&quot;sidebarSubmit&quot;&gt;search&lt;/label&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;accordion-nav__search-submit button--blue&quot; id=&quot;sidebarSubmit&quot;&gt;
+            &lt;i class=&quot;fa fa-search accordion-nav__search-submit-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/li&gt;
       &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 1&lt;/a&gt;&lt;/li&gt;
       &lt;li class=&quot;accordion-nav__child&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__child-link&quot;&gt;Child link 2&lt;/a&gt;
         &lt;span class=&quot;accordion-nav__toggle-children&quot;&gt;
@@ -448,6 +474,106 @@
   &lt;/li&gt;
   &lt;li class=&quot;accordion-nav__item&quot;&gt;&lt;a href=&quot;/&quot; class=&quot;accordion-nav__item-link&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</code></pre>
+      </div>
+      </div>
+
+      </section>
+      <section id="kssref-6-4" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-6-4">
+          <span class="kss-title__ref">
+              6.4
+            <span class="kss-title__permalink-hash">
+                #permalink
+            </span>
+          </span>
+          Search
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>Text!</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .search__container
+        </div>
+        <div class="kss-modifier__description kss-style">
+          The search bar wrapper
+        </div>
+        <div class="kss-modifier__example">
+          <form class="search__container">
+  <label for="searchInput">search for text</label>
+  <input type="text" name="query" placeholder="Search the docs" class="search__input" id="searchInput">
+  <label for="searchSubmit">search</label>
+  <input type="submit" value="Search" class="button button--blue search__submit" id="searchSubmit">
+</form>
+
+<div class="search__results">
+  <div class="search__result">
+    <h2 class="h3 search__result-title">
+      <a href="/section-6.html#kssref-6-4">Search Result 1</a>
+    </h2>
+    <div class="search__result-link">https://docs.probo.ci/result/path</div>
+    <div class="search__result-text">Some text derived from the search result.</div>
+  </div>
+  <div class="search__result">
+    <h2 class="h3 search__result-title">
+      <a href="/section-6.html#kssref-6-4">Search Result 2</a>
+    </h2>
+    <div class="search__result-link">https://docs.probo.ci/result/path</div>
+    <div class="search__result-text">Some text derived from the search result.</div>
+  </div>
+  <div class="search__result">
+    <h2 class="h3 search__result-title">
+      <a href="/section-6.html#kssref-6-4">Search Result 3</a>
+    </h2>
+    <div class="search__result-link">https://docs.probo.ci/result/path</div>
+    <div class="search__result-text">Some text derived from the search result.</div>
+  </div>
+</div>
+
+        </div>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;search__container&quot;&gt;
+  &lt;label for=&quot;searchInput&quot;&gt;search for text&lt;/label&gt;
+  &lt;input type=&quot;text&quot; name=&quot;query&quot; placeholder=&quot;Search the docs&quot; class=&quot;search__input&quot; id=&quot;searchInput&quot;&gt;
+  &lt;label for=&quot;searchSubmit&quot;&gt;search&lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Search&quot; class=&quot;button button--blue search__submit&quot; id=&quot;searchSubmit&quot;&gt;
+&lt;/form&gt;
+
+&lt;div class=&quot;search__results&quot;&gt;
+  &lt;div class=&quot;search__result&quot;&gt;
+    &lt;h2 class=&quot;h3 search__result-title&quot;&gt;
+      &lt;a href=&quot;/section-6.html#kssref-6-4&quot;&gt;Search Result 1&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;div class=&quot;search__result-link&quot;&gt;https://docs.probo.ci/result/path&lt;/div&gt;
+    &lt;div class=&quot;search__result-text&quot;&gt;Some text derived from the search result.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;search__result&quot;&gt;
+    &lt;h2 class=&quot;h3 search__result-title&quot;&gt;
+      &lt;a href=&quot;/section-6.html#kssref-6-4&quot;&gt;Search Result 2&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;div class=&quot;search__result-link&quot;&gt;https://docs.probo.ci/result/path&lt;/div&gt;
+    &lt;div class=&quot;search__result-text&quot;&gt;Some text derived from the search result.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;search__result&quot;&gt;
+    &lt;h2 class=&quot;h3 search__result-title&quot;&gt;
+      &lt;a href=&quot;/section-6.html#kssref-6-4&quot;&gt;Search Result 3&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;div class=&quot;search__result-link&quot;&gt;https://docs.probo.ci/result/path&lt;/div&gt;
+    &lt;div class=&quot;search__result-text&quot;&gt;Some text derived from the search result.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
       </div>
       </div>

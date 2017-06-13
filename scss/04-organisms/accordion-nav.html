@@ -5,6 +5,16 @@
         <i class="fa fa-angle-up"></i>
     </span>
     <ul class="accordion-nav__parent">
+      <li class="accordion-nav__item search">
+        <form action="/search" method="GET">
+          <label for="sidebarInput">search for text</label>
+          <input type="text" name="query" placeholder="Search the docs" class="accordion-nav__search-input" id="sidebarInput">
+          <label for="sidebarSubmit">search</label>
+          <button type="submit" class="accordion-nav__search-submit button--blue" id="sidebarSubmit">
+            <i class="fa fa-search accordion-nav__search-submit-icon" aria-hidden="true"></i>
+          </button>
+        </form>
+      </li>
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 1</a></li>
       <li class="accordion-nav__child"><a href="/" class="accordion-nav__child-link">Child link 2</a>
         <span class="accordion-nav__toggle-children">
