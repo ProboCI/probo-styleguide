@@ -1,6 +1,6 @@
 {
   "name": "probo-styleguide",
-  "version": "4.2.7",
+  "version": "4.3.0",
   "description": "A style guide for the Probo app and marketing website.",
   "main": "index.js",
   "engines": {
