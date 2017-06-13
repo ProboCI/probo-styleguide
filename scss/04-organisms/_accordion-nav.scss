@@ -157,6 +157,10 @@
 
   &__item.search {
     text-indent: 0;
+
+    label {
+      @include visuallyhidden;
+    }
   }
 
   &__search-input {
