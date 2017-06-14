@@ -183,3 +183,16 @@
     }
   }
 }
+
+// Classes provided by jekyll-toc plugin
+.section-nav {
+  @extend .accordion-nav;
+}
+
+.toc-entry {
+  @extend .accordion-nav__item;
+
+  a {
+    @extend .accordion-nav__item-link;
+  }
+}
