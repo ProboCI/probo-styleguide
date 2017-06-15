@@ -113,7 +113,7 @@ gulp.task('scss:dist', function() {
 gulp.task('kss', shell.task([kssNode]));
 
 // Use Browsersync to reload on change
-gulp.task('browser-sync', ['clean', 'styleguide'], function() {
+gulp.task('browser-sync', ['dist'], function() {
   browserSync.init({
     ghostMode: false,
     files: project.dest,

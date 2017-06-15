@@ -6,12 +6,16 @@
 //
 // Markup:
 // <form>
-//   <select>
+//  <div class="select__menu-wrap">
+//   <select class="select__menu">
 //     <option value="volvo">Volvo</option>
 //     <option value="saab">Saab</option>
 //     <option value="mercedes">Mercedes</option>
 //     <option value="audi">Audi</option>
 //   </select>
+//   <span class="select__text"></span>
+//   <span class="select__arrow"><i class="fa fa-caret-down"></i></span>
+//  </div>
 // </form>
 //
 // Styleguide 5.0
