@@ -3474,16 +3474,16 @@ a{
   a:hover{
     text-decoration:underline; }
 
-.nav-link, .footer__navigation-link, .header__navigation-link, .accordion-nav__item-link, .toc-entry a, .accordion-nav__child-link, .accordion-nav__grandchild-link{
+.nav-link, .footer__navigation-link, .header__navigation-link, .accordion-nav__item-link, .accordion-nav__child-link, .accordion-nav__grandchild-link{
   font-size:1.5rem;
   color:#4a4a4a;
   color:#333333;
   line-height:1.46667; }
-  .nav-link:hover, .footer__navigation-link:hover, .header__navigation-link:hover, .accordion-nav__item-link:hover, .toc-entry a:hover, .accordion-nav__child-link:hover, .accordion-nav__grandchild-link:hover{
+  .nav-link:hover, .footer__navigation-link:hover, .header__navigation-link:hover, .accordion-nav__item-link:hover, .accordion-nav__child-link:hover, .accordion-nav__grandchild-link:hover{
     color:#4a4a4a; }
-  .nav-link:active, .footer__navigation-link:active, .header__navigation-link:active, .accordion-nav__item-link:active, .toc-entry a:active, .accordion-nav__child-link:active, .accordion-nav__grandchild-link:active{
+  .nav-link:active, .footer__navigation-link:active, .header__navigation-link:active, .accordion-nav__item-link:active, .accordion-nav__child-link:active, .accordion-nav__grandchild-link:active{
     color:#4a4a4a; }
-  .nav-link:focus, .footer__navigation-link:focus, .header__navigation-link:focus, .accordion-nav__item-link:focus, .toc-entry a:focus, .accordion-nav__child-link:focus, .accordion-nav__grandchild-link:focus{
+  .nav-link:focus, .footer__navigation-link:focus, .header__navigation-link:focus, .accordion-nav__item-link:focus, .accordion-nav__child-link:focus, .accordion-nav__grandchild-link:focus{
     color:#4a4a4a; }
 
 .small-text-link{
@@ -3967,61 +3967,61 @@ select,
   text-indent:4px;
   text-align:center; }
 
-.accordion-nav, .section-nav{
+.accordion-nav{
   padding-left:0;
   font-size:14px;
   margin:0;
   position:relative;
   background:#efe6eb; }
-  .accordion-nav a, .section-nav a,
-  .accordion-nav a:hover, .section-nav a:hover{
+  .accordion-nav a,
+  .accordion-nav a:hover{
     text-decoration:none; }
-  .accordion-nav__item, .toc-entry{
+  .accordion-nav__item{
     border:1px solid #f5f5f5;
     background:#faf9f9;
     list-style-type:none;
     text-indent:11px; }
-    .accordion-nav__item .accordion-nav__toggle-children, .toc-entry .accordion-nav__toggle-children{
+    .accordion-nav__item .accordion-nav__toggle-children{
       border-right:1px solid #f5f5f5;
       border-left:1px solid #f5f5f5; }
-  .accordion-nav__item-link, .toc-entry a{
+  .accordion-nav__item-link{
     color:#440027;
     display:block;
     padding:12px;
     padding-right:26px; }
-    .accordion-nav__item-link:hover, .toc-entry a:hover{
+    .accordion-nav__item-link:hover{
       color:#4d0027; }
-    .accordion-nav__item-link:active, .toc-entry a:active{
+    .accordion-nav__item-link:active{
       color:#440027; }
-    .accordion-nav__item-link:focus, .toc-entry a:focus{
+    .accordion-nav__item-link:focus{
       color:#440027; }
-    .accordion-nav__item-link .current, .toc-entry a .current{
+    .accordion-nav__item-link .current{
       background:#f5f5f5; }
   .accordion-nav__parent{
     background:#efe6eb;
     padding:0; }
-  .accordion-nav__child, .accordion-nav__item, .toc-entry{
+  .accordion-nav__child, .accordion-nav__item{
     position:relative;
     right:0; }
-    .accordion-nav__child i, .accordion-nav__item i, .toc-entry i{
+    .accordion-nav__child i, .accordion-nav__item i{
       font-size:30px;
       position:relative;
       top:8px; }
-    .accordion-nav__child > ul, .accordion-nav__item > ul, .toc-entry > ul{
+    .accordion-nav__child > ul, .accordion-nav__item > ul{
       position:static; }
-    .accordion-nav__child.is-closed > ul, .accordion-nav__item.is-closed > ul, .is-closed.toc-entry > ul{
+    .accordion-nav__child.is-closed > ul, .accordion-nav__item.is-closed > ul{
       position:absolute;
       transition:max-height 0.15s cubic-bezier(0.7, 0.05, 0.15, 0.95), opacity 0.2s cubic-bezier(0.7, 0.05, 0.15, 0.95);
       max-height:0;
       opacity:0;
       top:-999em; }
-    .accordion-nav__child.is-open, .accordion-nav__item.is-open, .is-open.toc-entry{
+    .accordion-nav__child.is-open, .accordion-nav__item.is-open{
       border-bottom:none; }
-      .accordion-nav__child.is-open > ul, .accordion-nav__item.is-open > ul, .is-open.toc-entry > ul{
+      .accordion-nav__child.is-open > ul, .accordion-nav__item.is-open > ul{
         transition:max-height 0.4s cubic-bezier(0.7, 0.05, 0.15, 0.95), opacity 0.3s cubic-bezier(0.7, 0.05, 0.15, 0.95);
         max-height:9999px;
         opacity:1; }
-    .accordion-nav__child li:first-of-type, .accordion-nav__item li:first-of-type, .toc-entry li:first-of-type{
+    .accordion-nav__child li:first-of-type, .accordion-nav__item li:first-of-type{
       border-top:2px solid #c8c8c8; }
   .accordion-nav__child{
     border-bottom:1px solid #e5d6df;
@@ -4059,9 +4059,9 @@ select,
     border-left:1px solid #f5f5f5; }
     .accordion-nav__toggle-children:hover{
       cursor:pointer; }
-  .accordion-nav__item.search, .search.toc-entry{
+  .accordion-nav__item.search{
     text-indent:0; }
-    .accordion-nav__item.search label, .search.toc-entry label{
+    .accordion-nav__item.search label{
       border:0;
       clip:rect(0 0 0 0);
       height:1px;
@@ -4070,7 +4070,7 @@ select,
       padding:0;
       position:absolute;
       width:1px; }
-      .accordion-nav__item.search label.focusable, .search.toc-entry label.focusable{
+      .accordion-nav__item.search label.focusable{
         clip:auto;
         height:auto;
         margin:0;
