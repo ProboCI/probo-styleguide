@@ -1,0 +1,23 @@
+// Striped List
+//
+// Used for lists of information such as Plugin documentation.
+//
+// Markup: striped-list.html
+//
+// .striped-list - The list wrapper
+//
+// Styleguide 6.5
+
+.striped-list {
+  padding-left: 0;
+  list-style: none;
+
+  &__item {
+    padding: 3rem 1.5rem;
+    outline: 1px solid $probo-pale-dark;
+
+    &:nth-of-type(even) {
+      background-color: $probo-pale-medium;
+    }
+  }
+}

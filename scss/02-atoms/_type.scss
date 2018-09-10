@@ -67,8 +67,11 @@ body {
 }
 
 .body-text {
-  font-family: $serif;
+  @include rem(font-size, 18px);
+
+  font-family: $sans-serif;
   line-height: 1.65;
+  font-weight: 100;
 }
 
 a {
