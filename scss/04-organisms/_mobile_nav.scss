@@ -3,9 +3,8 @@
 }
 
 .main-menu {
-
   @include breakpoint($bp-medium) {
-    @include visuallyhidden;
+    display: none;
   }
 
   &__body {
@@ -63,10 +62,6 @@
     width: 25px;
     height: 20px;
 
-    @include breakpoint($bp-medium) {
-      @include visuallyhidden;
-    }
-
     &:focus,
     &:active,
     &:visited,
@@ -102,7 +97,6 @@
   }
 
   &.is-revealed {
-
     .main-menu__toggle {
       &::after {
         transform: rotate(-45deg);
