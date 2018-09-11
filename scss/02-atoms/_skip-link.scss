@@ -1,0 +1,16 @@
+.skip-link {
+  @include visuallyhidden;
+  @include rem(font-size, 20px);
+
+  text-align: center;
+  display: block;
+
+  &:focus {
+    @include visuallyhidden-off;
+
+    position: absolute;
+    z-index: 1;
+    background-color: $probo-white;
+    width: 100%;
+  }
+}
