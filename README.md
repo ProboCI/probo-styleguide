@@ -19,7 +19,7 @@ The other directors are generated, so your changes will get removed on the next 
 
 ## Releasing updates
 
-Please see [James Cole](https://github.com/tortillaj) to inquire about releasing new versions.
+Please see [John Kaeser](https://github.com/jkaeser) to inquire about releasing new versions.
 
 ## Contributions
 
