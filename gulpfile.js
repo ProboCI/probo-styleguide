@@ -75,9 +75,6 @@ var postprocessors = [
 // deploy styleguide
 gulp.task('deploy', shell.task([deployGH]));
 
-
-
-
 // Delete files
 gulp.task('clean', function() {
   return del([project.dest, project.dist]);
