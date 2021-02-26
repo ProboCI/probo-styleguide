@@ -68,9 +68,12 @@ var preprocessors = [
 
 // post CSS processors
 var postprocessors = [
-  autoprefixer({browsers: AUTOPREFIXER_BROWSERS}),
+  autoprefixer({overrideBrowserslist: AUTOPREFIXER_BROWSERS}),
   removeComments({removeAll: true}),
 ];
+
+// deploy styleguide
+gulp.task('deploy', shell.task([deployGH]));
 
 // Delete files
 gulp.task('clean', function() {
@@ -89,14 +92,14 @@ gulp.task('lint:scss', function() {
 });
 
 // Build CSS from scss (unminified for development)
-gulp.task('scss:dev', ['lint:scss'], function() {
+gulp.task('scss:dev', gulp.series('lint:scss', function() {
   return gulp.src('./' + project.scss + '/*.scss')
     .pipe(sass())
     .on('error', handleError('Scss Compiling'))
     .pipe(postcss(postprocessors))
     .on('error', handleError('Post CSS Processing'))
     .pipe(gulp.dest('./' + project.dest))
-});
+}));
 
 // Build CSS from scss (minified for production)
 gulp.task('scss:dist', function() {
@@ -111,9 +114,11 @@ gulp.task('scss:dist', function() {
 
 // generate styleguide
 gulp.task('kss', shell.task([kssNode]));
+gulp.task('styleguide', gulp.series('scss:dev', 'kss'));
+gulp.task('dist', gulp.series('clean', 'styleguide', 'scss:dist'));
 
 // Use Browsersync to reload on change
-gulp.task('browser-sync', ['dist'], function() {
+gulp.task('browser-sync', gulp.series('dist', function() {
   browserSync.init({
     ghostMode: false,
     files: project.dest,
@@ -122,11 +127,11 @@ gulp.task('browser-sync', ['dist'], function() {
     },
   });
 
-  gulp.watch(project.styleguide, ['scss:dev', 'kss']);
-});
-
+  gulp.watch(project.styleguide, gulp.series('scss:dev', 'kss'));
+}));
+gulp.task('default', gulp.series('browser-sync'));
 // create a release
-gulp.task('bump', ['clean', 'styleguide', 'scss:dist'], function() {
+gulp.task('bump', gulp.series('clean', 'styleguide', 'scss:dist'), function() {
 	var type = process.argv.indexOf('--type');
 	var typeLevel = 'patch';
 	if (type >= 1) {
@@ -161,9 +166,4 @@ gulp.task('npm:publish', function() {
     });
 });
 
-// deploy styleguide
-gulp.task('deploy', shell.task([deployGH]));
-gulp.task('dist', ['clean', 'styleguide', 'scss:dist']);
-gulp.task('release', ['bump', 'npm:publish']);
-gulp.task('styleguide', ['scss:dev', 'kss']);
-gulp.task('default', ['browser-sync']);
+gulp.task('release', gulp.series('bump', 'npm:publish'));
